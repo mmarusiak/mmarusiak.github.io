@@ -1,19 +1,43 @@
 <!DOCTYPE html>
-<html lang="pl">
-<head>
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
-</head>
-<body class = "background">
-    <h1 class = "main-text" id = "centered-text">
-        Welcome
-    </h1>
+<html lang="en">
 
-    <script>
-        window.location.href = "https://www.youtube.com/watch?v=nOz9onk36To"
-    </script>
+<head>
+    <meta charset="utf-8">
+    <title>ScrollMagic #1 Setup</title>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            margin: 55vh 0;
+            padding: 50px;
+            outline: 1px dashed orange;
+        }
+
+        #block {
+            padding: 10px;
+            border: 1px solid black;
+            font-family: Helvetica;
+        }
+    </style>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="block">
+            Hi there !
+        </div>
+    </div>
+    <script src="/scrollcontroller.js"></script>
 </body>
 </html>

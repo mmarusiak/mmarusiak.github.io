@@ -1,18 +1,26 @@
 * {
     font-family: 'REM', sans-serif;
+    cursor:default;
 }
 
-body{
+body {
     background-color: #31393C;
 }
 
 
 @media (min-width: 900px) {
     .main-section {
+        width: 100%;
         display: flex;
         justify-content: center;
+    }
+
+    .main-section>div {
+        display: flex;
+        justify-content: space-evenly;
         flex-direction: row-reverse;
-        width: 900px;
+        align-items: center;
+        width: clamp (900px, 80vw, 2000px);
         margin-left: auto;
         margin-right: auto;
     }
@@ -25,27 +33,41 @@ body{
         flex-direction: column;
     }
 }
+
 .profile-picture {
     vertical-align: middle;
-    height: 150px;
-    width: 150px;
+    height: 125px;
+    width: 125px;
     border-radius: 40%;
     margin-right: 25px;
     margin-left: 25px;
 }
 
-.about-me, .contact-content, .skills-content {
+.about-me,
+.contact-content,
+.skills-content {
     width: 400px;
     border-width: 4px;
     box-shadow: #F79824 -10px 10px;
     border-style: solid;
-    border-color:#F79824;
+    border-color: #F79824;
     border-radius: 20px;
-    background-color:#F0F7EE;
+    background-color: #F0F7EE;
 }
 
 .about-me {
     height: 300px;
+}
+
+.about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me>div {
+    width: 90%;
+    height: 100%;
 }
 
 .about-me-content {
@@ -62,7 +84,7 @@ body{
 
 .about-me-title {
     font-size: 35px;
-    color:#31393C;
+    color: #31393C;
     font-weight: 1000;
     text-decoration: underline;
 }
@@ -71,23 +93,22 @@ body{
     text-decoration: none;
 }
 
-h1 {
-    margin: 20px;
-}
 
-.about-me-text{
+.about-me-text {
     inline-size: 190px;
     margin-right: 15px;
     margin-top: 0;
 }
-.about-me-text > span{
+
+.about-me-text>span {
     font-weight: 400;
 }
-.about-me-text > span {
+
+.about-me-text>span {
     margin: 0;
 }
 
-h1 > span{
+h1>span {
     font-size: 50px;
 }
 
@@ -103,8 +124,8 @@ span.bold {
     justify-content: center;
 }
 
-.roadmap-stick{
-    background-color:#F79824;
+.roadmap-stick {
+    background-color: #F79824;
     width: 15px;
     height: 100%;
     border-radius: 20px/10px;
@@ -137,12 +158,11 @@ h2 {
 }
 
 .roadmap-p {
-    color:#F0F7EE;
+    color: #F0F7EE;
     inline-size: 300px;
 }
 
 .right-side-panel {
-    margin-left: 50px;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -150,7 +170,22 @@ h2 {
     height: 90vh;
 }
 
-.skills-content, .contact-content {
+@media (min-width: 900px) {
+    /*@media (max-width: 1400px) {*/
+        .right-side-panel {
+            margin-left: 10vw;
+        }
+    /*}
+
+    @media (min-width: 1400px) {
+        .right-side-panel {
+            margin-left: 20vw;
+        }
+    }*/
+}
+
+.skills-content,
+.contact-content {
     height: 200px;
     display: flex;
     flex-direction: column;
@@ -159,13 +194,13 @@ h2 {
 }
 
 
-.skills-content > div{
+.skills-content>div {
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 20px;
 }
 
-.skills-content > div > div{
+.skills-content>div>div {
     margin-top: 20px;
     margin-bottom: 20px;
     padding-left: 5px;
@@ -173,7 +208,7 @@ h2 {
     justify-content: center;
 }
 
-.skills-content > div > div > h2 {
+.skills-content>div>div>h2 {
     color: #31393C;
     font-size: 16px;
     font-weight: 300;
@@ -183,7 +218,50 @@ h2 {
     margin-bottom: auto;
 }
 
-.skills-img{
+.skills-img {
     height: 40px;
     width: 40px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-content>div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-content>div>button {
+    background-size: cover;
+    width: 90px;
+    height: 90px;
+    border-width: 0;
+    background-color: transparent;
+    display: flex;
+    cursor: pointer;
+}
+
+#projects-heading{
+    color: #31393C;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+.github {
+    background-image: url('./images/github-mark.png');
+}
+
+.linkedin {
+    background-image: url('./images/LI-In-Bug.png');
+}
+
+.twitter {
+    background-image: url('./images/twitter.webp');
 }

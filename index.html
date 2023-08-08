@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="style.css">
         <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=REM:wght@300&display=swap');
-    </style>
+        </style>
     </head>
 
     <body>
@@ -16,30 +16,33 @@
 
     <script src="/actions.js"></script>-->
         <div class='main-section'>
-
+            <div>
             <div class='right-side-panel'>
                 <div class='about-me'>
-                    <h1>
-                        <span class='emote'>
-                            👋
-                        </span>
-                        <span class='about-me-title'>
-                            Marcel Marusiak
-                        </span>
-                    </h1>
-                    <div class='about-me-content'>
-                        <img class='profile-picture'
-                            src="https://avatars.githubusercontent.com/u/20907620?v=4"
-                            alt='Profile Picture'>
-                        <p class='about-me-text'>
-                            I'm student and I love
-                            <span class='bold'>programming</span>. My hobby is
-                            <span class='bold'>game development</span>
-                            and
-                            <span class='bold'>contributing to open source
-                                projects</span>. I love Lego, Formula 1 and
-                            party games with friends.
-                        </p>
+                    <div>
+                        <h1>
+                            <span class='emote'>
+                                👋
+                            </span>
+                            <span class='about-me-title'>
+                                Marcel Marusiak
+                            </span>
+                        </h1>
+                        <div class='about-me-content'>
+                            <img class='profile-picture'
+                                src="https://avatars.githubusercontent.com/u/20907620?v=4"
+                                alt='Profile Picture'>
+                            <p class='about-me-text'>
+                                I'm student and I love
+                                <span class='bold'>programming</span>. My hobby
+                                is
+                                <span class='bold'>game development</span>
+                                and
+                                <span class='bold'>contributing to open source
+                                    projects</span>. I love Lego, Formula 1 and
+                                party games with friends.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
@@ -71,7 +74,14 @@
                     </div>
                 </div>
                 <div class='contact-content'>
-                    <button></button>
+                    <div>
+                        <button class='github' onclick="github();"></button>
+                        <button class='linkedin' onclick="linkedin();"></button>
+                        <button class='twitter' onclick="twitter();"></button>
+                    </div>
+                    <h2 id='projects-heading'>
+                        see my projects
+                    </h2>
                 </div>
             </div>
             <div class='roadmap'>
@@ -132,5 +142,25 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <script>
+        function github(){
+            window.location.href = 'https://github.com/mmarusiak';
+        }
+
+        function linkedin(){
+            window.location.href = 'https://www.linkedin.com/in/marcel-marusiak-46b419275/';
+        }
+
+        function twitter(){
+            window.location.href = 'https://twitter.com/mmarusiak_';
+        }
+
+        var projectsHeading = document.getElementById('projects-heading');
+        projectsHeading.addEventListener('click', function(){
+            window.location.href = '/Projects';
+        });
+    </script>
     </body>
 </html>

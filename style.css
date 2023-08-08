@@ -399,6 +399,16 @@ h2 {
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    width: 90%;
+    width: 95%;
 }
 
+.post-content>.upper-post>.post-title {
+    width: 500px;
+}
+
+.post-link {
+    cursor: pointer;
+    font-size: 20px;
+    width: 150px;
+
+}

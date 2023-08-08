@@ -156,12 +156,12 @@
                 <div class='post'>
                     <div class='post-content'>
                         <div class='upper-post'>
-                            <h1 id='post-title'>
+                            <h1 class='post-title'>
                                 first post
                             </h1>
-                            <h2 id='post-link'>go to post</h2>
+                            <h2 class='post-link'>go to post</h2>
                         </div>
-                        <p id='post-summary'>
+                        <p class='post-summary'>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore harum, reprehenderit
                             debitis perferendis eius iste autem ipsum repellat magnam mollitia! Officiis natus nam
                             repellat, eum earum minima. Sunt, provident magni!
@@ -171,12 +171,12 @@
                 <div class='post'>
                     <div class='post-content'>
                         <div class='upper-post'>
-                            <h1 id='post-title'>
+                            <h1 class='post-title'>
                                 first post
                             </h1>
-                            <h2 id='post-link'>go to post</h2>
+                            <h2 class='post-link'>go to post</h2>
                         </div>
-                        <p id='post-summary'>
+                        <p class='post-summary'>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore harum, reprehenderit
                             debitis perferendis eius iste autem ipsum repellat magnam mollitia! Officiis natus nam
                             repellat, eum earum minima. Sunt, provident magni!
@@ -186,12 +186,12 @@
                 <div class='post'>
                     <div class='post-content'>
                         <div class='upper-post'>
-                            <h1 id='post-title'>
+                            <h1 class='post-title'>
                                 first post
                             </h1>
-                            <h2 id='post-link'>go to post</h2>
+                            <h2 class='post-link'>go to post</h2>
                         </div>
-                        <p id='post-summary'>
+                        <p class='post-summary'>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore harum, reprehenderit
                             debitis perferendis eius iste autem ipsum repellat magnam mollitia! Officiis natus nam
                             repellat, eum earum minima. Sunt, provident magni!
@@ -234,20 +234,6 @@
             }
         });
 
-        function loadPosts() {
-            fetch('Posts/posts.json')
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data); // Display the array in the browser's console
-                    // You can now use the 'data' array in your JavaScript code
-                })
-                .catch(error => {
-                    console.error('Error loading JSON:', error);
-                });
-        }
-
-        loadPosts();
-
         async function getTextFromElementsWithId(ids) {
             const response = await fetch('./Posts/posts.json');
             const fileList = await response.json();
@@ -283,6 +269,18 @@
         getTextFromElementsWithId(idToLookFor)
             .then(result => {
                 console.log(result);
+
+                var postsTitle = document.getElementsByClassName('post-title');
+                var postsSummary = document.getElementsByClassName('post-summary');
+                var postsLink = document.getElementsByClassName('post-link');
+                for(let i = 0; i < postsTitle.length; i ++){
+                    postsTitle[i].textContent = result[i].title;
+                    postsSummary[i].textContent = result[i].content;
+                    postsLink[i].addEventListener('click', function(){
+                        window.document.location.href = result[i].source;
+                    });
+                }
+                console.log(postsTitle)
             })
             .catch(error => {
                 console.error(error);

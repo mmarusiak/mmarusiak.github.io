@@ -7,8 +7,47 @@ body {
     background-color: #31393C;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
 
 /* main section with all divs centering etc.*/
+
+@media (min-width: 1400px){
+    .main-section>div{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        align-items: center;
+        width: clamp (900px, 80vw, 2000px);
+        margin-left: 220px;
+        margin-right: auto;
+    }
+
+    .posts {
+        margin-left: 60px;
+    }
+}
+
+@media (max-width: 1400px){
+    .main-section>div{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .posts{
+        margin-top: 60px;
+    }
+}
+
+
+
 @media (min-width: 900px) {
     .main-section {
         width: 100%;
@@ -16,7 +55,7 @@ body {
         justify-content: center;
     }
 
-    .main-section>div>div {
+    .main-section>div>div.none {
         display: flex;
         justify-content: space-evenly;
         flex-direction: row-reverse;
@@ -75,13 +114,18 @@ body {
 .about-me,
 .contact-content,
 .skills-content,
-.post {
+.post,
+.post-heading {
     border-width: 4px;
     box-shadow: #F79824 -10px 10px;
     border-style: solid;
     border-color: #F79824;
     border-radius: 20px;
     background-color: #F0F7EE;
+}
+
+.about-me {
+    height: 300px;
 }
 
 .about-me,
@@ -99,6 +143,16 @@ body {
     align-items: start;
 }
 
+.post{
+    height: 200px;
+    width: 500px;
+}
+
+.post-heading{
+    height: 100px;
+    width: 500px;
+}
+
 
 /* about me section */
 
@@ -109,10 +163,6 @@ body {
     border-radius: 40%;
     margin-right: 25px;
     margin-left: 25px;
-}
-
-.about-me {
-    height: 300px;
 }
 
 .about-me {
@@ -182,7 +232,7 @@ h2 {
 
 /* roadap section */
 
-.roadmap-stick {
+.ab-stick {
     background-color: #F79824;
     width: 15px;
     height: 100%;
@@ -297,9 +347,32 @@ h2 {
 /* posts */
 
 .posts {
-    height: 100px;
-    width: 100px;
-    border:#F79824;
-    border-width: 10px;
-    border-style: solid;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90vh;
 }
+
+.post-content{
+    margin-left: 20px;
+    width: 100% - 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-heading>.post-content {
+    justify-content: center;
+    align-items: center;
+}
+
+.post-heading>.post-content>h1 {
+    text-align: center;
+}
+
+.post>.post-content{
+    justify-content: space-between;
+    align-items: start;
+}
+

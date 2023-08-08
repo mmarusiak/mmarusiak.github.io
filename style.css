@@ -7,15 +7,18 @@ body{
 }
 
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
     .main-section {
         display: flex;
         justify-content: center;
         flex-direction: row-reverse;
+        width: 900px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .main-section {
         display: flex;
         align-items: center;
@@ -31,16 +34,18 @@ body{
     margin-left: 25px;
 }
 
-.about-me {
+.about-me, .contact-content, .skills-content {
     width: 400px;
-    height: 300px;
     border-width: 4px;
     box-shadow: #F79824 -10px 10px;
     border-style: solid;
     border-color:#F79824;
     border-radius: 20px;
-    margin-left: 50px;
     background-color:#F0F7EE;
+}
+
+.about-me {
+    height: 300px;
 }
 
 .about-me-content {
@@ -102,6 +107,7 @@ span.bold {
     background-color:#F79824;
     width: 15px;
     height: 100%;
+    border-radius: 20px/10px;
 }
 
 .roadmap-signs {
@@ -132,32 +138,52 @@ h2 {
 
 .roadmap-p {
     color:#F0F7EE;
+    inline-size: 300px;
 }
 
-div.work-circle {
-    background-color: #FDCA40;
-    width: clamp(120px, 20vw, 150px);
-    height: 3vh;
-    border-radius: 100px / 90px;
-    margin-left: auto;
-    margin-right: auto; 
+.right-side-panel {
+    margin-left: 50px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    height: 90vh;
+}
+
+.skills-content, .contact-content {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    align-items: start;
+}
+
+
+.skills-content > div{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20px;
+}
+
+.skills-content > div > div{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 5px;
+    display: flex;
     justify-content: center;
-    transition: 1s;
 }
 
-
-p.work-circle {
-    text-align: center;
-    font-size: clamp(10px, 1.15vw ,12px);
+.skills-content > div > div > h2 {
     color: #31393C;
-    font-weight: 700;
-    font-style: italic;
+    font-size: 16px;
+    font-weight: 300;
+    margin-left: 20px;
+    inline-size: 280px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
-div.work-circle:hover {
-    border-radius: 10px / 9px;
-    background-color: #F79824;
+.skills-img{
+    height: 40px;
+    width: 40px;
 }
-

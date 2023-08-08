@@ -8,6 +8,7 @@ body {
 }
 
 
+/* main section with all divs centering etc.*/
 @media (min-width: 900px) {
     .main-section {
         width: 100%;
@@ -15,7 +16,7 @@ body {
         justify-content: center;
     }
 
-    .main-section>div {
+    .main-section>div>div {
         display: flex;
         justify-content: space-evenly;
         flex-direction: row-reverse;
@@ -34,6 +35,73 @@ body {
     }
 }
 
+@media (min-width: 900px) {
+    .right-side-panel{
+        margin-left: 50px;
+    }
+    
+    /*@media (max-width: 1400px) {
+        .right-side-panel {
+            margin-left: 10vw;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        .right-side-panel {
+            margin-left: 20vw;
+        }
+    }*/
+}
+
+.right-side-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    height: 90vh;
+}
+
+.roadmap {
+    margin: 20px 40px;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* boxes styling */
+
+.about-me,
+.contact-content,
+.skills-content,
+.post {
+    border-width: 4px;
+    box-shadow: #F79824 -10px 10px;
+    border-style: solid;
+    border-color: #F79824;
+    border-radius: 20px;
+    background-color: #F0F7EE;
+}
+
+.about-me,
+.contact-content,
+.skills-content {
+    width: 400px;
+}
+
+.skills-content,
+.contact-content {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    align-items: start;
+}
+
+
+/* about me section */
+
 .profile-picture {
     vertical-align: middle;
     height: 125px;
@@ -41,18 +109,6 @@ body {
     border-radius: 40%;
     margin-right: 25px;
     margin-left: 25px;
-}
-
-.about-me,
-.contact-content,
-.skills-content {
-    width: 400px;
-    border-width: 4px;
-    box-shadow: #F79824 -10px 10px;
-    border-style: solid;
-    border-color: #F79824;
-    border-radius: 20px;
-    background-color: #F0F7EE;
 }
 
 .about-me {
@@ -93,7 +149,6 @@ body {
     text-decoration: none;
 }
 
-
 .about-me-text {
     inline-size: 190px;
     margin-right: 15px;
@@ -108,6 +163,9 @@ body {
     margin: 0;
 }
 
+
+/* text styling */
+
 h1>span {
     font-size: 50px;
 }
@@ -116,13 +174,13 @@ span.bold {
     font-weight: 800;
 }
 
-.roadmap {
-    margin: 20px 40px;
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
+
+h2 {
+    color: #FDCA40;
 }
+
+
+/* roadap section */
 
 .roadmap-stick {
     background-color: #F79824;
@@ -153,46 +211,13 @@ span.bold {
     border-radius: 10px;
 }
 
-h2 {
-    color: #FDCA40;
-}
-
 .roadmap-p {
     color: #F0F7EE;
     inline-size: 300px;
 }
 
-.right-side-panel {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: space-between;
-    height: 90vh;
-}
 
-@media (min-width: 900px) {
-    /*@media (max-width: 1400px) {*/
-        .right-side-panel {
-            margin-left: 10vw;
-        }
-    /*}
-
-    @media (min-width: 1400px) {
-        .right-side-panel {
-            margin-left: 20vw;
-        }
-    }*/
-}
-
-.skills-content,
-.contact-content {
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    align-items: start;
-}
-
+/* skills and contact section */
 
 .skills-content>div {
     margin-top: auto;
@@ -247,6 +272,8 @@ h2 {
     cursor: pointer;
 }
 
+/* contact buttons */
+
 #projects-heading{
     color: #31393C;
     font-weight: 500;
@@ -264,4 +291,15 @@ h2 {
 
 .twitter {
     background-image: url('./images/twitter.webp');
+}
+
+
+/* posts */
+
+.posts {
+    height: 100px;
+    width: 100px;
+    border:#F79824;
+    border-width: 10px;
+    border-style: solid;
 }

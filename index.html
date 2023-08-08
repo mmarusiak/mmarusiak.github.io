@@ -141,6 +141,10 @@
                     </div>
                 </div>
             </div>
+            <h2 class="scroll-down">
+                scroll down <br>
+                ↓
+            </h2>
             <div class='posts'>
                 <div class='post-heading'>
                     <div class='post-content'>
@@ -150,18 +154,55 @@
                     </div>
                 </div>
                 <div class='post'>
-                    <div class='post-content'></div>
+                    <div class='post-content'>
+                        <div class='upper-post'>
+                            <h1 id='post-title'>
+                                first post
+                            </h1>
+                            <h2 id='post-link'>go to post</h2>
+                        </div>
+                        <p id='post-summary'>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore harum, reprehenderit
+                            debitis perferendis eius iste autem ipsum repellat magnam mollitia! Officiis natus nam
+                            repellat, eum earum minima. Sunt, provident magni!
+                        </p>
+                    </div>
                 </div>
                 <div class='post'>
-                    <div class='post-content'></div>
+                    <div class='post-content'>
+                        <div class='upper-post'>
+                            <h1 id='post-title'>
+                                first post
+                            </h1>
+                            <h2 id='post-link'>go to post</h2>
+                        </div>
+                        <p id='post-summary'>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore harum, reprehenderit
+                            debitis perferendis eius iste autem ipsum repellat magnam mollitia! Officiis natus nam
+                            repellat, eum earum minima. Sunt, provident magni!
+                        </p>
+                    </div>
                 </div>
                 <div class='post'>
-                    <div class='post-content'></div>
+                    <div class='post-content'>
+                        <div class='upper-post'>
+                            <h1 id='post-title'>
+                                first post
+                            </h1>
+                            <h2 id='post-link'>go to post</h2>
+                        </div>
+                        <p id='post-summary'>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore harum, reprehenderit
+                            debitis perferendis eius iste autem ipsum repellat magnam mollitia! Officiis natus nam
+                            repellat, eum earum minima. Sunt, provident magni!
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         function github() {
             window.location.href = 'https://github.com/mmarusiak';
@@ -178,6 +219,19 @@
         var projectsHeading = document.getElementById('projects-heading');
         projectsHeading.addEventListener('click', function () {
             window.location.href = '/Projects';
+        });
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('.scroll-down').fadeOut(300, function () {
+                    $(this).css({ 'color': 'transparent' }).fadeIn(0);
+                });
+                console.log('scrolled');
+            } else {
+                $('.scroll-down').fadeOut(300, function () {
+                    $(this).css({ 'color': '#F0F7EE' }).fadeIn(300);
+                });
+            }
         });
     </script>
 </body>

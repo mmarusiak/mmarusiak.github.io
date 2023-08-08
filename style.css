@@ -33,6 +33,9 @@ body {
     .posts {
         margin-left: 60px;
     }
+    .scroll-down{
+        display: none;
+    }
 }
 
 @media (max-width: 1400px){
@@ -43,6 +46,13 @@ body {
     }
     .posts{
         margin-top: 60px;
+    }
+    .scroll-down{
+        color: #F0F7EE;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        margin-top: 3px;
     }
 }
 
@@ -248,6 +258,14 @@ h2 {
     height: 100%;
 }
 
+.roadmap-stick {
+    height: 90vh;
+    width: 16px;
+    background-color: #FDCA40;
+    border-radius: 20px/10px;
+    margin-right: 25px;
+}
+
 .roadmap-sign {
     display: flex;
     align-items: center;
@@ -374,5 +392,13 @@ h2 {
 .post>.post-content{
     justify-content: space-between;
     align-items: start;
+}
+
+.post-content>.upper-post{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
 }
 

@@ -1,6 +1,6 @@
 * {
     font-family: 'REM', sans-serif;
-    cursor:default;
+    cursor: default;
 }
 
 body {
@@ -12,15 +12,17 @@ body::-webkit-scrollbar {
 }
 
 body {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 
 /* main section with all divs centering etc.*/
 
-@media (min-width: 1400px){
-    .main-section>div{
+@media (min-width: 1400px) {
+    .main-section>div {
         display: flex;
         justify-content: space-evenly;
         flex-direction: row;
@@ -33,21 +35,24 @@ body {
     .posts {
         margin-left: 60px;
     }
-    .scroll-down{
+
+    .main-section > div > .scroll-down {
         display: none;
     }
 }
 
-@media (max-width: 1400px){
-    .main-section>div{
+@media (max-width: 1400px) {
+    .main-section>div {
         display: flex;
         align-items: center;
         flex-direction: column;
     }
-    .posts{
+
+    .posts {
         margin-top: 60px;
     }
-    .scroll-down{
+
+    .scroll-down {
         color: #F0F7EE;
         text-align: center;
         font-size: 16px;
@@ -58,7 +63,7 @@ body {
 
 
 
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
     .main-section {
         width: 100%;
         display: flex;
@@ -76,7 +81,7 @@ body {
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
     .main-section {
         display: flex;
         align-items: center;
@@ -85,10 +90,10 @@ body {
 }
 
 @media (min-width: 900px) {
-    .right-side-panel{
+    .right-side-panel {
         margin-left: 50px;
     }
-    
+
     /*@media (max-width: 1400px) {
         .right-side-panel {
             margin-left: 10vw;
@@ -134,14 +139,26 @@ body {
     background-color: #F0F7EE;
 }
 
-.about-me {
-    height: 300px;
+@media (min-width: 600px) {
+
+    .about-me,
+    .contact-content,
+    .skills-content {
+        width: 400px;
+    }
+
+    .post {
+        width: 500px;
+    }
+
+    .post-heading {
+        width: 500px;
+    }
+
 }
 
-.about-me,
-.contact-content,
-.skills-content {
-    width: 400px;
+.about-me {
+    height: 300px;
 }
 
 .skills-content,
@@ -153,14 +170,12 @@ body {
     align-items: start;
 }
 
-.post{
+.post {
     height: 200px;
-    width: 500px;
 }
 
-.post-heading{
+.post-heading {
     height: 100px;
-    width: 500px;
 }
 
 
@@ -259,9 +274,9 @@ h2 {
 }
 
 .roadmap-stick {
-    height: 90vh;
+    height: 100%;
     width: 16px;
-    background-color:#F79824;
+    background-color: #F79824;
     border-radius: 20px/10px;
     margin-right: 25px;
 }
@@ -342,7 +357,7 @@ h2 {
 
 /* contact buttons */
 
-#projects-heading{
+#projects-heading {
     color: #31393C;
     font-weight: 500;
     cursor: pointer;
@@ -372,7 +387,7 @@ h2 {
     height: 90vh;
 }
 
-.post-content{
+.post-content {
     margin-left: 20px;
     width: 100% - 40px;
     height: 100%;
@@ -389,12 +404,12 @@ h2 {
     text-align: center;
 }
 
-.post>.post-content{
+.post>.post-content {
     justify-content: space-between;
     align-items: start;
 }
 
-.post-content>.upper-post{
+.post-content>.upper-post {
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -411,4 +426,141 @@ h2 {
     font-size: 20px;
     width: 150px;
 
+}
+
+/* for phones */
+@media (max-width: 600px) {
+    .about-me-title, .emote {
+        font-size: 30px;
+    }
+    .about-me-text {
+        font-size: 10px;
+    }
+    .right-side-panel {
+        align-items: center;
+    }
+    .about-me {
+        height: 240px;
+    }
+    .about-me,
+    .contact-content,
+    .skills-content {
+        width: 70vw;
+    }
+
+    .post {
+        width: 80vw;
+    }
+
+    .post-heading {
+        width: 80vw;
+    }
+
+    .skills-content > div > div > h2{
+        inline-size: 50vw;
+    }
+
+    .contact-content>div>button {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .roadmap-sign>div>h2 {
+        font-size: 15px;
+    }
+
+    .roadmap-sign>div>p {
+        font-size: 10px;
+    }
+
+    .roadmap-img {
+        width: 8vh;
+        height: 8vh;
+    }
+
+    .post-heading > .post-content > h1,
+    .post-content > .upper-post > h1 {
+        font-size: 25px;
+        inline-size: 40vw;
+    }
+
+    .post-content > .upper-post > h2 {
+        font-size:  15px;
+    }
+
+    .post-summary {
+        font-size: 15px;
+        inline-size: 70vw;
+    }
+    .post{
+        height: 19vh;
+    }
+}
+
+@media (max-width: 460px){
+    .about-me-title, .emote {
+        font-size: 25px;
+    }
+
+    .profile-picture {
+        height: 90px;
+        width: 90px;
+    }
+
+    .skills-content>div>div>h2 {
+        font-size: 12px;
+        inline-size: 45vw;
+    }
+
+    .roadmap {
+        margin: auto;
+        margin-top: 100px;
+    }
+
+    .post-heading > .post-content > h1,
+    .post-content > .upper-post > h1 {
+        font-size: 20px;
+        inline-size: 40vw;
+    }
+
+    .post-content > .upper-post > h2 {
+        font-size:  12px;
+    }
+
+    .post-summary {
+        font-size: 12px;
+        inline-size: 70vw;
+    }
+    .post{
+        height: 19vh;
+    }
+}
+
+@media (max-height: 840px){
+    .contact-content {
+        height: 130px;
+    }
+    .contact-content {
+        justify-content: center;
+    }
+}
+
+@media (max-height: 810px){
+    .post-heading > .post-content > h1,
+    .post-content > .upper-post > h1 {
+        font-size: 22px;
+        inline-size: 40vw;
+    }
+
+    .post-content > .upper-post > h2 {
+        font-size:  12px;
+    }
+
+    .post-summary {
+        font-size: 12px;
+        inline-size: 70vw;
+    }
+    .post{
+        height: 19vh;
+    }
 }

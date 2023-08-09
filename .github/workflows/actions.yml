@@ -1,0 +1,37 @@
+name: Run Posts Handler
+
+on:
+  push:
+    branches:
+      - main  # Adjust this branch name if needed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x  # Choose your desired Python version
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt  # If you have any requirements
+
+      - name: Run the script
+        run: python ./Posts/posts_handler.py
+
+      - name: Check for changes
+        id: check_changes
+        run: git diff --exit-code || echo "Changes detected"
+
+      - name: Commit changes
+        run: |
+          git config user.name "Marcel Marusiak"
+          git config user.email "marcel.marusiak@gmail.com"
+          git commit -am "Update posts.json" -m "Auto-generated commit by GitHub Action"
+          git push
+        if: steps.check_changes.outputs.return-code == '1'

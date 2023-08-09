@@ -8,6 +8,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=REM:wght@300&display=swap');
     </style>
+    <link rel='icon' href='./images/hello.png'</link:icon>
 </head>
 
 <body>
@@ -265,6 +266,18 @@
             return textContents;
         }
 
+        function getRandomPosts(amountOfPosts, howManyPosts){
+            const posts = [];
+            for (let i = 0; i < howManyPosts; i++){
+                var post = Math.floor(Math.random() * (amountOfPosts));
+                while (posts.includes(post)){
+                    post = Math.floor(Math.random() * (amountOfPosts));
+                }
+                posts.push(post);
+            }
+            return posts;
+        }
+
         const idToLookFor = ['post-title', 'post-summary'];
         getTextFromElementsWithId(idToLookFor)
             .then(result => {
@@ -274,10 +287,12 @@
                 var postsSummary = document.getElementsByClassName('post-summary');
                 var postsLink = document.getElementsByClassName('post-link');
                 for(let i = 0; i < postsTitle.length; i ++){
-                    postsTitle[i].textContent = result[i].title;
-                    postsSummary[i].textContent = result[i].content;
+                    const postsIndex = getRandomPosts(result.length, 3);
+                    console.log(postsIndex)
+                    postsTitle[i].textContent = result[postsIndex[i]].title;
+                    postsSummary[i].textContent = result[postsIndex[i]].content;
                     postsLink[i].addEventListener('click', function(){
-                        window.document.location.href = result[i].source;
+                        window.document.location.href = result[postsIndex[i]].source;
                     });
                 }
                 console.log(postsTitle)

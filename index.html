@@ -241,7 +241,7 @@
             const textContents = [];
 
             for (const fileName of fileList) {
-                const fileResponse = await fetch('./Posts/' + fileName);
+                const fileResponse = await fetch(fileName);
                 const fileText = await fileResponse.text();
                 
 

@@ -1,0 +1,90 @@
+* {
+    font-family: 'REM', sans-serif;
+    cursor: default;
+}
+
+body {
+    background-color: #31393C;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+h1 {
+    color: #31393C;
+    text-align: center;
+}
+
+p {
+    color: #31393C;
+    text-align: center;
+    font-style: italic;
+}
+
+body>div {
+    margin: 80px;
+
+    border-width: 4px;
+    box-shadow: #F79824 -10px 10px;
+    border-style: solid;
+    border-color: #F79824;
+    border-radius: 20px;
+    background-color: #F0F7EE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.github {
+    background-image: url('../images/github-mark.png');
+}
+
+button {
+    background-size: cover;
+    width: 90px;
+    height: 90px;
+    border-width: 0;
+    background-color: transparent;
+    display: flex;
+    cursor: pointer;
+}
+
+p>span.link{
+    text-decoration: underline;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.header > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+}
+
+
+.tech-img {
+    height: 6vh;
+    width: 6vh;
+    border-radius: 12px;
+}

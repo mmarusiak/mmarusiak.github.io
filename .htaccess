@@ -1,8 +1,11 @@
-RewriteEngine on
-
-
-RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
-RewriteRule ^ /%1 [NC,L,R]
-
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Redirect URLs with .html extension to extensionless URLs
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.+)\.html[\ ?]
+    RewriteRule ^(.+)\.html$ /$1/ [R=301,NC,L]
+    
+    # Internal rewrite for extensionless URLs to actual HTML files
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.*)/$ /$1.html [NC,L]
+</IfModule>

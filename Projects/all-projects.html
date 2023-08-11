@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Projects</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="icon" href="../images/projects.svg">
+    </head>
+    <body>
+        <div>
+            <h1>
+                some of my projects:
+            </h1>
+            <p>
+                to see all look on my <span class='link' id="my-github">GitHub</span>
+            </p>
+        </div>
+        <div>
+            <div class='header'>
+                <h1 id='language-detector' class='pointer'>
+                    Universe Simulator
+                </h1>
+                <div>
+                    <img
+                        src="../images/technologies/U_ProfileIcon_Alpha_Positive_2000x2000.png"
+                        class='tech-img'>
+                    <img
+                        src="../images/technologies/c-sharp-c-icon-456x512-9sej0lrz.webp"
+                        class='tech-img'>
+                </div>
+            </div>
+            <p>
+                open source logic game placed in space
+            </p>
+            <button class='github' onclick="projectOnGithub('Universe-Simulator');"></button>
+        </div>
+        <div>
+            <div class='header'>
+                <h1 id='doppler-demo' class='pointer'>
+                    Doppler Effect Demo
+                </h1>
+                <img
+                    src="../images/technologies/javascript-icon-256x256-0ybhyms4.webp"
+                    class="tech-img">
+            </div>
+            <p>
+                easy project made in p5.js, for my school presentation, also you
+                can see <span class='link' id='doppler-post'>post</span> about
+                doppler efect.
+            </p>
+            <button class='github' onclick="projectOnGithub('Doppler-effect-demo');"></button>
+        </div>
+        <div>
+            <div class='header'>
+                <h1 id='color-prediction' class='pointer'>
+                    Color Prediction Demo - JS Neural Network
+                </h1>
+                <img
+                    src="../images/technologies/javascript-icon-256x256-0ybhyms4.webp"
+                    class="tech-img">
+            </div>
+            <p>
+                project made for testing my simple JS Neural Network
+            </p>
+            <button class='github' onclick="projectOnGithub('JS-Neural-Network/tree/main/color_predictor_demo')"></button>
+        </div>
+        <div>
+            <div class='header'>
+                <h1 id='xor-demo' class='pointer'>
+                    XOR - demo - JS Neural Network
+                </h1>
+                <img
+                    src="../images/technologies/javascript-icon-256x256-0ybhyms4.webp"
+                    class="tech-img">
+            </div>
+            <p>
+                project made for testing my simple JS Neural Network
+            </p>
+            <button class='github' onclick="projectOnGithub('JS-Neural-Network/tree/main/xor_demo');"></button>
+        </div>
+        <div>
+            <div class='header'>
+                <h1 id='language-detector' class='pointer'>
+                    Language Detector
+                </h1>
+                <img src="../images/technologies/5848152fcef1014c0b5e4967.webp"
+                    class='tech-img'>
+            </div>
+            <p>
+                project made with simple machine learning and statistics
+                techniques, using wikipedia api
+            </p>
+            <button class='github' onclick="projectOnGithub('python-language-detector');"></button>
+        </div>
+
+        <script>
+            function projectOnGithub(projectName){
+                window.location.href = 'https://github.com/mmarusiak/' + projectName;
+            }
+
+            var myGithub = document.getElementById('my-github');
+            myGithub.addEventListener('click', function () {
+                window.location.href = 'https://github.com/mmarusiak?tab=repositories';
+            });
+        </script>
+    </body>
+</html>

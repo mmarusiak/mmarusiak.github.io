@@ -21,7 +21,7 @@ body {
 
 /* main section with all divs centering etc.*/
 
-@media (min-width: 1400px) {
+@media (min-width: 1700px) {
     .main-section>div {
         display: flex;
         justify-content: space-evenly;
@@ -41,7 +41,7 @@ body {
     }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1700px) {
     .main-section>div {
         display: flex;
         align-items: center;
@@ -429,7 +429,7 @@ h2 {
 }
 
 /* for phones */
-@media (max-width: 600px) {
+@media (max-width: 600px){
 
     .about-me-title,
     .emote {
@@ -497,6 +497,93 @@ h2 {
     .post-summary {
         font-size: 15px;
         inline-size: 70vw;
+    }
+
+    .post {
+        height: 19vh;
+    }
+}
+
+@media (max-height: 900px){
+    .about-me-title,
+    .emote {
+        font-size: 30px;
+    }
+
+    .about-me-text {
+        font-size: 1.6vh;
+    }
+
+    .right-side-panel {
+        align-items: center;
+    }
+
+    .about-me {
+        height: 240px;
+    }
+
+    .about-me,
+    .contact-content,
+    .skills-content {
+        width: 70vw;
+    }
+
+    .post {
+        width: 80vw;
+    }
+
+    .post-heading {
+        width: 80vw;
+    }
+
+    .skills-content>div>div>h2 {
+        inline-size: 50vw;
+    }
+
+    .contact-content>div>button {
+        width: 8vh;
+        height: 8vh;
+    }
+
+    #projects-heading {
+        font-size: 3vh;
+    }
+
+    .contact-content>div {
+        margin-bottom: 0;
+        margin-top: 20px;
+    }
+
+    .about-me-content {
+        justify-content: left;
+    }
+
+    .roadmap-sign>div>h2 {
+        font-size: 15px;
+    }
+
+    .roadmap-sign>div>p {
+        font-size: 10px;
+    }
+
+    .roadmap-img {
+        width: 8vh;
+        height: 8vh;
+    }
+
+    .post-heading>.post-content>h1,
+    .post-content>.upper-post>h1 {
+        font-size: 25px;
+        inline-size: 40vw;
+    }
+
+    .post-content>.upper-post>h2 {
+        font-size: 15px;
+    }
+
+    .post-summary {
+        font-size: 15px;
+        inline-size: 70vh;
     }
 
     .post {

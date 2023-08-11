@@ -87,6 +87,10 @@ body {
         align-items: center;
         flex-direction: column;
     }
+
+    .right-side-panel {
+        margin-bottom: 120px;
+    }
 }
 
 @media (min-width: 900px) {

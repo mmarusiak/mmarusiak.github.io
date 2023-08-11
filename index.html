@@ -9,7 +9,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=REM:wght@300&display=swap');
     </style>
-    <link rel='icon' href='./images/hello.png'</link:icon>
+    <link rel='icon' href='./images/hello.png' </link:icon>
 </head>
 
 <body>
@@ -237,37 +237,38 @@
             }
         });
 
-        function getRandomPosts(amountOfPosts, howManyPosts){
+        function getRandomPosts(amountOfPosts, howManyPosts) {
             const posts = [];
-            for (let i = 0; i < howManyPosts; i++){
+            for (let i = 0; i < howManyPosts; i++) {
                 var post = Math.floor(Math.random() * (amountOfPosts));
-                while (posts.includes(post)){
+                while (posts.includes(post)) {
                     post = Math.floor(Math.random() * (amountOfPosts));
                 }
+                console.log(post)
                 posts.push(post);
             }
             return posts;
         }
 
+        function displayPosts(posts) {
+            var postsTitle = document.getElementsByClassName('post-title');
+            var postsSummary = document.getElementsByClassName('post-summary');
+            var postsLink = document.getElementsByClassName('post-link');
+            
+            const postsIndex = getRandomPosts(posts.length, 3);
+
+            for (let i = 0; i < postsTitle.length; i++) {
+                postsTitle[i].textContent = posts[postsIndex[i]].title;
+                postsSummary[i].textContent = posts[postsIndex[i]].content;
+                postsLink[i].addEventListener('click', function () {
+                    window.document.location.href = posts[postsIndex[i]].source;
+                });
+            }
+        }
+
         const idToLookFor = ['post-title', 'post-summary'];
         getTextFromElementsWithId(idToLookFor)
-            .then(result => {
-                console.log(result);
-
-                var postsTitle = document.getElementsByClassName('post-title');
-                var postsSummary = document.getElementsByClassName('post-summary');
-                var postsLink = document.getElementsByClassName('post-link');
-                for(let i = 0; i < postsTitle.length; i ++){
-                    const postsIndex = getRandomPosts(result.length, 3);
-                    console.log(postsIndex)
-                    postsTitle[i].textContent = result[postsIndex[i]].title;
-                    postsSummary[i].textContent = result[postsIndex[i]].content;
-                    postsLink[i].addEventListener('click', function(){
-                        window.document.location.href = result[postsIndex[i]].source;
-                    });
-                }
-                console.log(postsTitle)
-            })
+            .then(result => { displayPosts(result); })
             .catch(error => {
                 console.error(error);
             });

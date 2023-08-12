@@ -153,6 +153,9 @@
                         <h1>
                             some of my posts
                         </h1>
+                        <p style = 'margin-bottom: 30px;' id = 'all-posts'>
+                            see all my posts
+                        </p>
                     </div>
                 </div>
                 <div class='post'>
@@ -161,7 +164,12 @@
                             <h1 class='post-title'>
                                 first post
                             </h1>
-                            <h2 class='post-link'>go to post</h2>
+                            <div class = 'right-side-psot'>
+                                <div class = 'hashtags'>
+     
+                                </div>
+                                <h2 class='post-link'>go to post</h2>
+                            </div>
                         </div>
                         <p class='post-summary'>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore harum, reprehenderit
@@ -176,7 +184,12 @@
                             <h1 class='post-title'>
                                 first post
                             </h1>
-                            <h2 class='post-link'>go to post</h2>
+                            <div class = 'right-side-psot'>
+                                <div class = 'hashtags'>
+
+                                </div>
+                                <h2 class='post-link'>go to post</h2>
+                            </div>
                         </div>
                         <p class='post-summary'>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore harum, reprehenderit
@@ -191,7 +204,12 @@
                             <h1 class='post-title'>
                                 first post
                             </h1>
-                            <h2 class='post-link'>go to post</h2>
+                            <div class = 'right-side-psot'>
+                                <div class = 'hashtags'>
+
+                                </div>
+                                <h2 class='post-link'>go to post</h2>
+                            </div>
                         </div>
                         <p class='post-summary'>
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore harum, reprehenderit
@@ -221,7 +239,7 @@
 
         var projectsHeading = document.getElementById('projects-heading');
         projectsHeading.addEventListener('click', function () {
-            window.location.href = './Projects/all-projects';
+            window.location.href = './all-projects';
         });
 
         $(window).scroll(function () {
@@ -251,10 +269,11 @@
         }
 
         function displayPosts(posts) {
-            var postsTitle = document.getElementsByClassName('post-title');
-            var postsSummary = document.getElementsByClassName('post-summary');
-            var postsLink = document.getElementsByClassName('post-link');
-            
+            const postsTitle = document.getElementsByClassName('post-title');
+            const postsSummary = document.getElementsByClassName('post-summary');
+            const postsLink = document.getElementsByClassName('post-link');
+            const hashtags = document.getElementsByClassName('hashtags');
+
             const postsIndex = getRandomPosts(posts.length, 3);
 
             for (let i = 0; i < postsTitle.length; i++) {
@@ -263,16 +282,15 @@
                 postsLink[i].addEventListener('click', function () {
                     window.document.location.href = posts[postsIndex[i]].source;
                 });
+                loadHashtags(hashtags[i], posts[postsIndex[i]].hashtags);
             }
         }
-
-        const idToLookFor = ['post-title', 'post-summary'];
-        getTextFromElementsWithId(idToLookFor)
+        getPostsInfo()
             .then(result => { displayPosts(result); })
             .catch(error => {
                 console.error(error);
             });
-
+        
     </script>
 </body>
 

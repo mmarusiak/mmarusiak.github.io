@@ -400,7 +400,7 @@ h2 {
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    width: 95%;
+    width: 98%;
 }
 
 .post-content>.upper-post>.post-title {
@@ -487,7 +487,8 @@ h2 {
         inline-size: 40vw;
     }
 
-    .post-content>.upper-post>h2 {
+    .post-content>.upper-post>div>h2, 
+    .post-content>.upper-post>div>div>p  {
         font-size: 15px;
     }
 
@@ -536,8 +537,9 @@ h2 {
         font-size: 22px;
         inline-size: 40vw;
     }
-
-    .post-content>.upper-post>h2 {
+    
+    .post-content>.upper-post>div>h2, 
+    .post-content>.upper-post>div>div>p  {
         font-size: 12px;
     }
 
@@ -613,7 +615,8 @@ h2 {
         inline-size: 40vw;
     }
 
-    .post-content>.upper-post>h2 {
+    .post-content>.upper-post>div>h2, 
+    .post-content>.upper-post>div>div>p  {
         font-size: 15px;
     }
 
@@ -655,7 +658,8 @@ h2 {
         inline-size: 40vw;
     }
 
-    .post-content>.upper-post>h2 {
+    .post-content>.upper-post>div>h2, 
+    .post-content>.upper-post>div>div>p  {
         font-size: 12px;
     }
 
@@ -686,7 +690,8 @@ h2 {
             inline-size: 40vw;
         }
 
-        .post-content>.upper-post>h2 {
+        .post-content>.upper-post>div>h2, 
+        .post-content>.upper-post>div>div>p  {
             font-size: 10px;
         }
 
@@ -711,4 +716,21 @@ h2 {
             margin-right: auto;
         }
     }
+}
+
+.hashtags {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 8px;
+}
+
+.hashtags > p{
+    margin: 0;
+    border-radius: 5px;
+    border-color: #31393C;
+    color: #F0F7EE;
+    background-color: #31393C;
+    padding: 5px;
+    text-align: center;
 }

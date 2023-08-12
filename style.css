@@ -726,6 +726,7 @@ h2 {
 }
 
 .hashtags > p{
+    cursor: pointer;
     margin: 0;
     border-radius: 5px;
     border-color: #31393C;

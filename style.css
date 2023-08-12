@@ -432,82 +432,6 @@ h2 {
 
 }
 
-/* for phones */
-@media (max-width: 600px){
-
-    .about-me-title,
-    .emote {
-        font-size: 30px;
-    }
-
-    .about-me-text {
-        font-size: 10px;
-    }
-
-    .right-side-panel {
-        align-items: center;
-    }
-
-    .about-me {
-        height: 240px;
-    }
-
-    .about-me,
-    .contact-content,
-    .skills-content {
-        width: 70vw;
-    }
-
-    .post {
-        width: 80vw;
-    }
-
-    .post-heading {
-        width: 80vw;
-    }
-
-    .skills-content>div>div>h2 {
-        inline-size: 50vw;
-    }
-
-    .contact-content>div>button {
-        width: 15vw;
-        height: 15vw;
-    }
-
-    .roadmap-sign>div>h2 {
-        font-size: 15px;
-    }
-
-    .roadmap-sign>div>p {
-        font-size: 10px;
-    }
-
-    .roadmap-img {
-        width: 8vh;
-        height: 8vh;
-    }
-
-    .post-heading>.post-content>h1,
-    .post-content>.upper-post>h1 {
-        font-size: 25px;
-        inline-size: 40vw;
-    }
-
-    .post-content>.upper-post>h2 {
-        font-size: 15px;
-    }
-
-    .post-summary {
-        font-size: 15px;
-        inline-size: 70vw;
-    }
-
-    .post {
-        height: 19vh;
-    }
-}
-
 @media (max-height: 900px){
     .about-me-title,
     .emote {
@@ -595,6 +519,114 @@ h2 {
     }
 }
 
+@media (max-height: 840px) {
+    .contact-content {
+        height: 130px;
+    }
+
+    .contact-content {
+        justify-content: center;
+    }
+}
+
+@media (max-height: 810px) {
+
+    .post-heading>.post-content>h1,
+    .post-content>.upper-post>h1 {
+        font-size: 22px;
+        inline-size: 40vw;
+    }
+
+    .post-content>.upper-post>h2 {
+        font-size: 12px;
+    }
+
+    .post-summary {
+        font-size: 12px;
+        inline-size: 70vw;
+    }
+
+    .post {
+        height: 19vh;
+    }
+}
+
+/* for phones */
+@media (max-width: 600px){
+
+    .about-me-title,
+    .emote {
+        font-size: 30px;
+    }
+
+    .about-me-text {
+        font-size: 10px;
+    }
+
+    .right-side-panel {
+        align-items: center;
+    }
+
+    .about-me {
+        height: 240px;
+    }
+
+    .about-me,
+    .contact-content,
+    .skills-content {
+        width: 70vw;
+    }
+
+    .post {
+        width: 80vw;
+    }
+
+    .post-heading {
+        width: 80vw;
+    }
+
+    .skills-content>div>div>h2 {
+        inline-size: 50vw;
+    }
+
+    .contact-content>div>button {
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .roadmap-sign>div>h2 {
+        font-size: 15px;
+    }
+
+    .roadmap-sign>div>p {
+        font-size: 10px;
+    }
+
+    .roadmap-img {
+        width: 8vh;
+        height: 8vh;
+    }
+
+    .post-heading>.post-content>h1,
+    .post-content>.upper-post>h1 {
+        font-size: 25px;
+        inline-size: 40vw;
+    }
+
+    .post-content>.upper-post>h2 {
+        font-size: 15px;
+    }
+
+    .post-summary {
+        font-size: 15px;
+        inline-size: 70vw;
+    }
+
+    .post {
+        height: 19vh;
+    }
+}
+
 @media (max-width: 460px) {
 
     .about-me-title,
@@ -620,38 +652,6 @@ h2 {
     .post-heading>.post-content>h1,
     .post-content>.upper-post>h1 {
         font-size: 20px;
-        inline-size: 40vw;
-    }
-
-    .post-content>.upper-post>h2 {
-        font-size: 12px;
-    }
-
-    .post-summary {
-        font-size: 12px;
-        inline-size: 70vw;
-    }
-
-    .post {
-        height: 19vh;
-    }
-}
-
-@media (max-height: 840px) {
-    .contact-content {
-        height: 130px;
-    }
-
-    .contact-content {
-        justify-content: center;
-    }
-}
-
-@media (max-height: 810px) {
-
-    .post-heading>.post-content>h1,
-    .post-content>.upper-post>h1 {
-        font-size: 22px;
         inline-size: 40vw;
     }
 

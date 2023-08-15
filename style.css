@@ -18,6 +18,11 @@ body {
     /* Firefox */
 }
 
+.main-section {
+    width: 100vw;
+    height: 100%;
+}
+
 
 /* main section with all divs centering etc.*/
 
@@ -374,8 +379,7 @@ h2 {
 }
 
 .post-content {
-    margin-left: 20px;
-    width: 100% - 40px;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -392,7 +396,7 @@ h2 {
 
 .post>.post-content {
     justify-content: space-between;
-    align-items: start;
+    align-items: center;
 }
 
 .post-content>.upper-post {
@@ -400,18 +404,55 @@ h2 {
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-    width: 98%;
+    width: 96%;
+    margin-left: 0;
 }
 
+
 .post-content>.upper-post>.post-title {
-    width: 500px;
+    width: 100%;
+}
+
+.right-side-post {
+    width: 100%;
+}
+
+.post-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .post-link {
     cursor: pointer;
-    font-size: 20px;
-    width: 150px;
+}
 
+.post-date {
+    color: #31393C;
+}
+
+.post-date, .post-link {
+    font-size: 16px;
+}
+
+.post-heading>.post-content>h1,
+.post-content>.upper-post>h1 {
+    font-size: 25px;
+    inline-size: 40vw;
+}
+
+.post-content>.upper-post>div>h2, 
+.post-content>.upper-post>div>div>p  {
+    font-size: 15px;
+}
+
+.post-summary {
+    font-size: 15px;
+    inline-size: 90%;
+}
+
+.post {
+    height: 200px
 }
 
 @media (max-height: 900px){
@@ -480,26 +521,6 @@ h2 {
         width: 8vh;
         height: 8vh;
     }
-
-    .post-heading>.post-content>h1,
-    .post-content>.upper-post>h1 {
-        font-size: 25px;
-        inline-size: 40vw;
-    }
-
-    .post-content>.upper-post>div>h2, 
-    .post-content>.upper-post>div>div>p  {
-        font-size: 15px;
-    }
-
-    .post-summary {
-        font-size: 15px;
-        inline-size: 70vh;
-    }
-
-    .post {
-        height: 19vh;
-    }
 }
 
 @media (min-width: 600px) {
@@ -545,7 +566,6 @@ h2 {
 
     .post-summary {
         font-size: 12px;
-        inline-size: 70vw;
     }
 
     .post {

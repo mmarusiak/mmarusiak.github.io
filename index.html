@@ -164,11 +164,14 @@
                             <h1 class='post-title'>
                                 first post
                             </h1>
-                            <div class = 'right-side-psot'>
+                            <div class = 'right-side-post'>
                                 <div class = 'hashtags'>
      
                                 </div>
-                                <h2 class='post-link'>go to post</h2>
+                                <div class="post-info">
+                                    <h2 class='post-link'>go to post</h2>
+                                    <h2 class='post-date'>Some Date</h2>
+                                </div>
                             </div>
                         </div>
                         <p class='post-summary'>
@@ -184,11 +187,14 @@
                             <h1 class='post-title'>
                                 first post
                             </h1>
-                            <div class = 'right-side-psot'>
+                            <div class = 'right-side-post'>
                                 <div class = 'hashtags'>
 
                                 </div>
-                                <h2 class='post-link'>go to post</h2>
+                                <div class="post-info">
+                                    <h2 class='post-link'>go to post</h2>
+                                    <h2 class='post-date'>Some Date</h2>
+                                </div>
                             </div>
                         </div>
                         <p class='post-summary'>
@@ -204,11 +210,14 @@
                             <h1 class='post-title'>
                                 first post
                             </h1>
-                            <div class = 'right-side-psot'>
+                            <div class = 'right-side-post'>
                                 <div class = 'hashtags'>
 
                                 </div>
-                                <h2 class='post-link'>go to post</h2>
+                                <div class="post-info">
+                                    <h2 class='post-link'>go to post</h2>
+                                    <h2 class='post-date'>Some Date</h2>
+                                </div>
                             </div>
                         </div>
                         <p class='post-summary'>
@@ -273,7 +282,8 @@
             const postsSummary = document.getElementsByClassName('post-summary');
             const postsLink = document.getElementsByClassName('post-link');
             const hashtags = document.getElementsByClassName('hashtags');
-
+            const postDates = document.getElementsByClassName('post-date');
+            
             const postsIndex = getRandomPosts(posts.length, 3);
 
             for (let i = 0; i < postsTitle.length; i++) {
@@ -282,6 +292,7 @@
                 postsLink[i].addEventListener('click', function () {
                     window.document.location.href = posts[postsIndex[i]].source;
                 });
+                postDates[i].textContent = posts[postsIndex[i]].date;
                 loadHashtags(hashtags[i], posts[postsIndex[i]].hashtags);
             }
         }

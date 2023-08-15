@@ -456,6 +456,10 @@ h2 {
 }
 
 @media (max-height: 900px){
+    .post-date, .post-link {
+        font-size: 12px;
+    }
+
     .about-me-title,
     .emote {
         font-size: 30px;

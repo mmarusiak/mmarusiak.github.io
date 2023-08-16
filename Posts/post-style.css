@@ -1,0 +1,270 @@
+/* posts */
+.post,
+.post-heading {
+    border-width: 4px;
+    box-shadow: #F79824 -10px 10px;
+    border-style: solid;
+    border-color: #F79824;
+    border-radius: 20px;
+    background-color: #F0F7EE;
+}
+
+.post {
+    height: 200px;
+}
+
+.post-heading {
+    height: 100px;
+}
+
+.posts {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90vh;
+}
+
+.post-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-heading>.post-content {
+    justify-content: center;
+    align-items: center;
+}
+
+.post-heading>.post-content>h1 {
+    text-align: center;
+}
+
+.post>.post-content {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-content>.upper-post {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 96%;
+    margin-left: 0;
+}
+
+
+.post-content>.upper-post>.post-title {
+    width: 100%;
+    margin-top: 0;
+    height: 70%;
+}
+
+.right-side-post {
+    width: 100%;
+}
+
+.post-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.post-link {
+    cursor: pointer;
+}
+
+.post-date {
+    color: #31393C;
+}
+
+.post-date, .post-link {
+    font-size: 16px;
+}
+
+.post-heading>.post-content>h1,
+.post-content>.upper-post>h1 {
+    font-size: 25px;
+    inline-size: 40vw;
+}
+
+.post-content>.upper-post>div>h2, 
+.post-content>.upper-post>div>div>p  {
+    font-size: 15px;
+}
+
+.post-summary {
+    font-size: 15px;
+    inline-size: 90%;
+}
+
+.post {
+    height: 200px
+}
+
+@media (max-height: 900px){
+    .post-date, .post-link {
+        font-size: 12px;
+    }
+   
+    .post {
+        width: 80vw;
+    }
+
+    .post-heading {
+        width: 80vw;
+    }
+}
+
+@media (min-width: 600px) {
+
+    .post {
+        width: 500px;
+    }
+
+    .post-heading {
+        width: 500px;
+    }
+
+}
+
+@media (max-height: 960px) {
+
+    .post-heading>.post-content>h1,
+    .post-content>.upper-post>h1 {
+        font-size: 22px;
+        inline-size: 40vw;
+    }
+    
+    .post-content>.upper-post>div>h2, 
+    .post-content>.upper-post>div>div>p  {
+        font-size: 12px;
+    }
+
+    .post-summary {
+        font-size: 12px;
+    }
+
+    .post {
+        height: 19vh;
+    }
+}
+
+
+@media (max-width: 600px){
+    .about-me {
+        height: 240px;
+    }
+
+    .about-me,
+    .contact-content,
+    .skills-content {
+        width: 70vw;
+    }
+
+    .post {
+        width: 80vw;
+    }
+
+    .post-heading {
+        width: 80vw;
+    }
+
+    .post-heading>.post-content>h1,
+    .post-content>.upper-post>h1 {
+        font-size: 25px;
+        inline-size: 40vw;
+    }
+
+    .post-content>.upper-post>div>h2, 
+    .post-content>.upper-post>div>div>p  {
+        font-size: 15px;
+    }
+
+    .post-summary {
+        font-size: 15px;
+        inline-size: 70vw;
+    }
+
+    .post {
+        height: 19vh;
+    }
+}
+
+@media (max-width: 460px){
+    .post-heading>.post-content>h1,
+    .post-content>.upper-post>h1 {
+        font-size: 20px;
+        inline-size: 40vw;
+    }
+
+    .post-content>.upper-post>div>h2, 
+    .post-content>.upper-post>div>div>p  {
+        font-size: 12px;
+    }
+
+    .post-summary {
+        font-size: 12px;
+        inline-size: 70vw;
+    }
+
+    .post {
+        height: 19vh;
+    }
+}
+
+@media (max-width: 400px) {
+    @media (max-height: 800px) {
+        .posts {
+            height: 110vh;
+        }
+        .about-me-title {
+            font-size: 20px;
+        }
+
+        .profile-picture {
+            width: 75px;
+            height: 75px;
+        }
+
+        .post-heading>.post-content>h1,
+        .post-content>.upper-post>h1 {
+            font-size: 18px;
+            inline-size: 40vw;
+        }
+
+        .post-content>.upper-post>div>h2, 
+        .post-content>.upper-post>div>div>p  {
+            font-size: 10px;
+        }
+
+        .post-summary {
+            font-size: 10px;
+            inline-size: 70vw;
+        }
+
+        .post {
+            height: 21vh;
+        }
+    }
+}
+
+.hashtags {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 8px;
+}
+
+.hashtags > p{
+    cursor: pointer;
+    margin: 0;
+    border-radius: 5px;
+    border-color: #31393C;
+    color: #F0F7EE;
+    background-color: #31393C;
+    padding: 5px;
+    text-align: center;
+}

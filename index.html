@@ -154,7 +154,7 @@
                         <h1>
                             some of my posts
                         </h1>
-                        <p style = 'margin-bottom: 30px;' id = 'all-posts'>
+                        <p style = 'margin-bottom: 30px; cursor: pointer;' id = 'all-posts'>
                             see all my posts
                         </p>
                     </div>
@@ -247,10 +247,15 @@
             window.location.href = 'https://twitter.com/mmarusiak_';
         }
 
-        var projectsHeading = document.getElementById('projects-heading');
-        projectsHeading.addEventListener('click', function () {
+        const allProjects = document.getElementById('projects-heading');
+        allProjects.addEventListener('click', function () {
             window.location.href = './all-projects';
         });
+
+        const allPosts = document.getElementById('all-posts');
+        allPosts.addEventListener('click', function (){
+            window.location.href = './all-posts'
+        })
 
         $(window).scroll(function () {
             if ($(this).scrollTop() > 100) {

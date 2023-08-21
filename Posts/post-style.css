@@ -1,6 +1,11 @@
+body {
+    background-color: #31393C;
+}
+
 /* posts */
 .post,
-.post-heading {
+.post-heading,
+.post-main {
     border-width: 4px;
     box-shadow: #F79824 -10px 10px;
     border-style: solid;
@@ -109,7 +114,7 @@
         font-size: 12px;
     }
    
-    .post {
+    .post, .post-main {
         width: 80vw;
     }
 
@@ -120,7 +125,7 @@
 
 @media (min-width: 600px) {
 
-    .post {
+    .post, .post-main {
         width: 500px;
     }
 
@@ -267,4 +272,13 @@
     background-color: #31393C;
     padding: 5px;
     text-align: center;
+}
+
+.post-main{
+    display: flex;
+    justify-content: center;
+}
+
+.post-main > .post-content{
+    width: 90%;
 }

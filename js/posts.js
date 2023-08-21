@@ -53,7 +53,7 @@ async function getPostsInfo(ids = ['post-title', 'post-summary', 'date'], hashta
         }
         post.source = fileName;
         post.dateConverted = getDateFromRaw(post.date);
-        console.log(post)
+        
         posts.push(post);
     }
     return posts;

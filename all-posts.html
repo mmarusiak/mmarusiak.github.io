@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All posts</title>
     <link rel="stylesheet" href="Posts/post-style.css">
 </head>
+
 <body>
-    <div class='posts'>
-        <div class='post-main'>
-            <div class='post-content'>
-                <h1>
-                    my posts
-                </h1>
-                <p style = 'margin-bottom: 30px; cursor: pointer;' id = 'all-posts'>
-                    filter by
-                </p>
-                <div class = 'hashtags'>
-                    <p>
-                        hashtag 1
-                    </p>
-                    <p>
-                        hashtag 1
-                    </p>
-                    <p>
-                        hashtag 1
-                    </p>
-                    <p>
-                        hashtag 1
-                    </p>
-                    
-                </div>
+    <div class='post-main'>
+        <div class='post-content'>
+            <h1>
+                my posts
+            </h1>
+            <p style='margin-bottom: 30px; cursor: pointer;' id='all-posts'>
+                filter by
+            </p>
+            <div class='hashtags' id='hashtag-holder'>
+
             </div>
+
+            <label style="margin-top: 15px;" for="sort">Sort posts by:</label>
+            <select name="sort-select" id="sort-drop-down">
+                <optgroup label="Date">
+                    <option value="1">Newest to oldest</option>
+                    <option value="2">Oldest to newest</option>
+                </optgroup>
+                <optgroup label="Alphabetical">
+                    <option value="3">A to Z</option>
+                    <option value="4">Z to A</option>
+                </optgroup>
+            </select>
         </div>
+    </div>
+    <div class='posts' id='posts'>
         <div class='post'>
             <div class='post-content'>
                 <div class='upper-post'>
                     <h1 class='post-title'>
                         first post
                     </h1>
-                    <div class = 'right-side-post'>
-                        <div class = 'hashtags'>
+                    <div class='right-side-post'>
+                        <div class='hashtags'>
 
                         </div>
                         <div class="post-info">
@@ -62,8 +64,8 @@
                     <h1 class='post-title'>
                         first post
                     </h1>
-                    <div class = 'right-side-post'>
-                        <div class = 'hashtags'>
+                    <div class='right-side-post'>
+                        <div class='hashtags'>
 
                         </div>
                         <div class="post-info">
@@ -85,8 +87,8 @@
                     <h1 class='post-title'>
                         first post
                     </h1>
-                    <div class = 'right-side-post'>
-                        <div class = 'hashtags'>
+                    <div class='right-side-post'>
+                        <div class='hashtags'>
 
                         </div>
                         <div class="post-info">
@@ -104,7 +106,16 @@
         </div>
     </div>
 
+    <script src="./js/postCreator.js"></script>
     <script src="./js/posts.js"></script>
     <script src="./js/postsPage.js"></script>
+    <script>
+        // Get a reference to the select element
+        const selectElement = document.getElementById('sort-drop-down');
+
+        // Add an event listener to the select element to detect changes
+        selectElement.addEventListener('change', function () {sortBy(selectElement.value)});
+    </script>
 </body>
+
 </html>

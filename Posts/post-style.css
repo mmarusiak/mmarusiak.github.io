@@ -1,5 +1,10 @@
 body {
     background-color: #31393C;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
 }
 
 /* posts */
@@ -107,6 +112,10 @@ body {
 
 .post {
     height: 200px
+}
+
+.post-main {
+    margin-bottom: 100px;
 }
 
 @media (max-height: 900px){
@@ -281,4 +290,26 @@ body {
 
 .post-main > .post-content{
     width: 90%;
+}
+
+/* Style the select element */
+select#sort-drop-down {
+    background-color: #F0F7EE; /* Background color */
+    color: #31393C; /* Text color */
+    border: none; /* Remove default border */
+    padding: 5px; /* Add some padding for spacing */
+    font-size: 15px; /* Font size */
+}
+
+/* Style the optgroup labels */
+optgroup {
+    background-color: #F79824; /* Background color */
+    color: #F0F7EE; /* Text color */
+    font-weight: bold; /* Make the labels bold */
+}
+
+/* Style the options */
+option {
+    background-color: #F0F7EE; /* Background color */
+    color: #31393C; /* Text color */
 }

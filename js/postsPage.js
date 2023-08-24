@@ -16,8 +16,27 @@ async function fetchAndProcessPosts(){
         })
     })
 
+    const hashtagsHolder = document.getElementById('hashtag-holder');
+
+    allHashtags.forEach((hashtag) => {
+        const newP = document.createElement('p');
+        hashtagsHolder.appendChild(newP);
+        newP.textContent = hashtag;
+        newP.addEventListener('click', function() {filterByHashtag(hashtag)});
+    });
+
+    //clearPosts();
+
     console.log(postsArray);
     console.log(allHashtags)
+}
+
+function filterByHashtag(hashtagName){
+    console.log('clicked: ' + hashtagName);
+}
+
+function sortBy(sort){
+    console.log(sort);
 }
 
 fetchAndProcessPosts();

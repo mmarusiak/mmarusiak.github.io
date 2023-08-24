@@ -1,11 +1,11 @@
+const allHashtags = [];
+var postsArray;
+
 async function fetchAndProcessPosts(){
     const posts = await getPostsInfo();
-    const postsArray = Object.values(posts);
+    postsArray = Object.values(posts);
 
-    const allHashtags = [];
-
-    // sort array from newest to oldest
-    postsArray.sort((a, b) => b.dateConverted - a.dateConverted);
+    sortByDate('1');
 
     // here we should do some lookup table fancy thingy :)
     postsArray.forEach((post) => {
@@ -25,10 +25,19 @@ async function fetchAndProcessPosts(){
         newP.addEventListener('click', function() {filterByHashtag(hashtag)});
     });
 
-    //clearPosts();
+    clearPosts();
+    displayPosts(postsArray);
 
     console.log(postsArray);
     console.log(allHashtags)
+}
+
+function displayPosts(postsToDisplay){
+    const postsHolder = document.getElementById('posts');
+    postsToDisplay.forEach((post) => {
+        const postElement = createPost(post.title, post.content, post.hashtags, post.date, post.source);
+        postsHolder.appendChild(postElement);
+    });
 }
 
 function filterByHashtag(hashtagName){
@@ -36,7 +45,32 @@ function filterByHashtag(hashtagName){
 }
 
 function sortBy(sort){
-    console.log(sort);
+    if (sort == '1' || sort == '2'){
+        sortByDate(sort);
+    }
+    else {
+        sortAlphabetical(sort);
+    }
+
+    clearPosts();
+    displayPosts(postsArray);
+}
+
+function sortByDate(sort){
+    const multiplier = sort == '1' ? 1 : -1;
+   postsArray.sort((a, b) => multiplier * (b.dateConverted - a.dateConverted));
+}
+
+function sortAlphabetical(sort){
+    const multiplier = sort == '3' ? 1 : -1;
+    postsArray.sort((a, b) => {
+        const titleA = a.title.toLowerCase();
+        const titleB = b.title.toLowerCase();
+
+        if (titleA < titleB) return -1 * multiplier;
+        if (titleA > titleB) return 1 * multiplier;
+        return 0;
+      });
 }
 
 fetchAndProcessPosts();

@@ -1,5 +1,5 @@
 function createPost(postTitleContent, postSummaryContent,
-    hashtagsContent, postDateContent) {
+    hashtagsContent, postDateContent, link) {
     // Create the outermost div with class 'post'
     const postDiv = document.createElement('div');
     postDiv.className = 'post';
@@ -26,7 +26,7 @@ function createPost(postTitleContent, postSummaryContent,
     hashtagsDiv.className = 'hashtags';
 
     // Create all hashtags
-    hashtagsContent.array.forEach(hashtag => {
+    hashtagsContent.forEach(hashtag => {
         const hashElement = document.createElement('p');
         hashElement.textContent = hashtag;
         hashtagsDiv.appendChild(hashElement);
@@ -40,6 +40,9 @@ function createPost(postTitleContent, postSummaryContent,
     const postLink = document.createElement('h2');
     postLink.className = 'post-link';
     postLink.textContent = 'go to post';
+    postLink.addEventListener('click', function(){
+        window.location.href = link;
+    })
 
     // Create the 'post-date' h2 element and set its text content
     const postDate = document.createElement('h2');
@@ -61,6 +64,8 @@ function createPost(postTitleContent, postSummaryContent,
     postContentDiv.appendChild(upperPostDiv);
     postContentDiv.appendChild(postSummary);
     postDiv.appendChild(postContentDiv);
+
+    return(postDiv);
 }
 
 function clearPosts(postContainerId = 'posts') {

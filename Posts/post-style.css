@@ -167,7 +167,7 @@ body {
     }
 
     .post {
-        height: 19vh;
+        height: 175px;
     }
 }
 
@@ -206,10 +206,6 @@ body {
         font-size: 15px;
         inline-size: 70vw;
     }
-
-    .post {
-        height: 19vh;
-    }
 }
 
 @media (max-width: 460px){
@@ -227,10 +223,6 @@ body {
     .post-summary {
         font-size: 12px;
         inline-size: 70vw;
-    }
-
-    .post {
-        height: 19vh;
     }
 }
 
@@ -259,10 +251,6 @@ body {
         .post-summary {
             font-size: 10px;
             inline-size: 70vw;
-        }
-
-        .post {
-            height: 21vh;
         }
     }
 }

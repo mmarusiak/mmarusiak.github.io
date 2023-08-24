@@ -26,6 +26,7 @@ body {
 
 .post {
     height: 200px;
+    margin-top: 60px;
 }
 
 .post-heading {
@@ -37,7 +38,6 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    height: 90vh;
 }
 
 .post-content {
@@ -236,9 +236,6 @@ body {
 
 @media (max-width: 400px) {
     @media (max-height: 800px) {
-        .posts {
-            height: 110vh;
-        }
         .about-me-title {
             font-size: 20px;
         }

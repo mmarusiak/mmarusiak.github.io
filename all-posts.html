@@ -14,14 +14,19 @@
             <h1>
                 my posts
             </h1>
-            <p style='margin-bottom: 30px; cursor: pointer;' id='all-posts'>
-                filter by
-            </p>
+            <div style="display: flex; justify-content: space-between; width: 45%;">
+                <p id='all-posts'>
+                    filter by
+                </p>
+                <p style='cursor: pointer;' id = 'clear-filtering'>
+                    clear filtering
+                </p>
+            </div>
             <div class='hashtags' id='hashtag-holder'>
 
             </div>
 
-            <label style="margin-top: 15px;" for="sort">Sort posts by:</label>
+            <label style="margin-top: 30px;" for="sort">Sort posts by:</label>
             <select name="sort-select" id="sort-drop-down">
                 <optgroup label="Date">
                     <option value="1">Newest to oldest</option>
@@ -112,9 +117,11 @@
     <script>
         // Get a reference to the select element
         const selectElement = document.getElementById('sort-drop-down');
-
-        // Add an event listener to the select element to detect changes
         selectElement.addEventListener('change', function () {sortBy(selectElement.value)});
+        
+        // Get a reference to clear filtering element
+        const clearFilteringElement = document.getElementById('clear-filtering');
+        clearFilteringElement.addEventListener('click', function () {clearFiltering();})
     </script>
 </body>
 

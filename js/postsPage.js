@@ -1,9 +1,12 @@
 const allHashtags = [];
 var postsArray;
+var currentPosts;
+var currentSortMethod = '1';
 
 async function fetchAndProcessPosts(){
     const posts = await getPostsInfo();
     postsArray = Object.values(posts);
+    currentPosts = postsArray;
 
     sortByDate('1');
 
@@ -41,7 +44,17 @@ function displayPosts(postsToDisplay){
 }
 
 function filterByHashtag(hashtagName){
-    console.log('clicked: ' + hashtagName);
+    const newPosts = [];
+    postsArray.forEach((post) => {
+        if (post.hashtags.includes(hashtagName)){
+            newPosts.push(post);
+        }
+    });
+
+    currentPosts = Object.values(newPosts);
+
+    clearPosts();
+    displayPosts(newPosts);
 }
 
 function sortBy(sort){
@@ -53,17 +66,18 @@ function sortBy(sort){
     }
 
     clearPosts();
-    displayPosts(postsArray);
+    displayPosts(currentPosts);
+    currentSortMethod = sort;
 }
 
 function sortByDate(sort){
     const multiplier = sort == '1' ? 1 : -1;
-   postsArray.sort((a, b) => multiplier * (b.dateConverted - a.dateConverted));
+    currentPosts.sort((a, b) => multiplier * (b.dateConverted - a.dateConverted));
 }
 
 function sortAlphabetical(sort){
     const multiplier = sort == '3' ? 1 : -1;
-    postsArray.sort((a, b) => {
+    currentPosts.sort((a, b) => {
         const titleA = a.title.toLowerCase();
         const titleB = b.title.toLowerCase();
 
@@ -71,6 +85,12 @@ function sortAlphabetical(sort){
         if (titleA > titleB) return 1 * multiplier;
         return 0;
       });
+}
+
+function clearFiltering(){
+    currentPosts = postsArray;
+
+    sortBy(currentSortMethod);
 }
 
 fetchAndProcessPosts();

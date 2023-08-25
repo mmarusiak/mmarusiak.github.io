@@ -25,9 +25,9 @@ jobs:
         id: check_changes
         run: |
           if git diff --exit-code; then
-            echo "CHANGES_STATE=no_changes" >> $GITHUB_ENV
+            echo "CHANGES_STATE=no_changes" >> "$GITHUB_ENV"
           else
-            echo "CHANGES_STATE=changes_detected" >> $GITHUB_ENV
+            echo "CHANGES_STATE=changes_detected" >> "$GITHUB_ENV"
 
       - name: Commit changes
         run: |

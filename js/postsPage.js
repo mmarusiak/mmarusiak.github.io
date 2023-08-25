@@ -28,8 +28,8 @@ async function fetchAndProcessPosts(){
         newP.addEventListener('click', function() {filterByHashtag(hashtag)});
     });
 
-    clearPosts();
-    displayPosts(postsArray);
+    //clearPosts();
+    //displayPosts(postsArray);
 
     console.log(postsArray);
     console.log(allHashtags)
@@ -38,7 +38,7 @@ async function fetchAndProcessPosts(){
 function displayPosts(postsToDisplay){
     const postsHolder = document.getElementById('posts');
     postsToDisplay.forEach((post) => {
-        const postElement = createPost(post.title, post.content, post.hashtags, post.date, post.source);
+        const postElement = createPost(post.title, post.content, post.hashtags, post.date, post.source, post.postIcon);
         postsHolder.appendChild(postElement);
     });
 }

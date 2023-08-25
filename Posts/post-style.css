@@ -12,6 +12,10 @@ body {
     align-items: center;
 }
 
+.upper-post > div > img{
+    width: 20px;
+}
+
 /* posts */
 .post,
 .post-heading,
@@ -100,7 +104,7 @@ body {
 }
 
 .post-heading>.post-content>h1,
-.post-content>.upper-post>h1 {
+.post-content>.upper-post>div>h1 {
     font-size: 25px;
     inline-size: 40vw;
 }
@@ -152,7 +156,7 @@ body {
 @media (max-height: 960px) {
 
     .post-heading>.post-content>h1,
-    .post-content>.upper-post>h1 {
+    .post-content>.upper-post>div>h1 {
         font-size: 22px;
         inline-size: 40vw;
     }
@@ -192,7 +196,7 @@ body {
     }
 
     .post-heading>.post-content>h1,
-    .post-content>.upper-post>h1 {
+    .post-content>.upper-post>div>h1 {
         font-size: 25px;
         inline-size: 40vw;
     }
@@ -210,7 +214,7 @@ body {
 
 @media (max-width: 460px){
     .post-heading>.post-content>h1,
-    .post-content>.upper-post>h1 {
+    .post-content>.upper-post>div>h1 {
         font-size: 20px;
         inline-size: 40vw;
     }
@@ -238,7 +242,7 @@ body {
         }
 
         .post-heading>.post-content>h1,
-        .post-content>.upper-post>h1 {
+        .post-content>.upper-post>div>h1 {
             font-size: 18px;
             inline-size: 40vw;
         }

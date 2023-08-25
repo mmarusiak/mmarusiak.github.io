@@ -13,7 +13,7 @@ const months = [
     'Dec.'
 ]
 
-async function getPostsInfo(ids = ['post-title', 'post-summary', 'date'], hashtagClass = 'hashtag') {
+async function getPostsInfo(ids = ['post-title', 'post-summary', 'date', 'icon-img'], hashtagClass = 'hashtag') {
     const response = await fetch('./Posts/posts.json');
     const fileList = await response.json();
 
@@ -33,7 +33,8 @@ async function getPostsInfo(ids = ['post-title', 'post-summary', 'date'], hashta
              date: "post-date", 
              dateConverted: "date-converted", 
              source: "source", 
-             hashtags: [] 
+             hashtags: [],
+             postIcon : "" 
             }
         for (const id of ids) {
             const element = doc.getElementById(id);
@@ -42,8 +43,10 @@ async function getPostsInfo(ids = ['post-title', 'post-summary', 'date'], hashta
                     post.title = element.textContent;
                 } else if (ids.indexOf(id) == 1){
                     post.content = element.textContent;
-                }else {
+                }else if (ids.indexOf(id) == 2){
                     post.date = element.textContent;
+                }else{
+                    post.postIcon = element.src;
                 }
             }
         }

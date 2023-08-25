@@ -4,14 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Template Post</title>
-    <link rel="stylesheet" href="/Posts/post-style.css">
+    <link rel="stylesheet" href="/Posts/default-post-styling.css">
     <link rel="icon" href="link-to-icon">
-    <!--
-        i think it's good idea to also get icon from post and display it on main page
-        maybe with some hashtags??
-    -->
 </head>
 <body>
-    
+
+    <h2 id = 'back-to-all-posts'>back to all posts</h2>
+    <div style="margin-top: 0px;">
+    <div style = 'display: flex; width: 50%; justify-content: space-around;'>
+        <h1 id = 'post-title'>post title</h1>
+        <img id = 'icon-img' src="https://imgs.search.brave.com/dchp_08XLcsWSOLcQxutT3XtzVo0B_B5A1yPEdLebcQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/bWVycmlhbS13ZWJz/dGVyLmNvbS9kaXN0/LWNyb3NzLWR1bmdh/cmVlcy8yMDIzLTA4/LTE4LS0xNy0zNC01/OC1heDJjbC9pbWFn/ZXMvc3ZnL3JlZGVz/aWduL2NvcHktaWNv/bi5zdmc.svg" alt="">
+    </div>
+    <p id = 'date'>Sep. 25 2023</p>
+
+    <div class = 'hashtags'>
+        <p class = 'hashtag'>#test-new-test</p>
+        <p class = 'hashtag'>#test2</p>
+        <p class = 'hashtag'>#test</p>
+        <p class = 'hashtag'>#test</p>
+    </div>
+    <h2 class = 'summary' id = 'post-summary'>post summary</h2>
+    <div class = 'line'></div>
+    <h2>some content</h2>
+    <img src="https://user-images.githubusercontent.com/20907620/231538124-8653acdd-8099-4530-819f-e84db56788db.gif" alt="some image">
+    <h2>some content</h2>
+    </div>
+    <script>
+        const backToAllPostsElement = document.getElementById('back-to-all-posts');
+        backToAllPostsElement.addEventListener('click', function() {document.location.href = '../all-posts'})
+    </script>
 </body>
 </html>

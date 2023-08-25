@@ -1,5 +1,5 @@
 function createPost(postTitleContent, postSummaryContent,
-    hashtagsContent, postDateContent, link) {
+    hashtagsContent, postDateContent, link, postIconSource) {
     // Create the outermost div with class 'post'
     const postDiv = document.createElement('div');
     postDiv.className = 'post';
@@ -12,10 +12,15 @@ function createPost(postTitleContent, postSummaryContent,
     const upperPostDiv = document.createElement('div');
     upperPostDiv.className = 'upper-post';
 
+    const postTitleDiv = document.createElement('div');
+
     // Create the 'post-title' h1 element and set its text content
     const postTitle = document.createElement('h1');
     postTitle.className = 'post-title';
     postTitle.textContent = postTitleContent;
+
+    const postImage = document.createElement('img');
+    postImage.src = postIconSource;
 
     // Create the 'right-side-post' div
     const rightSidePostDiv = document.createElement('div');
@@ -59,7 +64,9 @@ function createPost(postTitleContent, postSummaryContent,
     hashtagsDiv.appendChild(postDate);
     rightSidePostDiv.appendChild(hashtagsDiv);
     rightSidePostDiv.appendChild(postInfoDiv);
-    upperPostDiv.appendChild(postTitle);
+    postTitleDiv.appendChild(postTitle);
+    postTitleDiv.appendChild(postImage);
+    upperPostDiv.appendChild(postTitleDiv);
     upperPostDiv.appendChild(rightSidePostDiv);
     postContentDiv.appendChild(upperPostDiv);
     postContentDiv.appendChild(postSummary);

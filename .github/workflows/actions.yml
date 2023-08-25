@@ -23,7 +23,11 @@ jobs:
 
       - name: Check for changes
         id: check_changes
-        run: git diff --exit-code || echo "CHANGES_STATE=1" >> "$GITHUB_OUTPUT"
+        run: |
+          if git diff --exit-code; then
+            echo "CHANGES_STATE=no_changes" >> $GITHUB_ENV
+          else
+            echo "CHANGES_STATE=changes_detected" >> $GITHUB_ENV
 
       - name: Commit changes
         run: |
@@ -31,4 +35,4 @@ jobs:
           git config user.email "marcel.marusiak@gmail.com"
           git commit -am "Update posts.json" -m "Auto-generated commit by GitHub Action"
           git push
-        if: steps.check_changes.outputs.CHANGES_STATE == "1"
+        if: env.CHANGES_STATE == 'changes_detected'

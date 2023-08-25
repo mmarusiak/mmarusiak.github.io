@@ -31,4 +31,4 @@ jobs:
           git config user.email "marcel.marusiak@gmail.com"
           git commit -am "Update posts.json" -m "Auto-generated commit by GitHub Action"
           git push
-        if: steps.check_changes.outputs.return-code == '1'
+        if: steps.check_changes.outputs.return-code != '0'

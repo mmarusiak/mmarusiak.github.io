@@ -23,7 +23,7 @@ jobs:
 
       - name: Check for changes
         id: check_changes
-        run: git diff --exit-code || echo "Changes detected"
+        run: git diff --exit-code || echo "Changes detected ${{ steps.check_changes.outputs.return-code }}"
 
       - name: Commit changes
         run: |

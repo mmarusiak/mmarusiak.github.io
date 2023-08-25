@@ -28,8 +28,8 @@ async function fetchAndProcessPosts(){
         newP.addEventListener('click', function() {filterByHashtag(hashtag)});
     });
 
-    //clearPosts();
-    //displayPosts(postsArray);
+    clearPosts();
+    displayPosts(postsArray);
 
     console.log(postsArray);
     console.log(allHashtags)

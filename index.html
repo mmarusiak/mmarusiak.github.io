@@ -162,9 +162,12 @@
                 <div class='post'>
                     <div class='post-content'>
                         <div class='upper-post'>
-                            <h1 class='post-title'>
-                                first post
-                            </h1>
+                            <div>
+                                <h1 class='post-title'>
+                                    first post
+                                </h1>
+                                <img src="" alt="" class = 'post-img'>
+                            </div>
                             <div class = 'right-side-post'>
                                 <div class = 'hashtags'>
      
@@ -185,9 +188,12 @@
                 <div class='post'>
                     <div class='post-content'>
                         <div class='upper-post'>
-                            <h1 class='post-title'>
-                                first post
-                            </h1>
+                            <div>
+                                <h1 class='post-title'>
+                                    first post
+                                </h1>
+                                <img src="" alt="" class = 'post-img'>
+                            </div>
                             <div class = 'right-side-post'>
                                 <div class = 'hashtags'>
 
@@ -208,9 +214,12 @@
                 <div class='post'>
                     <div class='post-content'>
                         <div class='upper-post'>
-                            <h1 class='post-title'>
-                                first post
-                            </h1>
+                            <div>
+                                <h1 class='post-title'>
+                                    first post
+                                </h1>
+                                <img src="" alt="" class = 'post-img'>
+                            </div>
                             <div class = 'right-side-post'>
                                 <div class = 'hashtags'>
 
@@ -272,9 +281,10 @@
 
         function getRandomPosts(amountOfPosts, howManyPosts) {
             const posts = [];
+            
             for (let i = 0; i < howManyPosts; i++) {
                 var post = Math.floor(Math.random() * (amountOfPosts));
-                while (posts.includes(post)) {
+                while (posts.includes(post) && amountOfPosts >= howManyPosts) {
                     post = Math.floor(Math.random() * (amountOfPosts));
                 }
                 console.log(post)
@@ -289,6 +299,7 @@
             const postsLink = document.getElementsByClassName('post-link');
             const hashtags = document.getElementsByClassName('hashtags');
             const postDates = document.getElementsByClassName('post-date');
+            const postImages = document.getElementsByClassName('post-img');
             
             const postsIndex = getRandomPosts(posts.length, 3);
 
@@ -299,6 +310,7 @@
                     window.document.location.href = posts[postsIndex[i]].source;
                 });
                 postDates[i].textContent = posts[postsIndex[i]].date;
+                postImages[i].src = posts[postsIndex[i]].postIcon;
                 loadHashtags(hashtags[i], posts[postsIndex[i]].hashtags);
             }
         }

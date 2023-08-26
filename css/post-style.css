@@ -67,7 +67,7 @@ body {
 
 .post-content>.upper-post {
     display: flex;
-    align-items: center;
+    align-items: start;
     flex-direction: row;
     justify-content: space-between;
     width: 96%;
@@ -306,4 +306,12 @@ optgroup {
 option {
     background-color: #F0F7EE; /* Background color */
     color: #31393C; /* Text color */
+}
+
+.post-link{
+    color: #F79824;
+}
+
+.upper-post > div {
+    margin-top: 0;
 }

@@ -353,15 +353,15 @@ h2 {
 
 
 .github {
-    background-image: url('./images/github-mark.png');
+    background-image: url('/images/github-mark.png');
 }
 
 .linkedin {
-    background-image: url('./images/LI-In-Bug.png');
+    background-image: url('/images/LI-In-Bug.png');
 }
 
 .twitter {
-    background-image: url('./images/twitter.webp');
+    background-image: url('/images/twitter.webp');
 }
 
 @media (max-height: 900px){

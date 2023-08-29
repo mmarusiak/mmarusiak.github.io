@@ -24,9 +24,6 @@
                 <p id='all-posts'>
                     filter by
                 </p>
-                <p style='cursor: pointer;' id = 'clear-filtering'>
-                    clear filtering
-                </p>
             </div>
             <div class='hashtags' id='hashtag-holder'>
 
@@ -131,10 +128,6 @@
         const selectElement = document.getElementById('sort-drop-down');
         selectElement.addEventListener('change', function () {sortBy(selectElement.value)});
         
-        // Get a reference to clear filtering element and make button from it
-        const clearFilteringElement = document.getElementById('clear-filtering');
-        clearFilteringElement.addEventListener('click', function () {clearFiltering();})
-    
         // Get a referebce to back to home element and make button from it
         const backToHomeElement = document.getElementById('back-to-home');
         backToHomeElement.addEventListener('click', function () {document.location.href = './'})

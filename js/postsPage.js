@@ -2,6 +2,7 @@ const allHashtags = [];
 var postsArray;
 var currentPosts;
 var currentSortMethod = '1';
+var currentHashtag = 'none'
 
 async function fetchAndProcessPosts(){
     const posts = await getPostsInfo();
@@ -25,6 +26,8 @@ async function fetchAndProcessPosts(){
         const newP = document.createElement('p');
         hashtagsHolder.appendChild(newP);
         newP.textContent = hashtag;
+        newP.className = 'hashtag-notset';
+        newP.id = hashtag;
         newP.addEventListener('click', function() {filterByHashtag(hashtag)});
     });
 
@@ -33,6 +36,23 @@ async function fetchAndProcessPosts(){
 
     console.log(postsArray);
     console.log(allHashtags)
+}
+
+function changeHashtagDisplay(oldHashtag, currentHashtag){
+    const elements = [document.getElementById(oldHashtag),
+                        document.getElementById(currentHashtag)]
+    if (oldHashtag == currentHashtag){
+        elements[0].className = 'hashtag-notset';
+        return;
+    }
+    else {
+        elements[1].className = 'hashtag-set';
+
+        if (oldHashtag != 'none') {
+            elements[0].className = 'hashtag-notset';
+        }
+        return;
+    }
 }
 
 function displayPosts(postsToDisplay){
@@ -44,6 +64,16 @@ function displayPosts(postsToDisplay){
 }
 
 function filterByHashtag(hashtagName){
+    changeHashtagDisplay(currentHashtag, hashtagName)
+    if (hashtagName == currentHashtag){
+        currentPosts = postsArray;
+        currentHashtag = 'none';
+        sortBy(currentSortMethod);
+        return;
+    }
+
+    currentHashtag = hashtagName;
+
     const newPosts = [];
     postsArray.forEach((post) => {
         if (post.hashtags.includes(hashtagName)){
@@ -53,8 +83,7 @@ function filterByHashtag(hashtagName){
 
     currentPosts = Object.values(newPosts);
 
-    clearPosts();
-    displayPosts(newPosts);
+    sortBy(currentSortMethod);
 }
 
 function sortBy(sort){

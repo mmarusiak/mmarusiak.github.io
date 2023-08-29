@@ -315,3 +315,16 @@ option {
 .upper-post > div {
     margin-top: 0;
 }
+
+p.hashtag-notset {
+    background-color: #F0F7EE;
+    color: #31393C;
+    border-color: #31393C;
+    border-style: solid;
+}
+
+p.hashtag-set {
+    background-color: #31393C;
+    color: #F0F7EE;
+    border-style: solid;
+}

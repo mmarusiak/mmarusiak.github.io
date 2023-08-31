@@ -31,6 +31,8 @@ async function fetchAndProcessPosts(){
         newP.addEventListener('click', function() {filterByHashtag(hashtag)});
     });
 
+    if(currentHashtag != 'none') filterByHashtag(currentHashtag);
+
     clearPosts();
     displayPosts(postsArray);
 

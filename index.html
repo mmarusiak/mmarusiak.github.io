@@ -242,7 +242,8 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./js/posts.js"></script>
+    <script src="/js/posts.js"></script>
+    <script src="/js/hashtagFilterOtherPage.js"></script>
     <script>
         function github() {
             window.location.href = 'https://github.com/mmarusiak';
@@ -315,11 +316,13 @@
             }
         }
         getPostsInfo()
-            .then(result => { displayPosts(result); })
+            .then(result => { 
+                displayPosts(result); 
+                hashtagLoader();
+            })
             .catch(error => {
                 console.error(error);
             });
-        
     </script>
 </body>
 

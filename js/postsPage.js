@@ -3,13 +3,14 @@ var postsArray;
 var currentPosts;
 var currentSortMethod = '1';
 var currentHashtag = 'none'
+var ready = false;
 
 async function fetchAndProcessPosts(){
     const posts = await getPostsInfo();
     postsArray = Object.values(posts);
     currentPosts = postsArray;
 
-    sortByDate('1');
+    sortByDate(currentSortMethod);
 
     // here we should do some lookup table fancy thingy :)
     postsArray.forEach((post) => {
@@ -31,13 +32,17 @@ async function fetchAndProcessPosts(){
         newP.addEventListener('click', function() {filterByHashtag(hashtag)});
     });
 
-    if(currentHashtag != 'none') filterByHashtag(currentHashtag);
-
     clearPosts();
     displayPosts(postsArray);
+    ready = true;
+}
 
-    console.log(postsArray);
-    console.log(allHashtags)
+async function getDataFromLink(){
+    if (!document.location.href.includes('?')) return;
+    const urlData = document.location.href.split('?')[1];
+    // extract data
+    const data = urlData.split('=')[1];
+    filterByHashtag(data);
 }
 
 function changeHashtagDisplay(oldHashtag, currentHashtag){
@@ -66,6 +71,7 @@ function displayPosts(postsToDisplay){
 }
 
 function filterByHashtag(hashtagName){
+    console.log('filtering by ' + hashtagName);
     changeHashtagDisplay(currentHashtag, hashtagName)
     if (hashtagName == currentHashtag){
         currentPosts = postsArray;
@@ -124,4 +130,9 @@ function clearFiltering(){
     sortBy(currentSortMethod);
 }
 
-fetchAndProcessPosts();
+async function main(){
+    await fetchAndProcessPosts();
+    await getDataFromLink();
+}
+
+main();

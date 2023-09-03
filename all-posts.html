@@ -32,7 +32,7 @@
             </div>
 
             <label style="margin-top: 30px;" for="sort">Sort posts by:</label>
-            <select name="sort-select" id="sort-drop-down">
+            <select name="sort-select" id="sort">
                 <optgroup label="Date">
                     <option value="1">Newest to oldest</option>
                     <option value="2">Oldest to newest</option>
@@ -127,21 +127,12 @@
     <script src="./js/postsPage.js"></script>
     <script>
         // Get a reference to the select element and manage dropdown options
-        const selectElement = document.getElementById('sort-drop-down');
+        const selectElement = document.getElementById('sort');
         selectElement.addEventListener('change', function () {sortBy(selectElement.value)});
         
         // Get a referebce to back to home element and make button from it
         const backToHomeElement = document.getElementById('back-to-home');
-        backToHomeElement.addEventListener('click', function () {document.location.href = './'})
-
-        $(document).ready(function(){
-            const urlStr = document.location.href.split('?')[0];
-            console.log(urlStr);
-            var url = $(this).data('url');
-            console.log(url);
-            var hashID = url.queryKey['hashtag-filter'];
-            filterByHashtag(hashID);
-        });
+        backToHomeElement.addEventListener('click', function () {document.location.href = './'});
     </script>
 </body>
 

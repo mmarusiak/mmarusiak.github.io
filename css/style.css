@@ -1,523 +1,153 @@
-* {
-    font-family: 'REM', sans-serif;
-    cursor: default;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
-    background-color: #31393C;
+    background-color: #F4F3EE;
 }
 
-body::-webkit-scrollbar {
-    display: none;
+.navbar > h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    color: #8A817C;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
-body {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
-}
-
-.main-section {
-    width: 95vw;
-    height: 100%;
-}
-
-
-/* main section with all divs centering etc.*/
-
-@media (min-width: 1700px) {
-    .main-section>div {
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: row;
-        align-items: center;
-        width: clamp (900px, 80vw, 2000px);
-        margin-left: 220px;
-        margin-right: auto;
-    }
-
-    .posts {
-        margin-left: 60px;
-    }
-
-    .main-section>div>.scroll-down {
-        display: none;
-    }
-}
-
-@media (max-width: 1700px) {
-    .main-section>div {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .posts {
-        margin-top: 60px;
-    }
-
-    .scroll-down {
-        color: #F0F7EE;
-        text-align: center;
-        font-size: 16px;
-        font-weight: 500;
-        margin-top: 3px;
-    }
-}
-
-
-
-@media (min-width: 1200px) {
-    .main-section {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .main-section>div>div.none {
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: row-reverse;
-        align-items: center;
-        width: clamp (900px, 80vw, 2000px);
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media (max-width: 1200px) {
-    .main-section {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
-
-    .right-side-panel {
-        margin-bottom: 120px;
-    }
-}
-
-@media (min-width: 900px) {
-    .right-side-panel {
-        margin-left: 50px;
-    }
-
-    /*@media (max-width: 1400px) {
-        .right-side-panel {
-            margin-left: 10vw;
-        }
-    }
-
-    @media (min-width: 1400px) {
-        .right-side-panel {
-            margin-left: 20vw;
-        }
-    }*/
-}
-
-.posts {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 90vh;
-}
-
-.right-side-panel {
+.main{
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: space-between;
-    height: 90vh;
+    width: 70%;
+    max-width: 700px;
+    margin: auto;
 }
 
-.roadmap {
-    margin: 20px 40px;
+.main > .section-cover {
+    height: 110px;
+}
+
+.main > .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main > .header > h1 {
+    font-size: 40px;
+}
+
+h1 {
+    color: #463f3a;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.main > .header > img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.main > .cross-section {
+    margin-top: 10px;
+    height: 2px;
     width: 100%;
-    height: 90vh;
+    border-radius: 40px;
+    background-color: #463f3a;
+}
+
+.main > .content > .row-section {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-
-/* boxes styling */
-
-.about-me,
-.contact-content,
-.skills-content{
-    border-width: 4px;
-    box-shadow: #F79824 -10px 10px;
-    border-style: solid;
-    border-color: #F79824;
-    border-radius: 20px;
-    background-color: #F0F7EE;
+.main > .content > .about-me > h2 {
+    color: #463f3a;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
 }
 
-.about-me {
-    height: 300px;
-}
-
-.skills-content,
-.contact-content {
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    align-items: start;
-}
-
-/* about me section */
-
-.profile-picture {
-    vertical-align: middle;
-    height: 125px;
-    width: 125px;
-    border-radius: 40%;
-    margin-right: 25px;
-    margin-left: 25px;
-}
-
-.about-me {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-me>div {
-    width: 90%;
-    height: 100%;
-}
-
-.about-me-content {
-    display: flex;
-    justify-content: right;
-}
-
-.header {
-    color: #F0F7EE;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-.about-me-title {
-    font-size: 35px;
-    color: #31393C;
-    font-weight: 1000;
+.quick-link {
+    color: #8A817C;
+    cursor: pointer;
     text-decoration: underline;
 }
 
-.emote {
-    text-decoration: none;
+.quick-link:hover {
+    color: #463f3a;
 }
 
-.about-me-text {
-    inline-size: 190px;
-    margin-right: 15px;
-    margin-top: 0;
+
+.main > .content > .row-section > .links > h1 {
+    margin-bottom: 2px;
 }
 
-.about-me-text>span {
+.main > .content > .row-section > .links > h2 {
+    margin-top: 2px;
+    font-family: "Poppins", sans-serif;
     font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
 }
 
-.about-me-text>span {
+.main > .content > .row-section > .posts {
+    width: 280px;
+}
+
+.main > .content > .row-section > .posts > h1 {
+    margin-bottom: 2px;
+}
+
+.post {
+    display: flex;
+    justify-content: row;
+    margin-bottom: 10px;
+}
+
+.post > img {
+    width: 30px;
+    height: 30px;
+}
+
+.post > h2 {
+    padding: 0;
     margin: 0;
-}
-
-
-/* text styling */
-
-h1>span {
-    font-size: 50px;
-}
-
-span.bold {
-    font-weight: 800;
-}
-
-
-h2 {
-    color: #FDCA40;
-}
-
-
-/* roadap section */
-
-.ab-stick {
-    background-color: #F79824;
-    width: 15px;
-    height: 100%;
-    border-radius: 20px/10px;
-}
-
-.roadmap-signs {
     margin-left: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: space-between;
-    height: 100%;
-}
-
-.roadmap-stick {
-    height: 100%;
-    width: 16px;
-    background-color: #F79824;
-    border-radius: 20px/10px;
-    margin-right: 25px;
-}
-
-.roadmap-sign {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-left: 10px;
-}
-
-.roadmap-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
-}
-
-.roadmap-p {
-    color: #F0F7EE;
-    inline-size: 300px;
-}
-
-
-/* skills and contact section */
-
-.skills-content>div {
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 20px;
-}
-
-.skills-content>div>div {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-left: 5px;
-    display: flex;
-    justify-content: center;
-}
-
-.skills-content>div>div>h2 {
-    color: #31393C;
-    font-size: 16px;
-    font-weight: 300;
-    margin-left: 20px;
-    inline-size: 280px;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.skills-img {
-    height: 40px;
-    width: 40px;
-}
-
-.contact-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contact-content>div {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.contact-content>div>button {
-    background-size: cover;
-    width: 90px;
-    height: 90px;
-    border-width: 0;
-    background-color: transparent;
-    display: flex;
+    margin-top: 2px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
     cursor: pointer;
 }
 
-/* contact buttons */
-
-#projects-heading {
-    color: #31393C;
-    font-weight: 500;
-    cursor: pointer;
+.post-title {
+    color:#8A817C;
+    text-decoration: underline;
 }
 
-
-.github {
-    background-image: url('/images/github-mark.png');
+.post-title:hover{
+    color: #463f3a;
 }
 
-.linkedin {
-    background-image: url('/images/LI-In-Bug.png');
+.footer {
+    background-color: #F4F3EE;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
-.twitter {
-    background-image: url('/images/twitter.webp');
-}
-
-@media (max-height: 900px){
-
-    .about-me-title,
-    .emote {
-        font-size: 30px;
-    }
-
-    .about-me-text {
-        font-size: 1.6vh;
-    }
-
-    .right-side-panel {
-        align-items: center;
-    }
-
-    .about-me {
-        height: 240px;
-    }
-
-    .about-me,
-    .contact-content,
-    .skills-content {
-        width: 70vw;
-    }
-
-    .skills-content>div>div>h2 {
-        inline-size: 50vw;
-    }
-
-    .contact-content>div>button {
-        width: 8vh;
-        height: 8vh;
-    }
-
-    #projects-heading {
-        font-size: 3vh;
-    }
-
-    .contact-content>div {
-        margin-bottom: 0;
-        margin-top: 20px;
-    }
-
-    .about-me-content {
-        justify-content: left;
-    }
-
-    .roadmap-sign>div>h2 {
-        font-size: 15px;
-    }
-
-    .roadmap-sign>div>p {
-        font-size: 10px;
-    }
-
-    .roadmap-img {
-        width: 8vh;
-        height: 8vh;
-    }
-}
-
-@media (min-width: 600px) {
-
-    .about-me,
-    .contact-content,
-    .skills-content {
-        width: 400px;
-    }
-}
-
-@media (max-height: 840px) {
-    .contact-content {
-        height: 130px;
-    }
-
-    .contact-content {
-        justify-content: center;
-    }
-}
-
-/* for phones */
-@media (max-width: 600px){
-
-    .about-me-title,
-    .emote {
-        font-size: 30px;
-    }
-
-    .about-me-text {
-        font-size: 10px;
-    }
-
-    .right-side-panel {
-        align-items: center;
-    }
-
-    .skills-content>div>div>h2 {
-        inline-size: 50vw;
-    }
-
-    .contact-content>div>button {
-        width: 15vw;
-        height: 15vw;
-    }
-
-    .roadmap-sign>div>h2 {
-        font-size: 15px;
-    }
-
-    .roadmap-sign>div>p {
-        font-size: 10px;
-    }
-
-    .roadmap-img {
-        width: 8vh;
-        height: 8vh;
-    }
-}
-
-@media (max-width: 460px) {
-
-    .about-me-title,
-    .emote {
-        font-size: 25px;
-    }
-
-    .profile-picture {
-        height: 90px;
-        width: 90px;
-    }
-
-    .skills-content>div>div>h2 {
-        font-size: 12px;
-        inline-size: 45vw;
-    }
-
-    .roadmap {
-        margin: auto;
-        margin-top: 100px;
-    }
-}
-
-@media (max-width: 400px) {
-    @media (max-height: 800px) {
-        .skills-content>div>div>h2{
-            font-size: 10px;
-        }
-        
-        .contact-content>h2{
-            font-size: 18px;
-        }
-
-        .roadmap-stick{
-            margin-right: auto;
-        }
-    }
+.footer > h2 {
+    text-align: center;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    color:#463f3a;
 }

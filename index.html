@@ -6,282 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Marcel Marusiak</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/post-style.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=REM:wght@300&display=swap');
-    </style>
+
     <link rel='icon' href='./images/hello.png' </link:icon>
 </head>
 
 <body>
-    <!--<button onclick="changeToPredictor()">Color Predictor</button>
-    <button onclick="changeToXOR()">XOR Demo</button>
-
-    <script src="/actions.js"></script>-->
-    <div class='main-section'>
-        <div>
-            <div class='none'>
-                <div class='right-side-panel'>
-                    <div class='about-me'>
-                        <div>
-                            <h1>
-                                <span class='emote'>
-                                    👋
-                                </span>
-                                <span class='about-me-title'>
-                                    Marcel Marusiak
-                                </span>
-                            </h1>
-                            <div class='about-me-content'>
-                                <img class='profile-picture' src="https://avatars.githubusercontent.com/u/20907620?v=4"
-                                    alt='Profile Picture'>
-                                <p class='about-me-text'>
-                                    I'm student and I love
-                                    <span class='bold'>programming</span>. My hobby
-                                    is
-                                    <span class='bold'>game development</span>
-                                    and
-                                    <span class='bold'>contributing to open source
-                                        projects</span>. I love Lego, Formula 1 and
-                                    party games with friends.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class='skills-content'>
-                        <div>
-                            <div>
-                                <img class='skills-img'
-                                    src="https://imgs.search.brave.com/BjephQx3SuA2BvLn7uCMOWoexKJdJwWuY4NWEtiuWQU/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/d29ybGR2ZWN0b3Js/b2dvLmNvbS9sb2dv/cy9jLS00LnN2Zw.svg">
-                                <h2>
-                                    I know C# .net, mainly I use it to make my
-                                    personal projects.
-                                </h2>
-                            </div>
-                            <div>
-                                <img class='skills-img'
-                                    src="https://imgs.search.brave.com/M-FiGkB1jPVADW6xtp-i7TJcdhipqz463z8s2cuR3WY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODQ4MTUyZmNlZjEw/MTRjMGI1ZTQ5Njcu/cG5n">
-                                <h2>
-                                    I know Python and I use it to build some basic
-                                    apps and programs.
-                                </h2>
-                            </div>
-                            <div>
-                                <img class='skills-img'
-                                    src="https://imgs.search.brave.com/VBZu_6c9xWQlOrRduQl4n0XR4-0pyEonURQ1EbWn-e8/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9sb2dv/cy1kb3dubG9hZC5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjEvMDEvUnVzdF9M/b2dvLTcwMHg3MDAu/cG5n">
-                                <h2>
-                                    I'm learning Rust right now.
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class='contact-content'>
-                        <div>
-                            <button class='github' onclick="github();"></button>
-                            <button class='linkedin' onclick="linkedin();"></button>
-                            <button class='twitter' onclick="twitter();"></button>
-                        </div>
-                        <h2 id='projects-heading'>
-                            see my projects
-                        </h2>
-                    </div>
-                </div>
-                <div class='roadmap'>
-                    <div class='roadmap-stick'></div>
-                    <div class='roadmap-signs'>
-                        <div class='roadmap-sign'>
-                            <div>
-                                <h2>March 2019</h2>
-                                <p class='roadmap-p'>Made first C# project - Tic Tac
-                                    Toe</p>
-                            </div>
-                        </div>
-                        <div class='roadmap-sign'>
-                            <div>
-                                <h2>Aprill 2020</h2>
-                                <p class='roadmap-p'>Made first Unity game - Monarch</p>
-                            </div>
-                            <img class='roadmap-img' src="https://img.itch.zone/aW1nLzMzMjIyMzEucG5n/347x500/S6jvsS.png"
-                                alt="Monarch Logo">
-                        </div>
-                        <div class='roadmap-sign'>
-                            <div>
-                                <h2>September 2020</h2>
-                                <p class='roadmap-p'>
-                                    Student in High School of University of
-                                    Technology in Wrocław
-                                </p>
-                            </div>
-                        </div>
-                        <div class='roadmap-sign'>
-                            <div>
-                                <h2>December 2022</h2>
-                                <p class='roadmap-p'>
-                                    Made LOQUI - tool for making dialogs in Unity,
-                                    also my first public repo on GitHub
-                                </p>
-                            </div>
-                        </div>
-                        <div class='roadmap-sign'>
-                            <div>
-                                <h2>May 2024</h2>
-                                <p class='roadmap-p'>
-                                    High School graduate - in High School of
-                                    Univeristy of Technology in Wrocław
-                                </p>
-                            </div>
-                        </div>
-                        <div class='roadmap-sign'>
-                            <div>
-                                <h2>Now</h2>
-                                <p class='roadmap-p'>
-                                    Making Universe Simulator - open source Unity2D
-                                    logic game in space
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="navbar">
+        <h2 class="quick-link" data-link_var="mmarusiak.github.io">
+            marcel marusiak
+        </h2>
+    </div>
+    <div class="main">
+        <div class="section-cover"></div>
+        <div class="header">
+            <h1>marcel marusiak</h1>
+            <img src="https://avatars.githubusercontent.com/u/20907620?v=4" alt="it's just me!">
+        </div>
+        <div class="cross-section"></div>
+        <div class="content">
+            <div class="about-me">
+                <h1>about me</h1>
+                <h2>I'm a student at University of Technology in Wrocław (WRUST), one of the
+                    best unis in Poland <u class="quick-link" id="rank-flex"
+                        data-link_var="https://www.topuniversities.com/universities/wroclaw-university-science-technology-wrust">(ranked
+                        901 - 950 in the world by QS World
+                        University Rankings)</u>. I'm technology enthusiast,
+                    I love solving problems which I do a lot while programming.
+                    Outside of study, I make video games and many interesting
+                    stuff <u class="quick-link" id="github" data-link_var="https://github.com/mmarusiak">which I host on
+                        my github</u> and
+                    contribute to a lot
+                    of interesting open-source projects.
+                </h2>
             </div>
-            <h2 class="scroll-down">
-                scroll down <br>
-                ↓
-            </h2>
-            <div class='posts'>
-                <div class='post-heading'>
-                    <div class='post-content'>
-                        <h1>
-                            some of my posts
-                        </h1>
-                        <p style = 'margin-bottom: 30px; cursor: pointer;' id = 'all-posts'>
-                            see all my posts
-                        </p>
-                    </div>
+            <div class="row-section">
+                <div class="links">
+                    <h1>links</h1>
+                    <h2 class="quick-link" id="github" data-link_var="https://github.com/mmarusiak">GitHub</h2>
+                    <h2 class="quick-link" id="twitter" data-link_var="https://twitter.com/mmarusiak_">Twitter</h2>
+                    <h2 class="quick-link" id="resume" data-link_var="">Resume</h2>
                 </div>
-                <div class='post'>
-                    <div class='post-content'>
-                        <div class='upper-post'>
-                            <div>
-                                <h1 class='post-title'>
-                                    first post
-                                </h1>
-                                <img src="" alt="" class = 'post-img'>
-                            </div>
-                            <div class = 'right-side-post'>
-                                <div class = 'hashtags'>
-     
-                                </div>
-                                <div class="post-info">
-                                    <h2 class='post-link'>go to post</h2>
-                                    <h2 class='post-date'>Some Date</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <p class='post-summary'>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore harum, reprehenderit
-                            debitis perferendis eius iste autem ipsum repellat magnam mollitia! Officiis natus nam
-                            repellat, eum earum minima. Sunt, provident magni!
-                        </p>
+                <div class="posts">
+                    <h1 id="all-posts" style="cursor: pointer;">posts</h1>
+                    <div class="post" id="post">
+                        <img src="" alt="" class="post-img">
+                        <h2 class="post-title">post post post</h2>
                     </div>
-                </div>
-                <div class='post'>
-                    <div class='post-content'>
-                        <div class='upper-post'>
-                            <div>
-                                <h1 class='post-title'>
-                                    first post
-                                </h1>
-                                <img src="" alt="" class = 'post-img'>
-                            </div>
-                            <div class = 'right-side-post'>
-                                <div class = 'hashtags'>
-
-                                </div>
-                                <div class="post-info">
-                                    <h2 class='post-link'>go to post</h2>
-                                    <h2 class='post-date'>Some Date</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <p class='post-summary'>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore harum, reprehenderit
-                            debitis perferendis eius iste autem ipsum repellat magnam mollitia! Officiis natus nam
-                            repellat, eum earum minima. Sunt, provident magni!
-                        </p>
+                    <div class="post" id="post">
+                        <img src="" alt="" class="post-img">
+                        <h2 class="post-title">post post post</h2>
                     </div>
-                </div>
-                <div class='post'>
-                    <div class='post-content'>
-                        <div class='upper-post'>
-                            <div>
-                                <h1 class='post-title'>
-                                    first post
-                                </h1>
-                                <img src="" alt="" class = 'post-img'>
-                            </div>
-                            <div class = 'right-side-post'>
-                                <div class = 'hashtags'>
-
-                                </div>
-                                <div class="post-info">
-                                    <h2 class='post-link'>go to post</h2>
-                                    <h2 class='post-date'>Some Date</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <p class='post-summary'>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore harum, reprehenderit
-                            debitis perferendis eius iste autem ipsum repellat magnam mollitia! Officiis natus nam
-                            repellat, eum earum minima. Sunt, provident magni!
-                        </p>
+                    <div class="post" id="post">
+                        <img src="" alt="" class="post-img">
+                        <h2 class="post-title">post post post</h2>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <div class="footer">
+        <h2> © Marcel Marusiak 2024 </h2>
+    </div>
+    <script src=" https://code.jquery.com/jquery-3.6.0.min.js">
+    </script>
     <script src="/js/posts.js"></script>
     <script src="/js/hashtagFilterOtherPage.js"></script>
     <script>
-        function github() {
-            window.location.href = 'https://github.com/mmarusiak';
-        }
-
-        function linkedin() {
-            window.location.href = 'https://www.linkedin.com/in/marcel-marusiak-46b419275/';
-        }
-
-        function twitter() {
-            window.location.href = 'https://twitter.com/mmarusiak_';
-        }
-
-        const allProjects = document.getElementById('projects-heading');
-        allProjects.addEventListener('click', function () {
-            window.location.href = './all-projects';
-        });
 
         const allPosts = document.getElementById('all-posts');
-        allPosts.addEventListener('click', function (){
+        allPosts.addEventListener('click', function () {
             window.location.href = './all-posts'
         })
 
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 100) {
-                $('.scroll-down').fadeOut(300, function () {
-                    $(this).css({ 'color': 'transparent' }).fadeIn(0);
-                });
-            } else {
-                $('.scroll-down').fadeOut(300, function () {
-                    $(this).css({ 'color': '#F0F7EE' }).fadeIn(300);
-                });
-            }
-        });
+        const allQuickLinks = document.getElementsByClassName('quick-link');
+        console.log(allQuickLinks)
+        for (link of allQuickLinks) {
+            const link_value = link.dataset.link_var;
+            link.addEventListener('click', function () {
+                window.location.href = link_value;
+            });
+        }
+
+
 
         function getRandomPosts(amountOfPosts, howManyPosts) {
             const posts = [];
-            
+
             for (let i = 0; i < howManyPosts; i++) {
                 var post = Math.floor(Math.random() * (amountOfPosts));
                 while (posts.includes(post) && amountOfPosts >= howManyPosts) {
@@ -295,28 +105,21 @@
 
         function displayPosts(posts) {
             const postsTitle = document.getElementsByClassName('post-title');
-            const postsSummary = document.getElementsByClassName('post-summary');
-            const postsLink = document.getElementsByClassName('post-link');
-            const hashtags = document.getElementsByClassName('hashtags');
-            const postDates = document.getElementsByClassName('post-date');
             const postImages = document.getElementsByClassName('post-img');
-            
+
             const postsIndex = getRandomPosts(posts.length, 3);
 
             for (let i = 0; i < postsTitle.length; i++) {
                 postsTitle[i].textContent = posts[postsIndex[i]].title;
-                postsSummary[i].textContent = posts[postsIndex[i]].content;
-                postsLink[i].addEventListener('click', function () {
+                postsTitle[i].addEventListener('click', function () {
                     window.document.location.href = posts[postsIndex[i]].source;
                 });
-                postDates[i].textContent = posts[postsIndex[i]].date;
                 postImages[i].src = posts[postsIndex[i]].postIcon;
-                loadHashtags(hashtags[i], posts[postsIndex[i]].hashtags);
             }
         }
         getPostsInfo()
-            .then(result => { 
-                displayPosts(result); 
+            .then(result => {
+                displayPosts(result);
                 hashtagLoader();
             })
             .catch(error => {

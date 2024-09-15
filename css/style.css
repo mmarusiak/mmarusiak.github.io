@@ -34,6 +34,7 @@ body {
 
 .main > .header > h1 {
     font-size: 40px;
+    align-self:flex-end;
 }
 
 h1 {
@@ -57,10 +58,12 @@ h1 {
     background-color: #463f3a;
 }
 
-.main > .content > .row-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+@media only screen and (min-width: 700px){
+    .main > .content > .row-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 .main > .content > .about-me > h2 {
@@ -123,6 +126,7 @@ h1 {
     font-style: normal;
     font-size: 15px;
     cursor: pointer;
+    align-self: center;
 }
 
 .post-title {
@@ -150,4 +154,30 @@ h1 {
     font-style: normal;
     font-size: 13px;
     color:#463f3a;
+}
+
+
+@media only screen and (max-width: 700px){
+    .main > .content > .row-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .main > .header > h1 {
+        font-size: 25px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+
+    .main > .content > .about-me > h2,
+    .main > .content > .row-section > h2,
+    .post > h2 {
+        font-size: 12px;
+    }
+    
+    .post > img {
+        width: 20px;
+        height: 20px;
+    }
 }

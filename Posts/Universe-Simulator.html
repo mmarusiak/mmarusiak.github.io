@@ -6,22 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universe Simulator</title>
     <link rel="stylesheet" href="/css/default-post-styling.css">
-    <link rel="icon"
-        href="/Posts/posts-materials/UniverseSimulatorSquare.png">
+    <link rel="icon" href="/Posts/posts-materials/UniverseSimulatorSquare.png">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
-    
+
 </head>
 
 <body>
 
-    <h2 id='back-to-all-posts'>back to all posts</h2>
-    <div style="margin-top: 0px;">
-        <div style='display: flex; align-items: center; justify-content: center;'>
+    <h2 class='navbar'><u id="landing-page">mmarusiak</u> <u id='back-to-all-posts'>/all posts</u> <u>/Universe
+            Simulator</u></h2>
+    <div style="margin-top: 150px;">
+        <div class="main-section">
             <h1 id='post-title'>Universe Simulator</h1>
-            <img id='icon-img'
-                src="/Posts/posts-materials/universesimulatorsquaretransparent.png"
-                alt>
+            <img id='icon-img' src="/Posts/posts-materials/universesimulatorsquaretransparent.png" alt>
         </div>
         <p id='date'>Sep. 20 2023</p>
 
@@ -31,7 +29,7 @@
             <p class='hashtag'>#gamedev</p>
             <p class='hashtag'>#.net</p>
         </div>
-        <h2 class='summary' id='post-summary'>Universe Simulator - project 
+        <h2 class='summary' id='post-summary'>Universe Simulator - project
             overview and plans
         </h2>
         <div class='line'></div>
@@ -40,15 +38,16 @@
                 PROJECT OVERVIEW
             </h2>
             <h2 class='section-content'>Universe Simulator is my personal
-                project. It's space sandbox, with some logic features. Honestly I 
+                project. It's space sandbox, with some logic features. Honestly I
                 wanted to make game like Poly Bridge but in space. It's hosted on
                 Github
                 <br> <br>
-                <span id = 'repo' class = 'link'>Github Repository</span>
+                <span id='repo' class='link'>Github Repository</span>
             </h2>
             <div class='img-section'>
                 <div>
-                    <img src="https://user-images.githubusercontent.com/20907620/246488874-c0d5eba8-8c07-422a-a917-9a0d2c8fc973.png" alt="project banner">
+                    <img src="https://user-images.githubusercontent.com/20907620/246488874-c0d5eba8-8c07-422a-a917-9a0d2c8fc973.png"
+                        alt="project banner">
                     <h2>Universe Simulator banner</h2>
                 </div>
             </div>
@@ -56,7 +55,7 @@
                 Features
             </h2>
             <h2 class='section-content'>
-                I've added most of core features to the game. The 
+                I've added most of core features to the game. The
                 most important one - level editor with level saving and
                 loading is here. Latest feature that I've been working on
                 is logic in levels.
@@ -66,15 +65,17 @@
             </h2>
             <div class='img-section'>
                 <div>
-                    <img src="https://user-images.githubusercontent.com/20907620/224781063-739270fb-ad18-456d-9ac3-53ad08563c52.gif" alt>
+                    <img src="https://user-images.githubusercontent.com/20907620/224781063-739270fb-ad18-456d-9ac3-53ad08563c52.gif"
+                        alt>
                     <h2>level loader</h2>
                 </div>
                 <div>
-                    <img src="https://user-images.githubusercontent.com/20907620/246488955-3975567d-681b-4e6c-bbd0-f4a08f3845ef.gif" alt>
+                    <img src="https://user-images.githubusercontent.com/20907620/246488955-3975567d-681b-4e6c-bbd0-f4a08f3845ef.gif"
+                        alt>
                     <h2>level sandbox</h2>
                 </div>
             </div>
-            
+
             <h2 class='section-heading'>
                 project future
             </h2>
@@ -90,9 +91,9 @@
                 </div>
             </div>
             <h2 class='section-content'>
-                Because of recent Unity's moves, I decided to 
+                Because of recent Unity's moves, I decided to
                 abandon project. It was very painful to watch
-                what company can do with their tool, with 
+                what company can do with their tool, with
                 their customers and with hobbyists. However feel free
                 to make something from Universe Simulator. Go ahead,
                 fork and play with it :)
@@ -102,19 +103,23 @@
     <script src="/js/hashtagFilterOtherPage.js"></script>
     <script>
         const backToAllPostsElement = document.getElementById('back-to-all-posts');
-        backToAllPostsElement.addEventListener('click', function () 
-        {
+        backToAllPostsElement.addEventListener('click', function () {
             document.location.href = '../all-posts';
         });
+
+        const landingPage = document.getElementById('landing-page');
+        landingPage.addEventListener('click', function () {
+            document.location.href = '../';
+        });
         const demo = document.getElementById('repo');
-        demo.addEventListener('click', function(){
+        demo.addEventListener('click', function () {
             document.location.href = 'https://github.com/mmarusiak/Universe-Simulator'
         });
         hashtagLoader();
     </script>
 
     <footer>
-        Marcel Marusiak 2023
+        © Marcel Marusiak 2023
     </footer>
 </body>
 

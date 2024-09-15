@@ -1,10 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 * {
-    font-family: 'REM', sans-serif;
+     font-family: "Poppins", sans-serif;
     cursor: default;
 }
 
 body {
-    background-color: #31393C;
+    background-color: #F4F3EE;
+}
+
+.main-section{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.main-section > h1 {
+    max-width: 70%;
 }
 
 body > div {
@@ -15,24 +29,24 @@ body > div {
 
 h1 {
     font-size: 50px;
-    color: #F0F7EE;
+    color: #463f3a;
 }
 
 .summary {
-    color: #F79824;
+    color: #463f3a;
     font-style: italic;
-    font-size: 28px;
+    font-size: 18px;
 }
 
 h2 {
-    color: #F0F7EE;
+    color: #463f3a;
     font-size: 22px;
     text-align: center;
 }
 
 p{
     margin-top: 0;
-    color:#F0F7EE
+    color: #463f3a;
 }
 
 .hashtags {
@@ -46,11 +60,14 @@ p{
     cursor: pointer;
     margin: 0;
     border-radius: 5px;
-    color: #31393C;
-    background-color: #F0F7EE;
-    padding: 5px;
+    color:#8A817C;
+    text-decoration: underline;
     text-align: center;
     width: 140px;
+}
+
+.hashtags > p:hover{
+    color: #463f3a;
 }
 
 .img-section > div > img {
@@ -63,7 +80,7 @@ p{
 .line {
     width: 100%;
     height: 5px;
-    background-color: #F79824;
+    background-color: #463f3a;
 }
 
 #icon-img {
@@ -82,7 +99,7 @@ p{
 .section-content {
     font-weight: 300;
     text-align: start;
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .content {
@@ -105,7 +122,7 @@ p{
 
 .img-section > div > h2 {
     font-style: italic;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 #back-to-all-posts {
@@ -119,12 +136,35 @@ p{
 .link {
     cursor: pointer;
     text-decoration: underline;
-    color: #F79824;
+    color: #8A817C;
+}
+
+.link:hover {
+    color: #463f3a;
+}
+
+.content > p {
+    font-size: 14px;
 }
 
 footer {
     text-align: center;
-    color: #F0F7EE;
+    color: #31393C;
     font-style: italic;
     margin-top: 75px;
+}
+
+.navbar {
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    color: #8A817C;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.navbar > u {
+    cursor: pointer;
 }

@@ -19,6 +19,7 @@ body {
     flex-direction: column;
     width: 70%;
     max-width: 700px;
+    padding-bottom: 60px;
     margin: auto;
 }
 
@@ -101,6 +102,11 @@ h1 {
     width: 280px;
 }
 
+.posts > .post-holder {
+    display: flex;
+    flex-direction: row;
+}
+
 .main > .content > .row-section > .posts > h1 {
     margin-bottom: 2px;
 }
@@ -108,16 +114,25 @@ h1 {
 .post {
     display: flex;
     justify-content: row;
+    align-items: center;
     margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.post:hover {
+    background-color: #BCB8B1;
 }
 
 .post > img {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
+    padding: 3px;
 }
 
 .post > h2 {
-    padding: 0;
+    padding: 3px;
+    padding-right: 10px;
     margin: 0;
     margin-left: 10px;
     margin-top: 2px;
@@ -125,17 +140,14 @@ h1 {
     font-weight: 400;
     font-style: normal;
     font-size: 15px;
-    cursor: pointer;
     align-self: center;
+    display: inline;
 }
 
 .post-title {
-    color:#8A817C;
+    color:#463f3a;
     text-decoration: underline;
-}
-
-.post-title:hover{
-    color: #463f3a;
+    text-decoration: #8A817C;
 }
 
 .footer {
@@ -154,6 +166,7 @@ h1 {
     font-style: normal;
     font-size: 13px;
     color:#463f3a;
+    
 }
 
 

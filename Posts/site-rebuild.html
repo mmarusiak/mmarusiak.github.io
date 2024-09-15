@@ -6,29 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doppler Effect explained</title>
     <link rel="stylesheet" href="/css/default-post-styling.css">
-    <link rel="icon"
-        href="https://imgs.search.brave.com/IHC4oRgZ45Dtc6Da2P3cXYDKJNNzhm4iy_I89ZhdUj0/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudGhlbm91bnBy/b2plY3QuY29tL3Bu/Zy80MTEyMTk1LTIw/MC5wbmc">
+    <link rel="icon" href="./posts-materials/macbook-it-guy.png">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
-    
+
 </head>
 
 <body>
 
-    <h2 id='back-to-all-posts'>back to all posts</h2>
-    <div style="margin-top: 0px;">
-        <div style='display: flex; align-items: center; justify-content: center;'>
-            <h1 id='post-title'>test to display posts properly</h1>
-            <img id='icon-img'
-                src="https://imgs.search.brave.com/IHC4oRgZ45Dtc6Da2P3cXYDKJNNzhm4iy_I89ZhdUj0/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudGhlbm91bnBy/b2plY3QuY29tL3Bu/Zy80MTEyMTk1LTIw/MC5wbmc"
-                alt>
+    <h2 class='navbar'><u id="landing-page">mmarusiak</u> <u id='back-to-all-posts'>/all posts</u> <u>/devlog: personal
+            site rebuild</u></h2>
+    <div style="margin-top: 150px;">
+        <div class="main-section">
+            <h1 id='post-title'>Devlog: Personal site rebuild</h1>
+            <img id='icon-img' src="/Posts/posts-materials/macbook-it-guy.png" alt>
         </div>
         <p id='date'>Sep. 25 2023</p>
 
         <div class='hashtags'>
-            <p class='hashtag'>#ptesttetst</p>
-            <p class='hashtag'>#waas</p>
-            <p class='hashtag'>#abcd</p>
+            <p class='hashtag'>#physics</p>
+            <p class='hashtag'>#waves</p>
+            <p class='hashtag'>#explained</p>
             <p class='hashtag'>#demo</p>
         </div>
         <h2 class='summary' id='post-summary'>Doppler Effect: Physics
@@ -52,7 +50,7 @@
                 <br> <br>
                 I've also made little web demonstration (all gifs are from this demo),
                 you can play with it
-                <span id = 'demo' class = 'link'>here</span>.
+                <span id='demo' class='link'>here</span>.
             </h2>
             <div class='img-section'>
                 <div>
@@ -113,7 +111,7 @@
                 <br>
                 where f<sub>o</sub> is observed frequency, f<sub>s</sub> is source'
                 frequency, v is velocity of the wave and v<sub>o</sub> is velocity of
-                observer. 
+                observer.
                 <br>
                 If observer is moving toward source, we're adding velocity, because
                 frequency then is larger than original.
@@ -148,7 +146,7 @@
                 <br>
                 where f<sub>o</sub> is observed frequency, f<sub>s</sub> is source'
                 frequency, v is velocity of the wave and v<sub>s</sub> is velocity of
-                source. 
+                source.
                 <br>
                 If source is moving toward observer, we're subtracting velocity, because
                 frequency then is larger than original.
@@ -157,15 +155,15 @@
                 frequency then is less than original.
             </h2>
 
-            <h2 class = 'section-heading'>
+            <h2 class='section-heading'>
                 combined formula
             </h2>
-            <h2 class = 'section-content'>
+            <h2 class='section-content'>
                 When observer and source are moving at the same moment, we can
                 combine 2 formulas into 1.
             </h2>
 
-            <div class = 'img-section'>
+            <div class='img-section'>
                 <div>
                     <img src="/Posts/posts-materials/doppler/observerandsourcemoving.gif" alt="">
                     <h2>both objects are moving in the same direction</h2>
@@ -176,48 +174,52 @@
                 </div>
             </div>
 
-            <h2 class = 'section-content'>
+            <h2 class='section-content'>
                 For the combined formula, rules are the same and formula looks like
                 that:
                 $$f_{o} = {V \pm V_{o} \over V \pm V_{s}}$$
             </h2>
 
-            <h2 class = 'section-heading'>Real life examples</h2>
-            <h2 class = 'section-content'>
-                You can observe doppler effect everyday. Most common example is 
-                passing car with some signal (honk, sirens or radio). You will note 
+            <h2 class='section-heading'>Real life examples</h2>
+            <h2 class='section-content'>
+                You can observe doppler effect everyday. Most common example is
+                passing car with some signal (honk, sirens or radio). You will note
                 that you hear diffrent sound when it is closer to you and when it is
                 approaching you.
                 <br>
                 Some radars uses doppler effect to detect objects. Objects simply bounces
                 wave signal back which is detected then.
                 <br> <br>
-                You can see my youtube playlist with some examples <span id ='playlist' class = 'link'>here</span>.
+                You can see my youtube playlist with some examples <span id='playlist' class='link'>here</span>.
             </h2>
         </div>
     </div>
     <script src="/js/hashtagFilterOtherPage.js"></script>
     <script>
         const backToAllPostsElement = document.getElementById('back-to-all-posts');
-        backToAllPostsElement.addEventListener('click', function () 
-        {
+        backToAllPostsElement.addEventListener('click', function () {
             document.location.href = '../all-posts';
         });
-        
+
+        const landingPage = document.getElementById('landing-page');
+        landingPage.addEventListener('click', function () {
+            document.location.href = '../';
+        });
+
         const playlist = document.getElementById('playlist');
-        playlist.addEventListener('click', function() {
+        playlist.addEventListener('click', function () {
             document.location.href = 'https://www.youtube.com/watch?v=dC4Lp7k4zrI&list=PLKxlLnzEQmc_a6x5zzFSwkns5fvcB-MLr';
         });
 
         const demo = document.getElementById('demo');
-        demo.addEventListener('click', function(){
+        demo.addEventListener('click', function () {
             document.location.href = '/Projects/Doppler-effect/src/doppler.html'
         });
         hashtagLoader();
     </script>
 
     <footer>
-        Marcel Marusiak 2023
+        © Marcel Marusiak 2023
     </footer>
 </body>
 

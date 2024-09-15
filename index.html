@@ -48,17 +48,23 @@
                 </div>
                 <div class="posts">
                     <h1 id="all-posts" style="cursor: pointer;">posts</h1>
-                    <div class="post" id="post">
-                        <img src="" alt="" class="post-img">
-                        <h2 class="post-title">post post post</h2>
+                    <div class="post-holder">
+                        <div class="post" id="post">
+                            <img src="" alt="" class="post-img">
+                            <h2 class="post-title">post post post</h2>
+                        </div>
                     </div>
-                    <div class="post" id="post">
-                        <img src="" alt="" class="post-img">
-                        <h2 class="post-title">post post post</h2>
+                    <div class="post-holder">
+                        <div class="post" id="post">
+                            <img src="" alt="" class="post-img">
+                            <h2 class="post-title">post post post</h2>
+                        </div>
                     </div>
-                    <div class="post" id="post">
-                        <img src="" alt="" class="post-img">
-                        <h2 class="post-title">post post post</h2>
+                    <div class="post-holder">
+                        <div class="post" id="post">
+                            <img src="" alt="" class="post-img">
+                            <h2 class="post-title">post post post</h2>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -104,14 +110,15 @@
         }
 
         function displayPosts(posts) {
-            const postsTitle = document.getElementsByClassName('post-title');
+            const postTitle = document.getElementsByClassName('post-title');
             const postImages = document.getElementsByClassName('post-img');
+            const postHolders = document.getElementsByClassName('post');
 
             const postsIndex = getRandomPosts(posts.length, 3);
 
-            for (let i = 0; i < postsTitle.length; i++) {
-                postsTitle[i].textContent = posts[postsIndex[i]].title;
-                postsTitle[i].addEventListener('click', function () {
+            for (let i = 0; i < postTitle.length; i++) {
+                postTitle[i].textContent = posts[postsIndex[i]].title;
+                postHolders[i].addEventListener('click', function () {
                     window.document.location.href = posts[postsIndex[i]].source;
                 });
                 postImages[i].src = posts[postsIndex[i]].postIcon;

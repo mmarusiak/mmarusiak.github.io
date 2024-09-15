@@ -4,55 +4,25 @@ function createPost(postTitleContent, postSummaryContent,
     const postDiv = document.createElement('div');
     postDiv.className = 'post';
 
-    // Create the 'post-content' div
-    const postContentDiv = document.createElement('div');
-    postContentDiv.className = 'post-content';
+    // Create the 'title-content' div - contains icon, title and date
+    const titleContentDiv = document.createElement('div');
+    titleContentDiv.className = 'title-content';
 
-    // Create the 'upper-post' div
-    const upperPostDiv = document.createElement('div');
-    upperPostDiv.className = 'upper-post';
-
-    const postTitleDiv = document.createElement('div');
-
-    // Create the 'post-title' h1 element and set its text content
-    const postTitle = document.createElement('h1');
-    postTitle.className = 'post-title';
-    postTitle.textContent = postTitleContent;
-
+    // Create post icon
     const postImage = document.createElement('img');
     postImage.src = postIconSource;
 
-    // Create the 'right-side-post' div
-    const rightSidePostDiv = document.createElement('div');
-    rightSidePostDiv.className = 'right-side-post';
+    // Create the 'post-title' h2 element and set its text content
+    const postTitle = document.createElement('h2');
+    postTitle.textContent = postTitleContent;
 
-    // Create the 'hashtags' div
-    const hashtagsDiv = document.createElement('div');
-    hashtagsDiv.className = 'hashtags';
+    // Create the date p
+    const dateElement = document.createElement('p');
+    dateElement.textContent = postDateContent
 
-    // Create all hashtags
-    hashtagsContent.forEach(hashtag => {
-        const hashElement = document.createElement('p');
-        hashElement.textContent = hashtag;
-        hashtagsDiv.appendChild(hashElement);
-    });
-
-    // Create the 'post-info' div
-    const postInfoDiv = document.createElement('div');
-    postInfoDiv.className = 'post-info';
-
-    // Create the 'post-link' h2 element and set its text content
-    const postLink = document.createElement('h2');
-    postLink.className = 'post-link';
-    postLink.textContent = 'go to post';
-    postLink.addEventListener('click', function(){
+    postDiv.addEventListener('click', function(){
         window.location.href = link;
     })
-
-    // Create the 'post-date' h2 element and set its text content
-    const postDate = document.createElement('h2');
-    postDate.className = 'post-date';
-    postDate.textContent = postDateContent;
 
     // Create the 'post-summary' paragraph and set its text content
     const postSummary = document.createElement('p');
@@ -60,17 +30,11 @@ function createPost(postTitleContent, postSummaryContent,
     postSummary.textContent = postSummaryContent;
 
     // Append elements to build the structure
-    hashtagsDiv.appendChild(postLink);
-    hashtagsDiv.appendChild(postDate);
-    rightSidePostDiv.appendChild(hashtagsDiv);
-    rightSidePostDiv.appendChild(postInfoDiv);
-    postTitleDiv.appendChild(postTitle);
-    postTitleDiv.appendChild(postImage);
-    upperPostDiv.appendChild(postTitleDiv);
-    upperPostDiv.appendChild(rightSidePostDiv);
-    postContentDiv.appendChild(upperPostDiv);
-    postContentDiv.appendChild(postSummary);
-    postDiv.appendChild(postContentDiv);
+    postDiv.appendChild(titleContentDiv);
+    titleContentDiv.appendChild(postImage);
+    titleContentDiv.appendChild(postTitle);
+    titleContentDiv.appendChild(dateElement);
+    postDiv.appendChild(postSummary)
 
     return(postDiv);
 }

@@ -4,135 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All posts</title>
+    <title>all posts</title>
     <link rel="stylesheet" href="css/post-style.css">
 </head>
 
 <body>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <div class='post-main'>
-        <div class='post-content'>
-            <div style="display: flex; justify-content: space-between;
-            align-items: center;">
-                <h1>
-                    my posts
-                </h1>
-                <h2 id = 'back-to-home' style = 'cursor: pointer;'>
-                    back to home
-                </h2>
+    <h2 class="navbar">
+        <u id="back-to-home">mmarusiak</u><u>/all posts</u>
+    </h2>
+    <div class="cover"></div>
+    <div class='main'>
+        <div class='filter-content'>
+            <h1>filter options</h1>
+            <div class="sort-holder">
+                <label for="sort">sort posts by
+                    <select name="sort-select" id="sort">
+                        <optgroup label="Date">
+                            <option value="1">newest to oldest</option>
+                            <option value="2">oldest to newest</option>
+                        </optgroup>
+                        <optgroup label="Alphabetical">
+                            <option value="3">a to z</option>
+                            <option value="4">z to a</option>
+                        </optgroup>
+                    </select>
+                </label>
             </div>
-            <div style="display: flex; justify-content: space-between; width: 70%;">
-                <p id='all-posts'>
-                    filter by
-                </p>
+            <h2>
+                filter by hashtag
+            </h2>
+            <div class='hashtags' id='hashtag-holder'></div>
+        </div>
+        <div>
+            <h1>posts</h1>
+            <div class='posts' id='posts'>
+                <div class="post">
+                    <div class="title-content">
+                        <img src="/Posts/posts-materials/macbook-it-guy.png" alt="">
+                        <h2>post title</h2>
+                        <p>23 sep. 2024</p>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur</p>
+                </div>
             </div>
-            <div class='hashtags' id='hashtag-holder'>
-
-            </div>
-
-            <label style="margin-top: 30px;" for="sort">Sort posts by:</label>
-            <select name="sort-select" id="sort">
-                <optgroup label="Date">
-                    <option value="1">Newest to oldest</option>
-                    <option value="2">Oldest to newest</option>
-                </optgroup>
-                <optgroup label="Alphabetical">
-                    <option value="3">A to Z</option>
-                    <option value="4">Z to A</option>
-                </optgroup>
-            </select>
         </div>
     </div>
-    <div class='posts' id='posts'>
-        <div class='post'>
-            <div class='post-content'>
-                <div class='upper-post'>
-                    <div>
-                        <h1 class='post-title'>
-                            first post
-                        </h1>
-                        <img src="https://imgs.search.brave.com/dchp_08XLcsWSOLcQxutT3XtzVo0B_B5A1yPEdLebcQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/bWVycmlhbS13ZWJz/dGVyLmNvbS9kaXN0/LWNyb3NzLWR1bmdh/cmVlcy8yMDIzLTA4/LTE4LS0xNy0zNC01/OC1heDJjbC9pbWFn/ZXMvc3ZnL3JlZGVz/aWduL2NvcHktaWNv/bi5zdmc.svg" alt="">
-                    </div>
-                    <div class='right-side-post'>
-                        <div class='hashtags'>
-
-                        </div>
-                        <div class="post-info">
-                            <h2 class='post-link'>go to post</h2>
-                            <h2 class='post-date'>Some Date</h2>
-                        </div>
-                    </div>
-                </div>
-                <p class='post-summary'>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore harum, reprehenderit
-                    debitis perferendis eius iste autem ipsum repellat magnam mollitia! Officiis natus nam
-                    repellat, eum earum minima. Sunt, provident magni!
-                </p>
-            </div>
-        </div>
-        <div class='post'>
-            <div class='post-content'>
-                <div class='upper-post'>
-                    <div>
-                        <h1 class='post-title'>
-                            first post
-                        </h1>
-                        <img src="https://imgs.search.brave.com/dchp_08XLcsWSOLcQxutT3XtzVo0B_B5A1yPEdLebcQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/bWVycmlhbS13ZWJz/dGVyLmNvbS9kaXN0/LWNyb3NzLWR1bmdh/cmVlcy8yMDIzLTA4/LTE4LS0xNy0zNC01/OC1heDJjbC9pbWFn/ZXMvc3ZnL3JlZGVz/aWduL2NvcHktaWNv/bi5zdmc.svg" alt="">
-                    </div>
-                    <div class='right-side-post'>
-                        <div class='hashtags'>
-
-                        </div>
-                        <div class="post-info">
-                            <h2 class='post-link'>go to post</h2>
-                            <h2 class='post-date'>Some Date</h2>
-                        </div>
-                    </div>
-                </div>
-                <p class='post-summary'>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore harum, reprehenderit
-                    debitis perferendis eius iste autem ipsum repellat magnam mollitia! Officiis natus nam
-                    repellat, eum earum minima. Sunt, provident magni!
-                </p>
-            </div>
-            <div class='post'>
-                <div class='post-content'>
-                    <div class='upper-post'>
-                        <div>
-                            <h1 class='post-title'>
-                                first post
-                            </h1>
-                            <img src="https://imgs.search.brave.com/dchp_08XLcsWSOLcQxutT3XtzVo0B_B5A1yPEdLebcQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/bWVycmlhbS13ZWJz/dGVyLmNvbS9kaXN0/LWNyb3NzLWR1bmdh/cmVlcy8yMDIzLTA4/LTE4LS0xNy0zNC01/OC1heDJjbC9pbWFn/ZXMvc3ZnL3JlZGVz/aWduL2NvcHktaWNv/bi5zdmc.svg" alt="">
-                        </div>
-                        <div class='right-side-post'>
-                            <div class='hashtags'>
-    
-                            </div>
-                            <div class="post-info">
-                                <h2 class='post-link'>go to post</h2>
-                                <h2 class='post-date'>Some Date</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <p class='post-summary'>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore harum, reprehenderit
-                        debitis perferendis eius iste autem ipsum repellat magnam mollitia! Officiis natus nam
-                        repellat, eum earum minima. Sunt, provident magni!
-                    </p>
-                </div>
 
     <script src="./js/postCreator.js"></script>
     <script src="./js/posts.js"></script>
     <script src="./js/postsPage.js"></script>
+
+
     <script>
         // Get a reference to the select element and manage dropdown options
         const selectElement = document.getElementById('sort');
-        selectElement.addEventListener('change', function () {sortBy(selectElement.value)});
-        
-        // Get a referebce to back to home element and make button from it
+        selectElement.addEventListener('change', function () { sortBy(selectElement.value) });
+
+        // Get a reference to back to home element and make button from it
         const backToHomeElement = document.getElementById('back-to-home');
-        backToHomeElement.addEventListener('click', function () {document.location.href = './'});
+        backToHomeElement.addEventListener('click', function () { document.location.href = './' });
     </script>
 </body>
 

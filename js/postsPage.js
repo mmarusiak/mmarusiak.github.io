@@ -24,8 +24,11 @@ async function fetchAndProcessPosts(){
     const hashtagsHolder = document.getElementById('hashtag-holder');
 
     allHashtags.forEach((hashtag) => {
+        const newDiv = document.createElement('div')
+        newDiv.className = 'hashtag-body'
+        hashtagsHolder.appendChild(newDiv)
         const newP = document.createElement('p');
-        hashtagsHolder.appendChild(newP);
+        newDiv.appendChild(newP);
         newP.textContent = hashtag;
         newP.className = 'hashtag-notset';
         newP.id = hashtag;

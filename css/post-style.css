@@ -1,330 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 * {
-    font-family: 'REM', sans-serif;
+   font-family: "Poppins", sans-serif;
     cursor: default;
 }
 
 body {
-    background-color: #31393C;
+    background-color: #F4F3EE;
+}
+
+.cover {
+    height: 100px;
+    width: 100px;
+}
+
+h1 {
+    color: #463f3a;
+}
+
+h3 {
+    color: #8A817C;
+}
+
+.navbar {
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    color: #8A817C;
+    text-decoration: underline;
+    cursor: pointer;
+    display: block;
+}
+
+.navbar > u {
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 620px){
+    .main {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: start;
+    }
+}
+
+@media only screen and (max-width: 620px){
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+}
+
+.filter-content {
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    justify-self: center;
+}
+
+.filter-content > h2 {
+    margin-top: 30px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color:#463f3a;
+    font-size: 16px;
+}
+
+.hashtags {
+    display: grid;
+    grid-template-columns: 150px 150px;
+}
+
+.hashtag-body > p {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.hashtag-notset{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #8A817C;
+}
+
+.hashtag-set {
+    color: #463f3a;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.hashtag-body {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.sort-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 
-.upper-post > div > img{
-    width: 20px;
+label {
+    color: #463f3a;
+    font-size: 15px;
+    font-weight: 400;
 }
 
-/* posts */
-.post,
-.post-heading,
-.post-main {
-    border-width: 4px;
-    box-shadow: #F79824 -10px 10px;
-    border-style: solid;
-    border-color: #F79824;
-    border-radius: 20px;
-    background-color: #F0F7EE;
-}
-
-.post {
-    height: 200px;
-    margin-top: 60px;
-}
-
-.post-heading {
-    height: 100px;
+select {
+    color: #8A817C;
+    background-color: transparent;
+    text-decoration: underline;
+    border: none;
+    appearance: unset;
+    text-align: center;
+    align-items: center;
+    text-wrap: nowrap;
+    font-size: 15px;
 }
 
 .posts {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-.post-content {
     width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.post-heading>.post-content {
-    justify-content: center;
-    align-items: center;
-}
-
-.post-heading>.post-content>h1 {
-    text-align: center;
-}
-
-.post>.post-content {
-    justify-content: space-between;
-    align-items: center;
-}
-
-.post-content>.upper-post {
-    display: flex;
-    align-items: start;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 96%;
-    margin-left: 0;
-}
-
-
-.post-content>.upper-post>.post-title {
-    width: 100%;
-    margin-top: 0;
-    height: 70%;
-}
-
-.right-side-post {
-    width: 100%;
-}
-
-.post-info{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.post-link {
-    cursor: pointer;
-}
-
-.post-date {
-    color: #31393C;
-}
-
-.post-date, .post-link {
-    font-size: 16px;
-}
-
-.post-heading>.post-content>h1,
-.post-content>.upper-post>div>h1 {
-    font-size: 25px;
-    inline-size: 200px;
-}
-
-.post-content>.upper-post>div>h2, 
-.post-content>.upper-post>div>div>p  {
-    font-size: 15px;
-}
-
-.post-summary {
-    font-size: 15px;
-    inline-size: 90%;
 }
 
 .post {
-    height: 200px
+    margin-bottom: 30px;
 }
 
-.post-main {
-    margin-bottom: 100px;
-}
-
-@media (max-height: 900px){
-    .post-date, .post-link {
-        font-size: 12px;
-    }
-   
-    .post, .post-main {
-        width: 80vw;
-    }
-
-    .post-heading {
-        width: 80vw;
-    }
-}
-
-@media (min-width: 600px) {
-
-    .post, .post-main {
-        width: 500px;
-    }
-
-    .post-heading {
-        width: 500px;
-    }
-
-}
-
-@media (max-height: 960px) {
-
-    .post-heading>.post-content>h1,
-    .post-content>.upper-post>div>h1 {
-        font-size: 22px;
-        inline-size: 200px;
-    }
-    
-    .post-content>.upper-post>div>h2, 
-    .post-content>.upper-post>div>div>p  {
-        font-size: 12px;
-    }
-
-    .post-summary {
-        font-size: 12px;
-    }
-
-    .post {
-        height: 175px;
-    }
-}
-
-
-@media (max-width: 600px){
-    .about-me {
-        height: 240px;
-    }
-
-    .about-me,
-    .contact-content,
-    .skills-content {
-        width: 70vw;
-    }
-
-    .post {
-        width: 80vw;
-    }
-
-    .post-heading {
-        width: 80vw;
-    }
-
-    .post-heading>.post-content>h1,
-    .post-content>.upper-post>div>h1 {
-        font-size: 25px;
-        inline-size: 40vw;
-    }
-
-    .post-content>.upper-post>div>h2, 
-    .post-content>.upper-post>div>div>p  {
-        font-size: 15px;
-    }
-
-    .post-summary {
-        font-size: 15px;
-        inline-size: 70vw;
-    }
-}
-
-@media (max-width: 460px){
-    .post-heading>.post-content>h1,
-    .post-content>.upper-post>div>h1 {
-        font-size: 20px;
-        inline-size: 40vw;
-    }
-
-    .post-content>.upper-post>div>h2, 
-    .post-content>.upper-post>div>div>p  {
-        font-size: 12px;
-    }
-
-    .post-summary {
-        font-size: 12px;
-        inline-size: 70vw;
-    }
-}
-
-@media (max-width: 400px) {
-    @media (max-height: 800px) {
-        .about-me-title {
-            font-size: 20px;
-        }
-
-        .profile-picture {
-            width: 75px;
-            height: 75px;
-        }
-
-        .post-heading>.post-content>h1,
-        .post-content>.upper-post>div>h1 {
-            font-size: 18px;
-            inline-size: 40vw;
-        }
-
-        .post-content>.upper-post>div>h2, 
-        .post-content>.upper-post>div>div>p  {
-            font-size: 10px;
-        }
-
-        .post-summary {
-            font-size: 10px;
-            inline-size: 70vw;
-        }
-    }
-}
-
-.hashtags {
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 8px;
-}
-
-.hashtags > p{
+.post, .post > *, .post > * > *{
     cursor: pointer;
-    margin: 0;
-    border-radius: 5px;
-    border-color: #31393C;
-    color: #F0F7EE;
-    background-color: #31393C;
-    padding: 5px;
-    text-align: center;
 }
 
-.post-main{
+.post > .title-content {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
 }
 
-.post-main > .post-content{
-    width: 90%;
+.post > .title-content > h2 {
+    margin: 5px 15px 5px 0px;
+    color: #463f3a;
+    font-weight: 400;
+    font-size: 20px;
 }
 
-/* Style the select element */
-select#sort {
-    background-color: #F0F7EE; /* Background color */
-    color: #31393C; /* Text color */
-    border: none; /* Remove default border */
-    padding: 5px; /* Add some padding for spacing */
-    font-size: 15px; /* Font size */
+.post > .title-content > p {
+    color: #463f3a;
+    font-size: 10px;
+    margin-bottom: 0;
 }
 
-/* Style the optgroup labels */
-optgroup {
-    background-color: #F79824; /* Background color */
-    color: #F0F7EE; /* Text color */
-    font-weight: bold; /* Make the labels bold */
+.post > .title-content > img {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
 }
 
-/* Style the options */
-option {
-    background-color: #F0F7EE; /* Background color */
-    color: #31393C; /* Text color */
-}
-
-.post-link{
-    color: #F79824;
-}
-
-.upper-post > div {
-    margin-top: 0;
-}
-
-p.hashtag-notset {
-    background-color: #F0F7EE;
-    color: #31393C;
-    border-color: #31393C;
-    border-style: solid;
-}
-
-p.hashtag-set {
-    background-color: #31393C;
-    color: #F0F7EE;
-    border-style: solid;
+.post > p {
+    margin: 0;
+    color: #8A817C;
+    font-size: 12px;
 }

@@ -30,6 +30,8 @@ body > div {
     flex-direction: column;
     align-items: center;
     margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
     max-width: 800px;
 }
 

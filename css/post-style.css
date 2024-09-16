@@ -38,6 +38,7 @@ h3 {
     text-decoration: underline;
     cursor: pointer;
     display: block;
+    margin-top: 0px;
 }
 
 .navbar > u {

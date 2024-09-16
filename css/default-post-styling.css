@@ -180,6 +180,7 @@ footer {
     text-decoration: underline;
     cursor: pointer;
     text-transform: lowercase;
+    margin-top: 0px;
 }
 
 .navbar > u {

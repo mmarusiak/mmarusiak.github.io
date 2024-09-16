@@ -173,7 +173,10 @@ select {
     font-size: 10px;
     margin-bottom: 0;
     max-width: 90px;
+    text-align: right;
+    margin-left: auto;
 }
+
 
 .post > .title-content > img {
     width: 24px;

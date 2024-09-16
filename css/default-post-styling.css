@@ -8,6 +8,9 @@
 
 body {
     background-color: #F4F3EE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .main-section{
@@ -18,13 +21,16 @@ body {
 }
 
 .main-section > h1 {
-    max-width: 70%;
+    max-width: 70vw;
+    margin-right: 20px;
 }
 
 body > div {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: auto;
+    max-width: 800px;
 }
 
 h1 {
@@ -53,7 +59,7 @@ p{
     margin-top: 10px;
     display: grid;
     grid-template-columns: auto auto;
-    grid-gap: 15px;
+    grid-gap: 25px;
 }
 
 .hashtags > p{
@@ -63,7 +69,7 @@ p{
     color:#8A817C;
     text-decoration: underline;
     text-align: center;
-    width: 140px;
+    
 }
 
 .hashtags > p:hover{
@@ -71,6 +77,7 @@ p{
 }
 
 .img-section > div > img {
+    max-width: 600px;
     width: 90%;
     align-self: center;
     margin-top: 20px;
@@ -163,8 +170,55 @@ footer {
     color: #8A817C;
     text-decoration: underline;
     cursor: pointer;
+    text-transform: lowercase;
 }
 
 .navbar > u {
     cursor: pointer;
+    text-transform: lowercase;
+}
+
+
+@media only screen and (max-width: 1050px){
+    .main-section > h1 {
+        font-size: 34px;
+    }
+    .main-section > #icon-img {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .main-section > h1 {
+        font-size: 26px;
+    }
+    .main-section > #icon-img {
+        width: 26px;
+        height: 26px;
+    }
+    .summary {
+        font-size: 12px;
+    }
+    #date {
+        font-size: 10px;
+    }
+    .hashtags > p{
+        font-size: 12px;
+    }
+
+    .section-heading {
+        font-size: 20px;
+    }
+    .section-content {
+        font-size: 12px;
+    }
+
+    .img-section > div > h2 {
+        font-size: 10px;
+    }
+
+    footer {
+        font-size: 10px;
+    }
 }

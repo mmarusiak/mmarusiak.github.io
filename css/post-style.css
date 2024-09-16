@@ -80,6 +80,10 @@ h3 {
     font-size: 14px;
 }
 
+.hashtag-body > p:hover{
+    color: #463f3a;
+}
+
 .hashtag-notset{
     cursor: pointer;
     text-decoration: underline;
@@ -130,7 +134,13 @@ select {
 }
 
 .post {
-    margin-bottom: 30px;
+    margin-bottom: 26px;
+    padding: 4px;
+    border-radius: 5px;
+}
+
+.post:hover{
+    background-color: #bcb8b1;
 }
 
 .post, .post > *, .post > * > *{

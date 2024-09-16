@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doppler Effect explained</title>
+    <title>Devlog: Personal site rebuild</title>
     <link rel="stylesheet" href="/css/default-post-styling.css">
     <link rel="icon" href="./posts-materials/macbook-it-guy.png">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
     <h2 class='navbar'><u id="landing-page">mmarusiak</u> <u id='back-to-all-posts'>/all posts</u> <u>/devlog: personal
             site rebuild</u></h2>
     <div style="margin-top: 150px;">
@@ -21,176 +20,193 @@
             <h1 id='post-title'>Devlog: Personal site rebuild</h1>
             <img id='icon-img' src="/Posts/posts-materials/macbook-it-guy.png" alt>
         </div>
-        <p id='date'>Sep. 25 2023</p>
+        <p id='date'>Sep. 16 2024</p>
 
         <div class='hashtags'>
-            <p class='hashtag'>#physics</p>
-            <p class='hashtag'>#waves</p>
+            <p class='hashtag'>#devlog</p>
+            <p class='hashtag'>#site</p>
             <p class='hashtag'>#explained</p>
-            <p class='hashtag'>#demo</p>
+            <p class='hashtag'>#htmlcssjs</p>
         </div>
-        <h2 class='summary' id='post-summary'>Doppler Effect: Physics
-            explains how motion changes wave frequencies, like
-            sirens.</h2>
+        <h2 class='summary' id='post-summary'>
+            My personal website rebuild overview - technologies and process explained!🥳
+        </h2>
         <div class='line'></div>
         <div class='content'>
-            <h2 class='section-heading'>
-                Problem overview
+            <h2 class="section-heading">
+                Why did I decide to rebuild my website?
             </h2>
-            <h2 class='section-content'>The Doppler Effect, named after the
-                Austrian physicist Christian Doppler, is a
-                phenomenon in physics that
-                describes the change in frequency or wavelength of a wave in
-                relation to an observer moving relative to
-                the
-                source of the wave. In simpler terms, it explains why the
-                sound or light from a moving object appears
-                different to an observer compared to when the object is
-                stationary.
-                <br> <br>
-                I've also made little web demonstration (all gifs are from this demo),
-                you can play with it
-                <span id='demo' class='link'>here</span>.
-            </h2>
-            <div class='img-section'>
-                <div>
-                    <img src="/Posts/posts-materials/doppler/observerismovingaway.gif" alt="doppler demo gif 1">
-                    <h2>observer is moving away of source</h2>
-                </div>
-                <div>
-                    <img src="/Posts/posts-materials/doppler/observernotmovingsourcenotmoving.gif"
-                        alt="doppler demo gif 2">
-                    <h2>both objects aren't moving</h2>
-                </div>
-                <div>
-                    <img src="/Posts/posts-materials/doppler/sourceismovingin.gif" alt="doppler demo gif 3">
-                    <h2>source is moving toward observer</h2>
-                </div>
-            </div>
-            <p style="font-style: italic; text-align: center;">
-                <span style="color: red;">red</span>
-                = observer,
-                <span style="color: gray;">gray</span> = source
-            </p>
-            <h2 class='section-heading'>
-                problem introduction
-            </h2>
-            <h2 class='section-content'>
-                Looking at the gifs you can clearly see that
-                observer "touches" waves with diffrent frequency.
-                From these gifs it's also clearly seen that frequency
-                depends on velocity of source and observer. It's
-                important to note that we'll discuss only movement
-                on the same axis (that means you can create
-                displacement vector which always has the same direction).
-            </h2>
-            <h2 class='section-content' style="font-weight: 600;">
-                Let's talk about what happens when observer is moving:
-            </h2>
-            <div class='img-section'>
-                <div>
-                    <img src="/Posts/posts-materials/doppler/observerismovingin.gif" alt>
-                    <h2>observer is moving toward source</h2>
-                </div>
-                <div>
-                    <img src="/Posts/posts-materials/doppler/observerismovingaway.gif" alt>
-                    <h2>observer is moving away of source</h2>
-                </div>
-            </div>
-            <h2 class='section-content'>
-                As we can see if observer is moving toward source,
-                frequency is less than original one. When is moving away
-                frequency
-                is greater than original one. When observer is
-                moving toward source, it is "crashing" with waves,
-                but when is moving away, it is running away of them.
-                The equations for an observer moving toward or away from a
-                stationary source can be combined into one equation:
-                <br>
-                $$f_{o} = {V \pm V_{o} \over V}$$
-                <br>
-                where f<sub>o</sub> is observed frequency, f<sub>s</sub> is source'
-                frequency, v is velocity of the wave and v<sub>o</sub> is velocity of
-                observer.
-                <br>
-                If observer is moving toward source, we're adding velocity, because
-                frequency then is larger than original.
-                <br>
-                If observer is moving away of source, we're subtracting velocity, because
-                frequency then is less than original.
+            <h2 class="section-content">
+                I decided to rebuild my site because the old design no longer reflected my current skills—it was created
+                back when I was
+                just learning HTML, CSS, and JavaScript. Plus, I wanted to test out my new MacBook and get a fresh,
+                updated site ready
+                before starting university. Most importantly, it was a great opportunity to continue learning and
+                refining my
+                development skills.
             </h2>
 
-            <h2 class='section-content' style="font-weight: 600;">
-                Let's talk about what happens when source is moving:
-            </h2>
-            <div class='img-section'>
+            <h2 class="section-heading">Design changes overview</h2>
+            <div class="img-section">
                 <div>
-                    <img src="/Posts/posts-materials/doppler/sourceismovingin.gif" alt>
-                    <h2>source is moving toward observer</h2>
+                    <img src="posts-materials/site-rebuild/legacy/home-page-legacy.png" alt="home page old design">
+                    <h2>home page design before</h2>
                 </div>
                 <div>
-                    <img src="/Posts/posts-materials/doppler/sourceismovingout.gif" alt>
-                    <h2>source is moving away of observer</h2>
-                </div>
-            </div>
-            <h2 class='section-content'>
-                As we can see if source is moving toward observer,
-                frequency is greater than original one. When is moving away
-                frequency is less than original one. When source is
-                moving toward observer, waves of it are closer to each other,
-                but when is moving away, they are away of each other.
-                The equations for an source moving toward or away from a
-                stationary source can be combined into one equation:
-                <br>
-                $$f_{o} = {V \over V \pm V_{s}}$$
-                <br>
-                where f<sub>o</sub> is observed frequency, f<sub>s</sub> is source'
-                frequency, v is velocity of the wave and v<sub>s</sub> is velocity of
-                source.
-                <br>
-                If source is moving toward observer, we're subtracting velocity, because
-                frequency then is larger than original.
-                <br>
-                If source is moving away of observer, w're adding velocity, because
-                frequency then is less than original.
-            </h2>
-
-            <h2 class='section-heading'>
-                combined formula
-            </h2>
-            <h2 class='section-content'>
-                When observer and source are moving at the same moment, we can
-                combine 2 formulas into 1.
-            </h2>
-
-            <div class='img-section'>
-                <div>
-                    <img src="/Posts/posts-materials/doppler/observerandsourcemoving.gif" alt="">
-                    <h2>both objects are moving in the same direction</h2>
-                </div>
-                <div>
-                    <img src="/Posts/posts-materials/doppler/observerandsourcemoving2.gif" alt="">
-                    <h2>objects are moving in opposite directions</h2>
+                    <img src="posts-materials/site-rebuild/home-page-rebuild.png" alt="home page new design">
+                    <h2>home page design after</h2>
                 </div>
             </div>
 
-            <h2 class='section-content'>
-                For the combined formula, rules are the same and formula looks like
-                that:
-                $$f_{o} = {V \pm V_{o} \over V \pm V_{s}}$$
+            <h2 class="section-content">
+                The homepage has changed a lot. I wanted to achieve a more minimalist look for the site, with a slightly
+                more modern
+                design. I didn't like the "blocky" look of the old design and disliked the colors. I managed to choose a
+                great,
+                minimalist brownish color palette that I love. It became clear that sometimes "less" content is better,
+                not only in
+                terms of design and aesthetics but also for improved readability.
             </h2>
 
-            <h2 class='section-heading'>Real life examples</h2>
-            <h2 class='section-content'>
-                You can observe doppler effect everyday. Most common example is
-                passing car with some signal (honk, sirens or radio). You will note
-                that you hear diffrent sound when it is closer to you and when it is
-                approaching you.
-                <br>
-                Some radars uses doppler effect to detect objects. Objects simply bounces
-                wave signal back which is detected then.
-                <br> <br>
-                You can see my youtube playlist with some examples <span id='playlist' class='link'>here</span>.
+            <div class="img-section">
+                <div>
+                    <img src="posts-materials/site-rebuild/legacy/posts-legacy.png" alt="all posts old design">
+                    <h2>all posts design before</h2>
+                </div>
+                <div>
+                    <img src="posts-materials/site-rebuild/all-posts-redesign.png" alt="all posts new design">
+                    <h2>all posts design after</h2>
+                </div>
+            </div>
+
+            <h2 class="section-content">
+                The old design of the "All Posts" page looked terrible. There was too much content on the screen, most
+                of which was
+                useless for the user. I decided to make it more minimalist and readable, and I was really amazed by how
+                it turned out. I
+                improved not only the look but also the readability. The color palette now matches the rest of the
+                site's colors. I also
+                added a navbar, which is an essential part of my site, and ensured the overall design remained
+                consistent with the rest
+                of the page.
+            </h2>
+
+            <div class="img-section">
+                <div>
+                    <img src="posts-materials/site-rebuild/legacy/post-design-legacy.png" alt="">
+                    <h2>post design before</h2>
+                </div>
+                <div>
+                    <img src="posts-materials/site-rebuild/post-rebuild.png" alt="">
+                    <h2>post design after</h2>
+                </div>
+            </div>
+
+            <h2 class="section-content">
+                The look of the posts didn't change much, as it was the most recent element. I updated the color
+                palette, adjusted some
+                font sizes, and added a maximum width for images.
+                Also I centered post content on site and made it to
+                not cover whole page on bigger screens.
+            </h2>
+
+            <h2 class="section-heading">
+                Technologies overview
+            </h2>
+            <h2 class="section-content">
+                I'm quite proud to say that I didn't use any frameworks for my site. It's 100% handmade, from the post
+                system to the
+                entire design. It was a great experience for me to challenge myself and improve my web design skills.
+            </h2>
+            <h2 class="section-content">
+                I always wanted to have a blog section on my personal site. I didn't like that everyone uses frameworks
+                like Blowfish.
+                There's nothing wrong with that, but I have a scientific mindset, and I love to invent and create my own
+                things. So, I
+                did the same here! I created my own post system — maybe a bit unusual, maybe not so fancy, but hey! It's
+                mine!
+            </h2>
+            <div class="img-section">
+                <div>
+                    <img src="posts-materials/site-rebuild/dir.png" alt="">
+                    <h2>project directory</h2>
+                </div>
+                <div>
+                    <img src="posts-materials/site-rebuild/carbon-4.png" alt="">
+                    <h2>posts_handler.py</h2>
+                </div>
+                <div>
+                    <img src="posts-materials/GitHub.png" alt="">
+                    <h2>github actions</h2>
+                </div>
+            </div>
+            <h2 class="section-content">
+                I didn't want to host anything on external clouds. I wanted to build the post system entirely on GitHub.
+                So, I thought
+                maybe there was a way to run Python on GitHub remotely — and there is! I created a GitHub workflow
+                script
+                that checks for
+                any changes in the <i class="scr">Posts/</i> directory. If changes are detected, it runs a simple
+                <i class="scr">posts_handler.py</i> script.
+                This script
+                retrieves all files with the <i class='scr'>.html</i> extension in the <i class="scr">Posts/</i>
+                directory and adds their
+                paths to <i class="scr">posts.json</i>,
+                which contains
+                all the posts. When any page containing posts is loaded, it fetches the post data and displays it. All
+                posts follow the
+                same format, so processing them is straightforward. Pure JavaScript couldn't check directories on the
+                site or retrieve
+                all the files from <i class="scr">Posts/</i> because it's website-based. That's why we needed Python!
+            </h2>
+
+            <h2 class="section-heading">
+                Process overview
+            </h2>
+            <h2 class="section-content">
+                I started by looking for inspiration online. I visited some sites hosted by other developers to see how
+                they built their
+                personal sites. I noticed that I prefer a minimalist look over some modern sites with a lot of content.
+                Then I chose a
+                color palette using <u class="quicklink" id="coolors">Coolors</u> (a site for picking color palettes,
+                you can see the palette I used <u class="quicklink" id="palette">here</u>).
+                After that, I
+                began the redesign. It took a long time to implement all the changes, but it was worth it. Here, you can
+                see some
+                progress I documented for the redesign of the "All Posts" page.
+            </h2>
+            <div class="img-section">
+                <div>
+                    <img src="posts-materials/site-rebuild/filter-options-v1.png" alt="">
+                    <h2>first steps, change of colors and changed display to row/column depend on screen size</h2>
+                </div>
+                <div>
+                    <img src="posts-materials/site-rebuild/filter-options-v2.png" alt="">
+                    <h2>made it look better, almost like I wanted, added basic styling for posts and for filter options
+                    </h2>
+                </div>
+            </div>
+            <div class="img-section">
+                <div>
+                    <img src="posts-materials/site-rebuild/filter-options-v3.png" alt="">
+                    <h2>added navbar <br> changed filter options look</h2>
+                </div>
+                <div>
+                    <img src="posts-materials/site-rebuild/all-posts-redesign.png" alt="">
+                    <h2>added padding to all the content to get some margins on the edges</h2>
+                </div>
+            </div>
+
+            <h2 class="section-content">
+                Rebuilding my personal site has been a challenging but incredibly rewarding experience. From redesigning
+                the layout to
+                building a custom post system, I've learned so much along the way. The process pushed me to refine my
+                skills, experiment
+                with new ideas, and make something that truly reflects my vision. I’m proud of the final result, and I
+                hope it showcases
+                not just my technical abilities but also my personal style. This site will continue to evolve, and I
+                look forward to
+                adding even more features and improvements in the future. Thanks for following along with the journey!
             </h2>
         </div>
     </div>
@@ -206,20 +222,21 @@
             document.location.href = '../';
         });
 
-        const playlist = document.getElementById('playlist');
-        playlist.addEventListener('click', function () {
-            document.location.href = 'https://www.youtube.com/watch?v=dC4Lp7k4zrI&list=PLKxlLnzEQmc_a6x5zzFSwkns5fvcB-MLr';
+        const coolors = document.getElementById('coolors');
+        coolors.addEventListener('click', function () {
+            document.location.href = 'https://coolors.co';
         });
 
-        const demo = document.getElementById('demo');
-        demo.addEventListener('click', function () {
-            document.location.href = '/Projects/Doppler-effect/src/doppler.html'
-        });
+        const palette = document.getElementById('palette');
+        palette.addEventListener('click', function () {
+            document.location.href = 'https://coolors.co/463f3a-8a817c-bcb8b1-f4f3ee-e0afa0';
+        })
+
         hashtagLoader();
     </script>
 
     <footer>
-        © Marcel Marusiak 2023
+        © Marcel Marusiak 2024
     </footer>
 </body>
 

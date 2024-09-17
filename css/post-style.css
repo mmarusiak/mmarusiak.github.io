@@ -37,12 +37,19 @@ h3 {
     color: #8A817C;
     text-decoration: underline;
     cursor: pointer;
-    display: block;
-    margin-top: 0px;
+    text-transform: lowercase;
+    position: fixed;
+    margin: 0;
+    top: 0;
+    left: 0;
+    background-color: RGBA(244, 243, 238, 0.9);
+    width: 100%;
+    padding: 10px;
 }
 
 .navbar > u {
     cursor: pointer;
+    text-transform: lowercase;
 }
 
 @media only screen and (min-width: 620px){

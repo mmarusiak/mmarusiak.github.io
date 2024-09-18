@@ -169,6 +169,10 @@ h1 {
     text-decoration: #8A817C;
 }
 
+.navbar:hover{
+    color: #463f3a;
+}
+
 .footer {
     background-color: #F4F3EE;
     position: fixed;

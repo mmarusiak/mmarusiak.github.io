@@ -1,9 +1,13 @@
 const allHashtags = [];
+const postsPerPage = 3
+
 var postsArray;
 var currentPosts;
 var currentSortMethod = '1';
 var currentHashtag = 'none'
 var ready = false;
+var currentPage = 1
+
 
 async function fetchAndProcessPosts(){
     const posts = await getPostsInfo();
@@ -65,12 +69,28 @@ function changeHashtagDisplay(oldHashtag, currentHashtag){
     }
 }
 
-function displayPosts(postsToDisplay){
+function displayPosts(allCurrentPosts, targetPage = 1){
     const postsHolder = document.getElementById('posts');
+
+    const expectedLastPostNumber = targetPage * postsPerPage;
+    const expectedFirstPostNumber = (targetPage-1) * postsPerPage
+
+    let postsToDisplay = Object.values(allCurrentPosts);
+    currentPage = targetPage;
+
+    if (postsToDisplay.length <= expectedLastPostNumber){
+        postsToDisplay = postsToDisplay.slice(expectedFirstPostNumber);
+    }
+    else {
+        postsToDisplay = postsToDisplay.slice(expectedFirstPostNumber, expectedLastPostNumber);
+    }
+
     postsToDisplay.forEach((post) => {
         const postElement = createPost(post.title, post.content, post.hashtags, post.date, post.source, post.postIcon);
         postsHolder.appendChild(postElement);
     });
+
+    createPageNavigation();
 }
 
 function filterByHashtag(hashtagName){
@@ -131,6 +151,66 @@ function clearFiltering(){
     currentPosts = postsArray;
 
     sortBy(currentSortMethod);
+}
+
+function createPageNavigation(){
+    const holder = document.getElementById('pages-holder');
+
+    holder.innerHTML = '';
+    holder.childNodes = [];
+
+    const startPage = 1;
+    const previousPage = currentPage - 1;
+    const nextPage = currentPage + 1;
+    const lastPage = Math.ceil(currentPosts.length/postsPerPage);
+
+    const pageNumbers = [];
+
+    pageNumbers.push(startPage);
+
+    // we don't want to have multiple navs of same page
+    if (previousPage > 1)
+        pageNumbers.push(previousPage);
+
+    if (currentPage != startPage && currentPage != lastPage)
+        pageNumbers.push(currentPage);
+
+    if (nextPage < lastPage)
+        pageNumbers.push(nextPage);
+
+    pageNumbers.push(lastPage);
+    
+    for(const pageNumber of pageNumbers){
+        const newPageNav = document.createElement('n');
+        newPageNav.innerHTML = pageNumber;
+
+        newPageNav.style = 'margin-right: 10px; margin-left: 10px;';
+        if (pageNumber == currentPage)
+            newPageNav.style = 'text-decoration: underline; margin-right: 10px; margin-left: 10px; color: #463f3a;';
+        
+        newPageNav.id = 'post-number';
+
+        newPageNav.addEventListener('click', function(){
+            clearPosts();
+            displayPosts(currentPosts, pageNumber);
+        });
+
+        holder.appendChild(newPageNav);
+    }
+}
+
+function moveToPreviousPage(){
+    if (currentPage == 1)
+        return;
+    clearPosts();
+    displayPosts(currentPosts, currentPage - 1);
+}
+
+function moveToNextPage(){
+    if (currentPage == Math.ceil(currentPosts.length/postsPerPage))
+        return;
+    clearPosts();
+    displayPosts(currentPosts, currentPage + 1)
 }
 
 async function main(){

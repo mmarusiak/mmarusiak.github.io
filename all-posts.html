@@ -50,6 +50,11 @@
                     <p>Lorem ipsum dolor sit amet, consectetur</p>
                 </div>
             </div>
+            <h2 class="post-pages">
+                <c id="previous">←</c>
+                <c id="pages-holder">1 2 3</c>
+                <c id="next">→</c>
+            </h2>
         </div>
     </div>
 
@@ -62,6 +67,12 @@
         // Get a reference to the select element and manage dropdown options
         const selectElement = document.getElementById('sort');
         selectElement.addEventListener('change', function () { sortBy(selectElement.value) });
+
+        const previousPage = document.getElementById('previous');
+        previousPage.addEventListener('click', function () { moveToPreviousPage() });
+
+        const nextPage = document.getElementById('next');
+        nextPage.addEventListener('click', function () { moveToNextPage() });
 
         // Get a reference to back to home element and make button from it
         const backToHomeElement = document.getElementById('back-to-home');

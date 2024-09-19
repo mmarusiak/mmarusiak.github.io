@@ -2,7 +2,7 @@
 
 
 * {
-   font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
     cursor: default;
 }
 
@@ -56,9 +56,12 @@ h3 {
     .main {
         display: flex;
         flex-direction: row;
-        justify-content: center;
         align-items: start;
+        justify-content: space-evenly;
+        max-width: 850px;
+        margin: auto;
     }
+    
 }
 
 @media only screen and (max-width: 620px){
@@ -197,6 +200,24 @@ select {
     color: #8A817C;
     font-size: 12px;
     max-width: 320px;
+}
+
+.post-pages{
+    color: #8A817C;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    margin: 0;
+}
+
+#previous, #next{
+    color: #8A817C;
+    cursor: pointer;
+}
+
+#previous:hover, #next:hover, #post-number:hover{
+    cursor: pointer;
+    color: #463f3a;
 }
 
 .quicklink {

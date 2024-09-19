@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devlog: Three.js falling sand</title>
+    <link rel="stylesheet" href="/css/default-post-styling.css">
+    <link rel="icon" href="./posts-materials/threejs-sandbox/image-removebg-preview-2.png">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+    <h2 class='navbar'><u class="quicklink" id="landing-page">marcel marusiak</u><u class="quicklink"
+            id='back-to-all-posts'>/all
+            posts</u><u class="quicklink">/devlog:
+            three.js falling sand
+        </u></h2>
+    <div style="margin-top: 150px;">
+        <div class="main-section">
+            <h1 id='post-title'>Devlog: Three.js falling sand</h1>
+            <img id='icon-img' src="/Posts/posts-materials/threejs-sandbox/image-removebg-preview-2.png" alt>
+        </div>
+        <p id='date'>Sep. 19 2024</p>
+
+        <div class='hashtags'>
+            <p class='hashtag'>#devlog</p>
+            <p class='hashtag'>#demo</p>
+            <p class='hashtag'>#explained</p>
+            <p class='hashtag'>#htmlcssjs</p>
+            <p class="hashtag">#threejs</p>
+            <p class="hashtag">#codingchallenge</p>
+        </div>
+        <h2 class='summary' id='post-summary'>
+            An overview of a 3D version of Daniel Shiffman's 'Falling Sand' project, created using the <u
+                class="quicklink" id="threejs">Three.js
+                library</u>.</h2>
+        <div class='line'></div>
+        <div class='content'>
+            <h2 class="section-heading">
+                What is this project?
+            </h2>
+            <h2 class="section-content">
+                I created a 3D "Falling Sand" simulation using Three.js, inspired by Daniel Shiffman's video on the
+                topic. It was a
+                two-day experimental project, and the experience was incredibly rewarding. The project simulates
+                particles interacting
+                in a 3D space, bringing the classic 2D concept to life in a new dimension. <u class="quicklink"
+                    id="demo">
+                    You can try it by yourself!
+                </u>
+            </h2>
+            <div class="img-section">
+                <div>
+                    <img src="posts-materials/threejs-sandbox/threejs.svg" alt="">
+                    <h2>Three.js logo - tech that I used</h2>
+                </div>
+                <div>
+                    <iframe src="https://www.youtube.com/embed/L4u7Zy_b868?si=RbklMlbnRoBhlWmO"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <h2>coding challange - genuary 2024</h2>
+                </div>
+            </div>
+
+
+            <h2 class="section-heading">
+                Process overview
+            </h2>
+
+            <h2 class="section-content">
+                I started with a simple falling sand prototype, but the 'physics' (rules for the sand) were poorly
+                specified. As a
+                result, the sand was forming towers, which shouldn't have happened. After making some improvements, the
+                towers
+                disappeared, but the sand was no longer following the grid I had specified. With some further tweaking,
+                I achieved the
+                desired falling sand behavior. Finally, I added a prototype control panel to make the demo more
+                customizable.
+            </h2>
+
+            <div class="img-section">
+                <div>
+                    <img src="posts-materials/threejs-sandbox/test.gif" alt="first version">
+                    <h2>first project protytpe with visible "towers"</h2>
+                </div>
+                <div>
+                    <img src="posts-materials/threejs-sandbox/workingcopy1.gif" alt="">
+                    <h2>improved prototype, it still doesn't snap to the grid</h2>
+                </div>
+                <div>
+                    <img src="posts-materials/threejs-sandbox/demoPreview.gif" alt="demo gif">
+                    <h2>prototype with first control panel, also it snaps to grid</h2>
+                </div>
+            </div>
+
+            <h2 class="section-content">
+                After refining the project, I decided to add control over the camera's Z position to make it easier for
+                users to observe
+                the sand. I also improved the overall appearance of the control panel, making the text much more
+                visible.
+            </h2>
+            <div class="img-section">
+                <div>
+                    <img src="posts-materials/threejs-sandbox/finalFallingSand.gif" alt="">
+                    <h2>final look of the project, with better looking panel and additional camera control</h2>
+                </div>
+            </div>
+
+            <h2 class="section-heading">
+                Problems I encountered
+            </h2>
+            <h2 class="section-content">
+                In general, using the Three.js library was a very enjoyable and smooth experience. <u class="quicklink"
+                    id="documentation">The
+                    documentation</u> is
+                easy to follow
+                and understand. However, I'd like to take a moment to discuss some of the challenges I faced.
+            </h2>
+
+            <h2 class="section-content">
+                The first issue, if I can even call it a problem, relates to the installation method I recommend. I
+                suggest going with
+                option 2: importing from a CDN. Initially, I installed Three.js using NPM and a build tool, but after
+                about two hours, I
+                noticed that my MacBook was getting warm—not overly hot, but enough to notice. After switching to
+                importing Three.js
+                from a CDN, it seemed to be less demanding on my computer <i>(at least in my case)</i>, as the MacBook
+                stayed cool even during
+                longer sessions with Three.js.
+            </h2>
+
+            <h2 class="section-content">
+                Another issue I encountered was some strange behavior with an array containing <i
+                    class="scr">THREE.Vector3</i> objects.
+                The array couldn't
+                find elements that were already in it, likely because it was trying to match the exact object reference
+                rather than just
+                vectors with the same XYZ coordinates. This was quite frustrating and took me a while to figure out. In
+                the end, I wrote
+                my own script to solve the problem.
+            </h2>
+
+            <div class="img-section">
+                <div>
+                    <img src="posts-materials/threejs-sandbox/Screenshot 2024-09-18 at 13.16.18.png" alt="">
+                    <h2>1. vector that I wanted to find in array; <br>
+                        2. array where vector is located in 1st index; <br>
+                        3. result of array.indexOf(vector) calling - vector not found
+                    </h2>
+                </div>
+
+                <div>
+                    <img src="posts-materials/threejs-sandbox/carbon-5.png" alt="">
+                    <h2>simple js function that replaced indexOf</h2>
+                </div>
+            </div>
+
+            <h2 class="section-heading">Closing words</h2>
+
+            <h2 class="section-content">In conclusion, working on this project has been a rewarding experience, despite
+                a
+                few challenges along the way. The
+                Three.js library made the development process smooth and enjoyable, and I learned a lot while overcoming
+                the obstacles I
+                faced. The project is open source and <u class="quicklink" id="github">available on GitHub</u>, so feel
+                free to check it out, contribute, or
+                use it as a
+                starting point for your own ideas!</h2>
+        </div>
+    </div>
+    <script src="/js/hashtagFilterOtherPage.js"></script>
+    <script>
+        const backToAllPostsElement = document.getElementById('back-to-all-posts');
+        backToAllPostsElement.addEventListener('click', function () {
+            document.location.href = '../all-posts';
+        });
+
+        const landingPage = document.getElementById('landing-page');
+        landingPage.addEventListener('click', function () {
+            document.location.href = '../';
+        });
+
+        const threejs = document.getElementById('threejs');
+        threejs.addEventListener('click', function () {
+            document.location.href = 'https://threejs.org';
+        });
+
+        const demoPreview = document.getElementById('demo');
+        demoPreview.addEventListener('click', function () {
+            document.location.href = '../Projects/sandbox-3d/';
+        });
+
+        const documentation = document.getElementById('documentation');
+        documentation.addEventListener('click', function () {
+            document.location.href = 'https://threejs.org/docs/#manual/en/introduction/';
+        });
+
+        const github = document.getElementById('github');
+        github.addEventListener('click', function () {
+            document.location.href = 'https://github.com/mmarusiak/sandbox-3d';
+        });
+
+        hashtagLoader();
+    </script>
+
+    <footer>
+        © Marcel Marusiak 2024
+    </footer>
+</body>
+
+</html>

@@ -4,3 +4,6 @@
 [submodule "Projects/Doppler-effect"]
 	path = Projects/Doppler-effect
 	url = https://github.com/mmarusiak/Doppler-effect-demo.git
+[submodule "Projects/sandbox-3d"]
+	path = Projects/sandbox-3d
+	url = https://github.com/mmarusiak/sandbox-3d.git

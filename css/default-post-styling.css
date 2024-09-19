@@ -127,6 +127,7 @@ p{
 
 iframe {
     margin: auto;
+    border-radius: 5px;
 }
 
 .img-section > div {
@@ -134,11 +135,15 @@ iframe {
     display: flex;
     flex-direction: column;
     justify-content: end;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .img-section > div > h2 {
     font-style: italic;
     font-size: 12px;
+    width: 100%;
 }
 
 #back-to-all-posts {

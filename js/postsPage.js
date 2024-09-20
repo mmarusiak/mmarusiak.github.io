@@ -177,8 +177,9 @@ function createPageNavigation(){
 
     if (nextPage < lastPage)
         pageNumbers.push(nextPage);
-
-    pageNumbers.push(lastPage);
+    
+    if (lastPage != startPage)
+        pageNumbers.push(lastPage);
     
     for(const pageNumber of pageNumbers){
         const newPageNav = document.createElement('n');

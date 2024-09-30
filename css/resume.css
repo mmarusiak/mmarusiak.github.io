@@ -4,7 +4,10 @@
 * {
     font-family: "Poppins", sans-serif;
     cursor: default;
-    color: #463f3a;
+}
+
+h1{
+        color: #463f3a;
 }
 
 body {
@@ -14,20 +17,16 @@ body {
 
 .nav-resume-pressed{
     cursor: pointer;
-}
-
-.nav-resume-pressed:hover{
     text-decoration: underline;
 }
 
 .nav-resume-inter{
-    text-decoration: underline;
     color: #8A817C;
     cursor: pointer;
 }
 
 .nav-resume-inter:hover{
-    color: #463f3a;
+    text-decoration: underline;
 }
 
 .pdf-false{
@@ -35,7 +34,8 @@ body {
 }
 
 .pdf-true{
-    display: block;
+    display: flex;
+    justify-content: center;
 }
 
 .interactive-false{
@@ -46,7 +46,30 @@ body {
     display: block;
 }
 
-#pdf > * {
-    margin-left: auto;
-    margin-right: auto;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.navbar-site{
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    color: #8A817C;
+}
+
+
+.navbar-site > u {
+    cursor: pointer;
+}
+
+
+.navbar-site > u:hover {
+    color: #463f3a;
+}
+
+.navbar-resume {
+    font-weight: 300;
+    font-size: 16px;
 }

@@ -118,9 +118,18 @@ body {
     font-size: 14px;
 }
 
+.section-content{
+    margin-bottom: 20px;
+}
+
 .section-content > p {
     color: #8A817C;
     padding: 20px;
     margin-top: 0;
+    display: none;
+}
+
+.section-content:hover > p {
+    display: block;
 }
 

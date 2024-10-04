@@ -74,10 +74,21 @@ body {
     font-size: 16px;
 }
 
+@media only screen and (min-width: 700px){
 .section {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+}
+
+@media only screen and (max-width: 700px){
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
 }
 
 .section > * > h2 {

@@ -96,6 +96,10 @@ body {
     font-weight: 550;
 }
 
+.section > div {
+    width: 330px;
+}
+
 .section-content {
     width: 330px;
     background-color: RGBA(0, 0, 0, 0.05);

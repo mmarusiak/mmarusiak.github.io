@@ -166,6 +166,8 @@ body {
 
 .section-content{
     margin-bottom: 20px;
+    max-height: 200px;
+    transition: max-height 500ms ease-out;
 }
 
 .section-content > p {
@@ -175,9 +177,13 @@ body {
     display: none;
     font-size: 14px;
     font-weight: 400;
+    transition: display 600ms linear;
 }
 
 .section-content:hover > p {
     display: block;
 }
 
+.section-content:hover {
+    max-height: 400px;
+}

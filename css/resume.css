@@ -94,6 +94,8 @@ body {
 .section > * > h2 {
     color: #463f3a;
     font-weight: 550;
+    height: 70px;
+    align-content: end;
 }
 
 .section > div {
@@ -127,14 +129,6 @@ body {
     color: #463f3a;
 }
 
-.job-title > h3 {
-    font-size: 16px;
-}
-
-.job-title > h2 {
-    font-size: 26px;
-}
-
 .study-title > h2, h3 {
     padding-left: 20px;
     font-weight: 500;
@@ -146,12 +140,13 @@ body {
     width: 210px;
 }
 
-.study-title > h3 {
+.study-title > h3, .job-title > h3 {
     font-size: 12px;
     font-weight: 550;
 }
 
-.study-title > h2 {
+.study-title > h2, .job-title > h2 {
+    padding-top: 15px;
     font-size: 18px;
     font-weight: 600;
 }
@@ -159,9 +154,11 @@ body {
 .section-heading > h3 {
     color: #463f3a;
     padding-right: 20px;
-    padding-top: 20px;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 12px;
+    align-content: start;
+    margin:0;
+    padding-left: 0px;
 }
 
 .section-content{

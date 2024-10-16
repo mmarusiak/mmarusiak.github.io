@@ -79,6 +79,8 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    max-width: 800px;
+    margin: auto;
 }
 }
 
@@ -96,6 +98,7 @@ body {
     font-weight: 550;
     height: 70px;
     align-content: end;
+    margin-top: 0px;
 }
 
 .section > div {
@@ -142,7 +145,7 @@ body {
 
 .study-title > h3, .job-title > h3 {
     font-size: 12px;
-    font-weight: 550;
+    font-weight: 380;
 }
 
 .study-title > h2, .job-title > h2 {
@@ -164,23 +167,41 @@ body {
 .section-content{
     margin-bottom: 20px;
     max-height: 200px;
-    transition: max-height 500ms ease-out;
+    transition: max-height 800ms ease-in-out;
 }
 
 .section-content > p {
-    color: #8A817C;
+    color: transparent;
     padding: 20px;
     margin-top: 0;
     display: none;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 400;
-    transition: display 600ms linear;
+    transition: color 900ms ease-in;
 }
 
 .section-content:hover > p {
     display: block;
+    color: #8A817C;
 }
 
 .section-content:hover {
     max-height: 400px;
+}
+
+.hobby, .skill {
+    height: 75px;
+}
+
+.skill > h3, .hobby > h3{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    color: #463f3a;
+}
+
+.skill > p, .hobby >p{
+    color: #8A817C;
+    margin-top: 8px;
+    font-size: 12px;
+    padding-left: 20px;
 }

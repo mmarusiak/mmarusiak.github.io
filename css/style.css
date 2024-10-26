@@ -103,19 +103,6 @@ h1 {
     color: #463f3a;
 }
 
-
-.main > .content > .row-section > .links > h1 {
-    margin-bottom: 2px;
-}
-
-.main > .content > .row-section > .links > h2 {
-    margin-top: 2px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
-}
-
 .main > .content > .row-section > .posts {
     width: 280px;
 }
@@ -125,11 +112,11 @@ h1 {
     flex-direction: row;
 }
 
-.main > .content > .row-section > .posts > h1 {
+.main > .content > .row-section > .posts > h1 , .links > h1{
     margin-bottom: 2px;
 }
 
-.post {
+.post, .links > div {
     display: flex;
     justify-content: row;
     align-items: center;
@@ -139,11 +126,11 @@ h1 {
     transition: background-color 300ms linear;
 }
 
-.post:hover {
+.post:hover , .links > div:hover{
     background-color: #BCB8B1;
 }
 
-.post > img {
+.post > img , .links > div > img{
     width: 20px;
     height: 20px;
     padding: 3px;
@@ -151,7 +138,7 @@ h1 {
     margin-bottom: auto;
 }
 
-.post > h2 {
+.post > h2 , .links > div > h2{
     padding: 3px;
     padding-right: 10px;
     margin: 0;

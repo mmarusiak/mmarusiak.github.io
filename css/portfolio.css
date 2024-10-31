@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    font-family: "Poppins", sans-serif;
+    cursor: default;
+}
+
+h1{
+    color: #463f3a;
+    font-size: 42px;
+}
+
+h2 {
+    font-weight: 600;;
+}
+
+h3{
+    font-weight: 500;
+}
+
+h2, h3 {
+    color: #8A817C;
+}
+
+h4 {
+    color: #463f3a;
+    font-weight: 450;
+    margin-bottom: 5px;
+}
+
+body {
+    background-color: #F4F3EE;
+}
+
+.quick-link{
+    cursor: pointer;
+    transition: text-decoration 500ms ease-in;
+}
+
+.quick-link:hover{
+    text-decoration: underline;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.navbar-site{
+    font-weight: 300;
+    font-style: normal;
+    font-size: 15px;
+    color: #8A817C;
+}
+
+.navbar-site > u {
+    cursor: pointer;
+}
+
+
+.navbar-site > u:hover {
+    color: #463f3a;
+}
+
+.panel-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.panel-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel-row > * {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 300px;
+    height: 300px;
+}
+
+.text-with-img{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#based-and-work>*{
+    height: 100%;
+    width: 210px;
+}
+
+#based-in > * , #work > *{
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+#main-img-div > *{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#main-img-div > img{
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+}
+
+more-info > even-more {
+    color: transparent;
+    transition: color 400ms ease;
+    transition: background-color 400ms ease;
+    transform:ma;
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+    display: flex;
+    position: absolute;
+    width: 200px;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+more-info:hover > even-more {
+    color: #F4F3EE;
+    background-color: #8a817cbb;
+    text-shadow:#463f3a 5px;
+}
+
+p{
+    color: #8A817C;
+    font-size: 14px;
+    margin: 0;
+}

@@ -123,11 +123,12 @@ h1 {
     margin-bottom: 10px;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 300ms linear;
+    transition: background-color 300ms linear, transform 300ms ease-in-out;
 }
 
 .post:hover , .links > div:hover{
     background-color: #BCB8B1;
+    transform: scale(1.1, 1.1);
 }
 
 .post > img , .links > div > img{

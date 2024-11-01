@@ -43,11 +43,10 @@ body {
 
 .quick-link{
     cursor: pointer;
-    transition: text-decoration 500ms ease-in;
 }
 
-.quick-link:hover{
-    text-decoration: underline;
+.quick-link * {
+    cursor: pointer;
 }
 
 .navbar {
@@ -81,7 +80,7 @@ body {
 .panel-row {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
     justify-content: center;
 }
 
@@ -89,7 +88,6 @@ body {
     margin-left: 10px;
     margin-right: 10px;
     width: 200px;
-    height: 300px;
 }
 
 .text-with-img{
@@ -113,12 +111,11 @@ body {
     height: 40px;
     width: 40px;
     margin-top: 18px;
-    transition: height 300ms ease-in-out , width 300ms ease-in-out;
+    transition: transform 300ms ease-in-out;
 }
 
 .socials > img:hover {
-    height: 80px;
-    width: 80px;
+    transform: scale(1.55, 1.55);
 }
 
 .page-content {
@@ -137,6 +134,10 @@ body {
 #based-in > * , #work > *{
     margin-left: 4px;
     margin-right: 4px;
+}
+
+#work:hover {
+    text-decoration: underline;
 }
 
 #main-img-div > *{
@@ -197,4 +198,63 @@ more-info:hover {
     padding: 8px;
     border-radius: 10px;
     position: absolute;
+}
+
+.tech {
+    margin-top: 12px;
+}
+
+.tech > img {
+    width: 30px;
+    height: 30px;
+}
+
+.projects > div > div {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: start;
+}
+
+.projects > div > div > p {
+    font-weight: 500;
+}
+
+.projects > div > p {
+    font-size: 12px;
+}
+
+.projects > div {
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    transition: background-color 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.projects > div:hover {
+    background-color: #8a817c2d;
+    transform: scale(1.1, 1.1);
+}
+
+.projects > div > div > * {
+    margin-right: 10px;
+}
+
+.footer {
+    background-color: #F4F3EE;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer > h2 {
+    text-align: center;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    color:#463f3a;
+    
 }

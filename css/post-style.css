@@ -153,6 +153,7 @@ select {
     margin-bottom: 26px;
     padding: 4px;
     border-radius: 5px;
+    transition: background-color 350ms linear;
 }
 
 .post:hover{
@@ -223,6 +224,7 @@ select {
 .quicklink {
     text-decoration: underline;
     color: #8A817C;
+    transition: color 200ms linear;
 }
 
 .quicklink:hover{

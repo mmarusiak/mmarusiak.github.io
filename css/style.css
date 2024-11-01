@@ -22,6 +22,7 @@ body {
     background-color: RGBA(244, 243, 238, 0.9);
     width: 100%;
     padding: 10px;
+    transition: color 200ms linear;
 }
 
 .navbar > u {
@@ -95,23 +96,11 @@ h1 {
     color: #8A817C;
     cursor: pointer;
     text-decoration: underline;
+    transition: color 200ms linear;
 }
 
 .quick-link:hover {
     color: #463f3a;
-}
-
-
-.main > .content > .row-section > .links > h1 {
-    margin-bottom: 2px;
-}
-
-.main > .content > .row-section > .links > h2 {
-    margin-top: 2px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 15px;
 }
 
 .main > .content > .row-section > .posts {
@@ -123,24 +112,25 @@ h1 {
     flex-direction: row;
 }
 
-.main > .content > .row-section > .posts > h1 {
+.main > .content > .row-section > .posts > h1 , .links > h1{
     margin-bottom: 2px;
 }
 
-.post {
+.post, .links > div {
     display: flex;
     justify-content: row;
     align-items: center;
     margin-bottom: 10px;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 300ms linear;
 }
 
-.post:hover {
+.post:hover , .links > div:hover{
     background-color: #BCB8B1;
 }
 
-.post > img {
+.post > img , .links > div > img{
     width: 20px;
     height: 20px;
     padding: 3px;
@@ -148,7 +138,7 @@ h1 {
     margin-bottom: auto;
 }
 
-.post > h2 {
+.post > h2 , .links > div > h2{
     padding: 3px;
     padding-right: 10px;
     margin: 0;

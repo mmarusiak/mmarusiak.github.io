@@ -106,7 +106,7 @@ body {
     flex-direction: column;
     width: 40px;
     position: fixed;
-    right: 2%;
+    right: calc(50vw - 231px - 40px);
     height: 400px;
     top: calc(50% - 100px);
 }
@@ -288,5 +288,27 @@ more-info:hover {
 
     .panel-row > * {
         width: 200px;
+    }
+
+    .page-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .socials {
+        position: relative;
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        justify-content: center;
+        margin-bottom: 20px;
+        right: inherit;
+    }
+
+    .socials > img {
+        margin-right: 5px;
+        margin-left: 5px;
     }
 }

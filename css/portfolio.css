@@ -105,6 +105,10 @@ body {
     display: flex;
     flex-direction: column;
     width: 40px;
+    position: fixed;
+    right: 2%;
+    height: 400px;
+    top: calc(50% - 100px);
 }
 
 .socials > img{
@@ -209,6 +213,10 @@ more-info:hover {
     height: 30px;
 }
 
+.projects {
+    width: 380px;
+}
+
 .projects > div > div {
     display: flex;
     flex-direction: row-reverse;
@@ -257,4 +265,28 @@ more-info:hover {
     font-size: 13px;
     color:#463f3a;
     
+}
+
+@media only screen and (max-width: 500px){
+    .panel-row {
+        flex-direction: column;
+    }
+
+    #main-img-div{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .tech {
+        flex-direction: row;
+    }
+
+    .projects {
+        width: 200px;
+    }
+
+    .panel-row > * {
+        width: 200px;
+    }
 }

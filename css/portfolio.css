@@ -213,26 +213,32 @@ more-info:hover {
     height: 30px;
 }
 
-.projects {
+.projects, .education {
     width: 380px;
+    align-items: start;
+    margin-left: 10px;
 }
 
-.projects > div > div {
+.projects > div > div, .education > div > div {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: start;
 }
 
-.projects > div > div > p {
+.projects > div > div > img, .education > div > div > img {
+    width: 24px;
+}
+
+.projects > div > div > p, .education > div > div > p {
     font-weight: 500;
 }
 
-.projects > div > p {
+.projects > div > p, .education > div > p {
     font-size: 12px;
 }
 
-.projects > div {
+.projects > div, .education > div {
     width: 100%;
     padding: 5px;
     border-radius: 4px;
@@ -244,7 +250,7 @@ more-info:hover {
     transform: scale(1.1, 1.1);
 }
 
-.projects > div > div > * {
+.projects > div > div > *, .education > div > div > * {
     margin-right: 10px;
 }
 
@@ -282,7 +288,7 @@ more-info:hover {
         flex-direction: row;
     }
 
-    .projects {
+    .projects, .education {
         width: 200px;
     }
 

@@ -257,6 +257,7 @@ more-info:hover {
     max-width: 400px;
     flex-direction: row;
     justify-content: space-between;
+    align-items: start;
     margin-top: 2px;
 }
 
@@ -366,4 +367,15 @@ more-info:hover {
         margin-right: 5px;
         margin-left: 5px;
     }
+}
+
+@media only screen and (hover: none) and (pointer: coarse){
+    .projects > div:hover > .screenshots {
+
+    }
+
+    .projects > div > .screenshots {
+        display: flex;
+    }
+
 }

@@ -14,8 +14,8 @@
 
 <body>
 
-    <h2 class='navbar'><u class="quicklink" id="landing-page">marcel marusiak</u><u class="quicklink"
-            id='back-to-all-posts'>/all
+    <h2 class='navbar'><u class="quicklink" data-link_var="../">marcel marusiak</u><u class="quicklink"
+            data-link_var="../all-posts">/all
             posts</u><u class="quicklink">/Universe
             Simulator</u></h2>
     <div style="margin-top: 150px;">
@@ -44,7 +44,8 @@
                 wanted to make game like Poly Bridge but in space. It's hosted on
                 Github
                 <br> <br>
-                <span id='repo' class='link'>Github Repository</span>
+                <span class='quicklink' data-link_var="https://github.com/mmarusiak/Universe-Simulator">Github
+                    Repository</span>
             </h2>
             <div class='img-section'>
                 <div>
@@ -104,19 +105,15 @@
     </div>
     <script src="/js/hashtagFilterOtherPage.js"></script>
     <script>
-        const backToAllPostsElement = document.getElementById('back-to-all-posts');
-        backToAllPostsElement.addEventListener('click', function () {
-            document.location.href = '../all-posts';
-        });
+        const allQuickLinks = document.getElementsByClassName('quicklink');
 
-        const landingPage = document.getElementById('landing-page');
-        landingPage.addEventListener('click', function () {
-            document.location.href = '../';
-        });
-        const demo = document.getElementById('repo');
-        demo.addEventListener('click', function () {
-            document.location.href = 'https://github.com/mmarusiak/Universe-Simulator'
-        });
+        for (link of allQuickLinks) {
+            const link_value = link.dataset.link_var;
+            link.addEventListener('click', function () {
+                window.location.href = link_value;
+            });
+        }
+
         hashtagLoader();
     </script>
 

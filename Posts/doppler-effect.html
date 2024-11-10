@@ -15,8 +15,8 @@
 
 <body>
 
-    <h2 class='navbar'><u class="quicklink" id="landing-page">marcel marusiak</u><u class="quicklink"
-            id='back-to-all-posts'>/all
+    <h2 class='navbar'><u class="quicklink" data-link_var="../">marcel marusiak</u><u class="quicklink"
+            data-link_var="../all-posts">/all
             posts</u><u class="quicklink">/Doppler
             Effect</u></h2>
     <div style="margin-top: 150px;">
@@ -55,7 +55,7 @@
                 <br> <br>
                 I've also made little web demonstration (all gifs are from this demo),
                 you can play with it
-                <span id='demo' class='link'>here</span>.
+                <span class='quicklink' data-link_var="/Projects/Doppler-effect/src/doppler.html">here</span>.
             </h2>
             <div class='img-section'>
                 <div>
@@ -195,31 +195,22 @@
                 Some radars uses doppler effect to detect objects. Objects simply bounces
                 wave signal back which is detected then.
                 <br> <br>
-                You can see my youtube playlist with some examples <span id='playlist' class='link'>here</span>.
+                You can see my youtube playlist with some examples <span class='quicklink'
+                    data-link_var="https://www.youtube.com/watch?v=dC4Lp7k4zrI&list=PLKxlLnzEQmc_a6x5zzFSwkns5fvcB-MLr">here</span>.
             </h2>
         </div>
     </div>
     <script src="/js/hashtagFilterOtherPage.js"></script>
     <script>
-        const backToAllPostsElement = document.getElementById('back-to-all-posts');
-        backToAllPostsElement.addEventListener('click', function () {
-            document.location.href = '../all-posts';
-        });
+        const allQuickLinks = document.getElementsByClassName('quicklink');
 
-        const landingPage = document.getElementById('landing-page');
-        landingPage.addEventListener('click', function () {
-            document.location.href = '../';
-        });
+        for (link of allQuickLinks) {
+            const link_value = link.dataset.link_var;
+            link.addEventListener('click', function () {
+                window.location.href = link_value;
+            });
+        }
 
-        const playlist = document.getElementById('playlist');
-        playlist.addEventListener('click', function () {
-            document.location.href = 'https://www.youtube.com/watch?v=dC4Lp7k4zrI&list=PLKxlLnzEQmc_a6x5zzFSwkns5fvcB-MLr';
-        });
-
-        const demo = document.getElementById('demo');
-        demo.addEventListener('click', function () {
-            document.location.href = '/Projects/Doppler-effect/src/doppler.html'
-        });
         hashtagLoader();
     </script>
 

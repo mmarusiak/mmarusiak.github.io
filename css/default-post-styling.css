@@ -154,16 +154,6 @@ iframe {
     margin-left: 1.5px;
 }
 
-.link {
-    cursor: pointer;
-    text-decoration: underline;
-    color: #8A817C;
-}
-
-.link:hover {
-    color: #463f3a;
-}
-
 .content > p {
     font-size: 14px;
 }
@@ -257,6 +247,7 @@ footer {
 .quicklink {
     color: #8A817C;
     cursor: pointer;
+    text-decoration: underline;
 }
 
 .quicklink:hover {

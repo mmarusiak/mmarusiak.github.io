@@ -13,8 +13,8 @@
 </head>
 
 <body>
-    <h2 class='navbar'><u class="quicklink" id="landing-page">marcel marusiak</u><u class="quicklink"
-            id='back-to-all-posts'>/all
+    <h2 class='navbar'><u class="quicklink" data-link_var="../">marcel marusiak</u><u class="quicklink"
+            data-link_var="../all-posts">/all
             posts</u><u class="quicklink">/devlog:
             three.js falling sand
         </u></h2>
@@ -35,7 +35,7 @@
         </div>
         <h2 class='summary' id='post-summary'>
             An overview of a 3D version of Daniel Shiffman's 'Falling Sand' project, created using the <u
-                class="quicklink" id="threejs">Three.js
+                class="quicklink" data-link_var="https://threejs.org">Three.js
                 library</u>.</h2>
         <div class='line'></div>
         <div class='content'>
@@ -48,7 +48,7 @@
                 two-day experimental project, and the experience was incredibly rewarding. The project simulates
                 particles interacting
                 in a 3D space, bringing the classic 2D concept to life in a new dimension. <u class="quicklink"
-                    id="demo">
+                    data-link_var="../Projects/sandbox-3d/">
                     You can try it by yourself!
                 </u>
             </h2>
@@ -115,7 +115,7 @@
             </h2>
             <h2 class="section-content">
                 In general, using the Three.js library was a very enjoyable and smooth experience. <u class="quicklink"
-                    id="documentation">The
+                    data-link_var="https://threejs.org/docs/#manual/en/introduction/">The
                     documentation</u> is
                 easy to follow
                 and understand. However, I'd like to take a moment to discuss some of the challenges I faced.
@@ -166,7 +166,8 @@
                 few challenges along the way. The
                 Three.js library made the development process smooth and enjoyable, and I learned a lot while overcoming
                 the obstacles I
-                faced. The project is open source and <u class="quicklink" id="github">available on GitHub</u>, so feel
+                faced. The project is open source and <u class="quicklink"
+                    data-link_var="https://github.com/mmarusiak/falling-sand-threejs">available on GitHub</u>, so feel
                 free to check it out, contribute, or
                 use it as a
                 starting point for your own ideas!</h2>
@@ -174,35 +175,14 @@
     </div>
     <script src="/js/hashtagFilterOtherPage.js"></script>
     <script>
-        const backToAllPostsElement = document.getElementById('back-to-all-posts');
-        backToAllPostsElement.addEventListener('click', function () {
-            document.location.href = '../all-posts';
-        });
+        const allQuickLinks = document.getElementsByClassName('quicklink');
 
-        const landingPage = document.getElementById('landing-page');
-        landingPage.addEventListener('click', function () {
-            document.location.href = '../';
-        });
-
-        const threejs = document.getElementById('threejs');
-        threejs.addEventListener('click', function () {
-            document.location.href = 'https://threejs.org';
-        });
-
-        const demoPreview = document.getElementById('demo');
-        demoPreview.addEventListener('click', function () {
-            document.location.href = '../Projects/sandbox-3d/';
-        });
-
-        const documentation = document.getElementById('documentation');
-        documentation.addEventListener('click', function () {
-            document.location.href = 'https://threejs.org/docs/#manual/en/introduction/';
-        });
-
-        const github = document.getElementById('github');
-        github.addEventListener('click', function () {
-            document.location.href = 'https://github.com/mmarusiak/falling-sand-threejs';
-        });
+        for (link of allQuickLinks) {
+            const link_value = link.dataset.link_var;
+            link.addEventListener('click', function () {
+                window.location.href = link_value;
+            });
+        }
 
         hashtagLoader();
     </script>

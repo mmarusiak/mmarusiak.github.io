@@ -13,8 +13,8 @@
 </head>
 
 <body>
-    <h2 class='navbar'><u class="quicklink" id="landing-page">marcel marusiak</u><u class="quicklink"
-            id='back-to-all-posts'>/all posts</u><u class="quicklink">/devlog:
+    <h2 class='navbar'><u class="quicklink" data-link_var="../">marcel marusiak</u><u class="quicklink"
+            data-link_var="../all-posts">/all posts</u><u class="quicklink">/devlog:
             personal
             site rebuild</u></h2>
     <div style="margin-top: 150px;">
@@ -170,8 +170,10 @@
                 they built their
                 personal sites. I noticed that I prefer a minimalist look over some modern sites with a lot of content.
                 Then I chose a
-                color palette using <u class="quicklink" id="coolors">Coolors</u> (a site for picking color palettes,
-                you can see the palette I used <u class="quicklink" id="palette">here</u>).
+                color palette using <u class="quicklink" data-link_var="https://coolors.co">Coolors</u> (a site for
+                picking color palettes,
+                you can see the palette I used <u class="quicklink"
+                    data-link_var="https://coolors.co/463f3a-8a817c-bcb8b1-f4f3ee-e0afa0">here</u>).
                 After that, I
                 began the redesign. It took a long time to implement all the changes, but it was worth it. Here, you can
                 see some
@@ -214,25 +216,14 @@
     </div>
     <script src="/js/hashtagFilterOtherPage.js"></script>
     <script>
-        const backToAllPostsElement = document.getElementById('back-to-all-posts');
-        backToAllPostsElement.addEventListener('click', function () {
-            document.location.href = '../all-posts';
-        });
+        const allQuickLinks = document.getElementsByClassName('quicklink');
 
-        const landingPage = document.getElementById('landing-page');
-        landingPage.addEventListener('click', function () {
-            document.location.href = '../';
-        });
-
-        const coolors = document.getElementById('coolors');
-        coolors.addEventListener('click', function () {
-            document.location.href = 'https://coolors.co';
-        });
-
-        const palette = document.getElementById('palette');
-        palette.addEventListener('click', function () {
-            document.location.href = 'https://coolors.co/463f3a-8a817c-bcb8b1-f4f3ee-e0afa0';
-        })
+        for (link of allQuickLinks) {
+            const link_value = link.dataset.link_var;
+            link.addEventListener('click', function () {
+                window.location.href = link_value;
+            });
+        }
 
         hashtagLoader();
     </script>

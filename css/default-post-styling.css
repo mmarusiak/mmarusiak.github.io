@@ -253,3 +253,19 @@ footer {
 .quicklink:hover {
     color: #31393C;
 }
+
+.live{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.live > h2{
+    font-size: 12px;
+    color: #463f3a;
+}
+
+iframe.live-preview {
+    height: 400px;
+    width: 75%;
+}

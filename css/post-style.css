@@ -241,6 +241,7 @@ select {
 .all-posts-content{
     display: flex;
     flex-direction: column;
+    width: 340px;
 }
 
 .post-pages {

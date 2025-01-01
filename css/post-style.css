@@ -237,3 +237,12 @@ select {
     text-decoration: underline;
     color: #463f3a;
 }
+
+.all-posts-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.post-pages {
+    align-self: center;
+}

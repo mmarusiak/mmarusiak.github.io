@@ -7,6 +7,8 @@
     <title>Marcel Marusiak</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel='icon' href='./images/hello.png' </link:icon>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=link" />
 </head>
 
 <body>
@@ -55,7 +57,12 @@
                     </div>
                 </div>
                 <div class="posts">
-                    <h1 id="all-posts" style="cursor: pointer;">posts</h1>
+                    <div class='posts-heading quick-link' data-link_var="./all-posts">
+                        <h1 id="all-posts" style="cursor: pointer;">posts</h1>
+                        <span class="material-symbols-outlined">
+                            link
+                        </span>
+                    </div>
                     <div class="post-holder">
                         <div class="post" id="post">
                             <img src="" alt="" class="post-img">
@@ -86,11 +93,11 @@
     <script src="/js/posts.js"></script>
     <script src="/js/hashtagFilterOtherPage.js"></script>
     <script>
-
-        const allPosts = document.getElementById('all-posts');
-        allPosts.addEventListener('click', function () {
-            window.location.href = './all-posts'
-        })
+        /*
+                const allPosts = document.getElementById('all-posts');
+                allPosts.addEventListener('click', function () {
+                    window.location.href = './all-posts'
+                })*/
 
         const allQuickLinks = document.getElementsByClassName('quick-link');
         console.log(allQuickLinks)
@@ -100,7 +107,6 @@
                 window.location.href = link_value;
             });
         }
-
 
 
         function getRandomPosts(amountOfPosts, howManyPosts) {

@@ -28,6 +28,10 @@ h3 {
     padding-right: 20px;
 }
 
+.main > div {
+    height: 530px;
+}
+
 .navbar {
     text-align: left;
     font-family: "Poppins", sans-serif;
@@ -209,7 +213,8 @@ select {
     font-weight: 500;
     font-size: 14px;
     text-align: center;
-    margin: 0;
+    margin-top: auto;
+    margin-bottom: 0;
 }
 
 #previous, #next{

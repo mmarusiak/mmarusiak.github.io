@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.7
+          python-version: 3.13.2
 
       - name: Run the script
         run: python ./Posts/posts_handler.py

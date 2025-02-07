@@ -219,22 +219,22 @@ more-info:hover {
     margin-left: 10px;
 }
 
-.projects > div > div, .education > div > div {
+.projects > div > #projects-hoverable > div, .education > div > div {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: start;
 }
 
-.projects > div > div > img, .education > div > div > img {
+.projects > div > #projects-hoverable > div > img, .education > div > div > img {
     width: 24px;
 }
 
-.projects > div > div > p, .education > div > div > p {
+.projects > div > #projects-hoverable > div > p, .education > div > div > p {
     font-weight: 500;
 }
 
-.projects > div > p, .education > div > p {
+.projects > div > #projects-hoverable > p, .education > div > p {
     font-size: 12px;
 }
 
@@ -245,37 +245,9 @@ more-info:hover {
     transition: background-color 300ms ease-in-out, transform 300ms ease-in-out;
 }
 
-.projects > div:hover {
+.projects > div:has(#projects-hoverable:hover){
     background-color: #8a817c2d;
     transform: scale(1.1, 1.1);
-}
-
-
-.screenshots::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(138, 129, 124, 0.176); 
-    -webkit-backdrop-filter: blur(2px);
-    backdrop-filter: blur(2px); /* Apply the blur effect */
-    z-index: -1; /* Place it behind the content */
-  }
-
-.projects > div > .screenshots {
-    padding-top: 10px;
-    width: 100%;
-    position: absolute;
-    display: flex;
-    left: 50%;
-    transform: scale(0) translateX(-50%);
-    max-width: 400px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: start;
-    margin-top: 5px;
 }
 
 .projects > div > .screenshots > div {
@@ -304,7 +276,7 @@ more-info:hover {
     max-height: 100px;
 }
 
-.projects > div:hover > .screenshots {
+.projects > div > #projects-hoverable:hover ~ .screenshots {
     left: 50%;
     transform: translatex(-50%) scale(1);
     animation: screenshots 300ms ease-in 0ms 1;
@@ -320,7 +292,7 @@ more-info:hover {
     }
 }
 
-.projects > div > div > *, .education > div > div > * {
+.projects > div > #projects-hoverable > div > *, .education > div > div > * {
     margin-right: 10px;
 }
 
@@ -389,12 +361,41 @@ more-info:hover {
     }
 }
 
-@media only screen and (hover: none) and (pointer: coarse){
-    .projects > div:hover > .screenshots {
+@media only screen and (hover: hover) and (pointer: fine){
+    .screenshots::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(138, 129, 124, 0.176); 
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px); /* Apply the blur effect */
+    z-index: -1; /* Place it behind the content */
+  }
 
-    }
+.projects > div > .screenshots {
+    padding-top: 10px;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    left: 50%;
+    transform: scale(0) translateX(-50%);
+    max-width: 400px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 5px;
+}
+
+}
+
+@media only screen and (hover: none) and (pointer: coarse){
 
     .projects > div > .screenshots {
+        margin-top: 8px;
+        position: relative;
         display: flex;
     }
 
